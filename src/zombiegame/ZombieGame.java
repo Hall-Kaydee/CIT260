@@ -5,6 +5,7 @@
  */
 package zombiegame;
 
+import byui.cit260.zombieGame.model.Game;
 import byui.cit260.zombieGame.model.Player;
 
 /**
@@ -25,6 +26,16 @@ public class ZombieGame {
      
      String playerInfo = playerOne.toString();
      System.out.println(playerInfo);
+     
+     
+     Game gameOne = new Game();
+     
+     gameOne.setTotalScore(9000.00);
+     gameOne.setNoPeople(1.0);
+     
+     String gameInfo = gameOne.toString();
+     System.out.println(gameInfo);
+     
      
        
     }
