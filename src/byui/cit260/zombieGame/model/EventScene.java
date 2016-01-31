@@ -37,7 +37,7 @@ public class EventScene implements Serializable{
     public void setTravelDistance(double travelDistance) {
         this.travelDistance = travelDistance;
     }
-
+//
     @Override
     public int hashCode() {
         int hash = 7;

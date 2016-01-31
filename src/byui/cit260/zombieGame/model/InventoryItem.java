@@ -12,7 +12,7 @@ import java.util.Objects;
  * @author Boyd
  */
 public class InventoryItem implements Serializable{
-    
+    //comment
     //class instance variables
     private String ItemType;
     private int ItemQuantity;
