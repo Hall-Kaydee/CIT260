@@ -11,6 +11,10 @@ import byui.cit260.zombieGame.model.Player;
 import byui.cit260.zombieGame.model.Thug;
 import byui.cit260.zombieGame.model.Weapon;
 import byui.cit260.zombieGame.model.Zombie;
+import byui.cit260.zombieGame.model.Game;
+import byui.cit260.zombieGame.model.MainCharacter;
+import byui.cit260.zombieGame.model.NPC;
+
 
 /**
  *
@@ -81,7 +85,36 @@ public class ZombieGame {
      String thugInfo = thugOne.toString();
      System.out.println(thugInfo);
      
+          //game test -Evan
+     Game gameOne = new Game();
      
+        gameOne.setTotalScore(9000.00);
+        gameOne.setNoPeople(1.0);
+     
+         String gameInfo = gameOne.toString();
+         System.out.println(gameInfo);
+        
+     
+     // mainCharacter test -Evan
+        MainCharacter mainCharacterOne = new MainCharacter();
+         
+        mainCharacterOne.setName(" Evanator ");
+        mainCharacterOne.setDescription(" This a man ");
+        mainCharacterOne.setCoordinates(4.56);
+        mainCharacterOne.setHitPoints(95);
+        
+        String MainCharacterInfo = mainCharacterOne.toString();
+         System.out.println(MainCharacterInfo);
+        
+        
+      // NPC test -Evan   
+         NPC NPCOne = new NPC();
+         
+         NPCOne.setType("Thug");
+         NPCOne.setCoordinates(6.99);
+         
+         String NPCInfo = NPCOne.toString();
+            System.out.println(NPCInfo);
      
     }
     
