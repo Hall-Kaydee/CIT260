@@ -108,3 +108,4 @@ public class InventoryControlTest {
         fail("The test case is a prototype."); 
     
     }
+}
