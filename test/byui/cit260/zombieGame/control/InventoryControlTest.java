@@ -41,7 +41,10 @@ public class InventoryControlTest {
         double expResult = 1.0;
         double result = instance.calcItemWeight(quantity, gramsPerItem);
         assertEquals(expResult, result, 0.0);
+      
         // TODO review the generated test code and remove the default call to fail.
+       
+        
      {  
         System.out.println("test 2");
         quantity = -5.0;
@@ -51,7 +54,7 @@ public class InventoryControlTest {
         result = instance.calcItemWeight(quantity, gramsPerItem);
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
-        
+       } 
       {
          System.out.println("test 3");
         quantity = 2.0;
@@ -61,7 +64,7 @@ public class InventoryControlTest {
         result = instance.calcItemWeight(quantity, gramsPerItem);
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.   
-            
+       }     
       {
             System.out.println("test 4");
         quantity = 50.0;
@@ -72,6 +75,7 @@ public class InventoryControlTest {
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail. 
         
+        }
       {
         System.out.println("test 5");
         quantity = 0.0;
@@ -81,6 +85,7 @@ public class InventoryControlTest {
         result = instance.calcItemWeight(quantity, gramsPerItem);
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail. 
+        }
         {
         System.out.println("test 6");
         quantity = 5.0;
@@ -91,10 +96,10 @@ public class InventoryControlTest {
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail. 
        }
-      }
-     }   
+      
+        
+    
+   
     }
-   }
-  }
    
 }
