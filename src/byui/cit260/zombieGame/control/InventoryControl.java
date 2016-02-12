@@ -16,13 +16,14 @@ public class InventoryControl {
         
         
 
-if (quantity < 0 || quantity > 50 ) {
-    return -1;
+        if (quantity < 0 || quantity > 50) {
+            return -1;
             }
-if (gramsPerItem > 5000 || gramsPerItem < 1 ) {
-        return -1;
-    }
-double totalKilograms = (quantity * gramsPerItem)/1000;
+        if (gramsPerItem > 5000 || gramsPerItem < 1) {
+            return -1;
+        }
+        
+double totalKilograms = (quantity * gramsPerItem) / 1000;
 
 return totalKilograms;
     } 

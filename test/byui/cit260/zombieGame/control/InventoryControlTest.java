@@ -35,10 +35,10 @@ public class InventoryControlTest {
     public void testCalcItemWeight() 
     {
         System.out.println("calcItemWeight");
-        double quantity = 4;
-        double gramsPerItem = 250;
+        double quantity = 4.0;
+        double gramsPerItem = 250.0;
         InventoryControl instance = new InventoryControl();
-        double expResult = 1;
+        double expResult = 1.0;
         double result = instance.calcItemWeight(quantity, gramsPerItem);
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
