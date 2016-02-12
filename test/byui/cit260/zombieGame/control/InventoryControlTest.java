@@ -42,70 +42,59 @@ public class InventoryControlTest {
         double result = instance.calcItemWeight(quantity, gramsPerItem);
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    
-    /**test 2**/ 
-  
-        System.out.println("\tTest Case #2");
-        quantity = -3;
-        gramsPerItem = 300;
-        expResult = 1;
-        result = instance.calcItemWeight(quantity, gramsPerItem);
-        assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-       
-    
-    /**test 3**/
-    
-        System.out.println("\tTest Case #3");
-        quantity = 4;
-        gramsPerItem = 900;
-        expResult = 1;
+     {  
+        System.out.println("test 2");
+        quantity = -5.0;
+        gramsPerItem = 300.0;
+        
+        expResult = -1.0;
         result = instance.calcItemWeight(quantity, gramsPerItem);
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
         
-    
-    /**test 4**/
+      {
+         System.out.println("test 3");
+        quantity = 2.0;
+        gramsPerItem = 0.0;
         
-        System.out.println("\tTest Case #4");
-        quantity = 2;
-        gramsPerItem = 0;
-        expResult = 1;
+        expResult = -1.0;
         result = instance.calcItemWeight(quantity, gramsPerItem);
         assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail
-    
-    /**test 5**/
+        // TODO review the generated test code and remove the default call to fail.   
+            
+      {
+            System.out.println("test 4");
+        quantity = 50.0;
+        gramsPerItem = 1.0;
         
-        System.out.println("\tTest Case #5");
-       quantity = 50;
-        gramsPerItem = 1;
-        expResult = 1;
+        expResult = 0.05;
         result = instance.calcItemWeight(quantity, gramsPerItem);
         assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-    
-    /**test 6**/
+        // TODO review the generated test code and remove the default call to fail. 
         
-        System.out.println("\tTest Case #6");
-        quantity = 0;
-        gramsPerItem = 50000;
-        expResult = 1;
-         result = instance.calcItemWeight(quantity, gramsPerItem);
-        assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-       
-    /**test 7**/
+      {
+        System.out.println("test 5");
+        quantity = 0.0;
+        gramsPerItem = 5000.0;
         
-        System.out.println("\tTest Case #7");
-        quantity = 5;
-        gramsPerItem = 1700;
-        expResult = 1;
+        expResult = 0.0;
         result = instance.calcItemWeight(quantity, gramsPerItem);
         assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype."); 
-    
+        // TODO review the generated test code and remove the default call to fail. 
+        {
+        System.out.println("test 6");
+        quantity = 5.0;
+        gramsPerItem = 1700.0;
+        
+        expResult = 8.5;
+        result = instance.calcItemWeight(quantity, gramsPerItem);
+        assertEquals(expResult, result, 0.0);
+        // TODO review the generated test code and remove the default call to fail. 
+       }
+      }
+     }   
     }
+   }
+  }
+   
 }
