@@ -11,4 +11,27 @@ package byui.cit260.zombieGame.control;
  */
 public class GameControl {
     
+    public double calcSneak(double numEnemy, double dist){
+        
+     if (numEnemy < 0 || numEnemy > 10 ) {
+        return -1;
+    }
+     
+    if (dist > 1000 || dist < 1 ) {
+        return -1;
+    }
+    
+    double preSneakSuccess = (5* numEnemy )+(2*( dist /100));
+	double sneakSuccess = (100 - preSneakSuccess);
+
+    return sneakSuccess;
+   
+        
+    }
+
+   
+    
+    
+    
+    
 }
