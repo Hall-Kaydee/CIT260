@@ -5,11 +5,17 @@
  */
 package byui.cit260.zombieGame.control;
 
+import byui.cit260.zombieGame.model.Player;
+
 /**
  *
  * @author tyler
  */
 public class GameControl {
+
+    public static Player createPlayer(String playersName) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     public double calcSneak(double numEnemy, double dist){
         
