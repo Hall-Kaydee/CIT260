@@ -6,6 +6,7 @@
 package byui.cit260.zombieGame.control;
 
 import byui.cit260.zombieGame.model.Player;
+import zombiegame.ZombieGame;
 
 /**
  *
@@ -13,8 +14,22 @@ import byui.cit260.zombieGame.model.Player;
  */
 public class GameControl {
 
-    public static Player createPlayer(String playersName) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public static Player createPlayer(String name) {
+   
+        if (name == null){
+            
+            return null;
+            
+        }
+        
+        Player player = new Player();
+        player.setName(name);
+        ZombieGame.setPlayer(player);//save the player
+        
+        
+        return player;
+        
+    
     }
     
     public double calcSneak(double numEnemy, double dist){
