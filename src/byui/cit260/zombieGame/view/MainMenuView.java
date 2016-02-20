@@ -5,7 +5,10 @@
  */
 package byui.cit260.zombieGame.view;
 
+import byui.cit260.zombieGame.control.GameControl;
+import byui.cit260.zombieGame.model.GameMenuView;
 import java.util.Scanner;
+import zombiegame.ZombieGame;
 
 /**
  *
@@ -15,15 +18,17 @@ public class MainMenuView {
 
     private final String MENU = "\n"
             + "\n++++++++++++++++++++++++++++++++++++++"
-            + "\n+| Main Menu                          "
+            + "\n+  Main Menu                          "
             + "\n++++++++++++++++++++++++++++++++++++++"
-            + "\nG - Start Game"
+            + "\nN - Start New Game"
+            + "\nL - Load Game"
             + "\nH - Help"
             + "\nS - Save Game"
-            + "\nE - Exit"
+            + "\nQ - Quit"
             + "\n++++++++++++++++++++++++++++++++++++++"
             ;
-    
+    private boolean promptMessage;
+
     public void displayMenu(){
         
         char selection = ' ';
@@ -58,7 +63,16 @@ END
     
     void displayMainMenuView() {
 
-        System.out.println("\n*** display menu function called ***");
+                boolean done = false;// set flag to not done.
+        do{
+            //prompt for and get player's name
+            String menuOption = this.getMenuOption();
+            if (menuOption.toUpperCase().equals("Q")) //user wants to quit
+                return;//exit the game
+                //do the requested action and display the next view
+                done = this.doAction(menuOption);
+            }
+        while (!done);
     
     }
 
@@ -81,8 +95,14 @@ END
         RETURN value    
         
      */
-        private String promptMessage = "\nPlease make a selection:";
-    
+ 
+
+    return "WHAT_AM_I? See line 95";
+    }
+
+    private String getMenuOption() {
+     
+        
         Scanner keyboard = new Scanner(System.in);//keyboard input string
         String value = "";
             boolean valid = false;//setflag to invalid valid entered
@@ -91,7 +111,7 @@ END
                 
                 //prompt for the players name
                 
-                System.out.println(this.promptMessage);
+                System.out.println(this.MENU);
                 
                 value = keyboard.nextLine();//get the name from the keyboard
                 
@@ -111,17 +131,135 @@ END
                 
                 }
 
-                return value;//return the value
-    
-    
+                return value;//return the value       
+        
+        
+        
+    //    System.out.println("\n*** get main menu option function called");
+    //    return "N";
     
     }
 
-    private void doAction(char selection) {
+    public boolean doAction(String choice) {
+    
+        choice = choice.toUpperCase(); //convert choice to upper case
+        
+        switch (choice){
+            
+            case "N"://create and start a new game
+                this.startNewGame();
+                break;
+            
+            case "L"://get and start existing game
+               this.loadGame();
+               break;
+               
+            case "H"://get help
+                this.displayHelpMenu();
+                break;
+                
+            case "S"://save the current game
+                this.saveGame();
+                break;
+ 
+            default:
+                System.out.println("\nInvalid selection. Try again");
+                break;
+                
+            
+        }
+        return false;
+        
+    }
+    
+    
+    public boolean doActionHelp(String choice) {
+    
+        // this is the help menu do action function
+        
+        choice = choice.toUpperCase(); //convert choice to upper case
+        
+        switch (choice){
+            
+            case "G"://what is the goal?
+                this.startNewGame();
+                break;
+            
+            case "M"://How to move
+               this.loadGame();
+               break;
+               
+            case "I"://how to get items
+                this.displayHelpMenu();
+                break;
+                
+            case "C"://combat - how to fight
+                this.saveGame();
+                break;
+ 
+            default:
+                System.out.println("\nInvalid selection. Try again");
+                break;
+                
+            
+        }
+        return false;
+        
+    }    
+    
+    
+    
+    
+    
+        
+        
+    //    System.out.println("\n*** do action function called");
+    //    return true;
+
+    private void startNewGame() {
+ 
+        //create new game 
+        GameControl.createNewGame(ZombieGame.getPlayer());
+        
+        //display the game menu
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.displayMenu();
+        
+        
+        
+        
+    }
+
+    private void loadGame() {
+
+        System.out.println("\n*** loadGame function called");    
+    
+    }
+
+    private void displayHelpMenu() {
+
+       
+        
+
+
+
+        //System.out.println("\n*** displayHelpMenu function called");    
+  
+    
+    }
+
+    private void saveGame() {
+
+
+        System.out.println("\n*** saveGame function called");  
+
+    }
+
 
    
-        
-    
+
+    private void doAction(char selection) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
   
     

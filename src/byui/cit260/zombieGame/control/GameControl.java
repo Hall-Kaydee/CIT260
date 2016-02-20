@@ -14,6 +14,13 @@ import zombiegame.ZombieGame;
  */
 public class GameControl {
 
+   public static void createNewGame(Player player){
+    
+    System.out.println("\ncreate new game stub function called");
+
+    }
+    
+    
     public static Player createPlayer(String name) {
    
         if (name == null){
@@ -51,8 +58,5 @@ public class GameControl {
     }
 
    
-    
-    
-    
     
 }
