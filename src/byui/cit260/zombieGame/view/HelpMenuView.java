@@ -5,25 +5,22 @@
  */
 package byui.cit260.zombieGame.view;
 
-import byui.cit260.zombieGame.control.GameControl;
-import byui.cit260.zombieGame.model.GameMenuView;
 import java.util.Scanner;
-import zombiegame.ZombieGame;
 
 /**
  *
  * @author Boyd
  */
-public class MainMenuView {
+public class HelpMenuView {
 
-    private final String MENU = "\n"
+    public final String HELPMENU = "\n"
             + "\n++++++++++++++++++++++++++++++++++++++"
-            + "\n+  Main Menu                          "
+            + "\n+  Help Menu                          "
             + "\n++++++++++++++++++++++++++++++++++++++"
-            + "\nN - Start New Game"
-            + "\nL - Load Game"
-            + "\nH - Help"
-            + "\nS - Save Game"
+            + "\nG - What is the goal?"
+            + "\nM - How do you move?"
+            + "\nI - How do you get items?"
+            + "\nF - How do you fight enemies?"
             + "\nQ - Quit"
             + "\n++++++++++++++++++++++++++++++++++++++"
             ;
@@ -35,33 +32,20 @@ public class MainMenuView {
         
         do {
             
-            System.out.println(MENU);// display the main menu
+            System.out.println(HELPMENU);// display the main menu
             
             String input = this.getInput();// get the user selection
             selection = input.charAt(0);//get first character of string
             
-            this.doAction(selection);//do action based on selection
+            this.doActionHelp(selection);//do action based on selection
             
           }
         
         while (selection != 'E');//while selection is not exit
         
-    }
-/* BEGIN
-DO
-	 	 DISPLAY the Main Menu
-	 	 GET the user’s selection
-	 	 Perform the action associated with selection
-		
+    }    
 
-WHILE the letter “E” has not been selected
-END
-
-*/
-    
-    
-    
-    void displayMainMenuView() {
+    void displayHelpMenuView() {
 
                 boolean done = false;// set flag to not done.
         do{
@@ -70,7 +54,7 @@ END
             if (menuOption.toUpperCase().equals("Q")) //user wants to quit
                 return;//exit the game
                 //do the requested action and display the next view
-                done = this.doAction(menuOption);
+                done = this.doActionHelp(menuOption);
             }
         while (!done);
     
@@ -111,7 +95,7 @@ END
                 
                 //prompt for the players name
                 
-                System.out.println(this.MENU);
+                System.out.println(this.HELPMENU);
                 
                 value = keyboard.nextLine();//get the name from the keyboard
                 
@@ -132,34 +116,34 @@ END
                 }
 
                 return value;//return the value       
-        
-        
-        
-    //    System.out.println("\n*** get main menu option function called");
-    //    return "N";
+    
+    
+    
+    
     
     }
-
-    public boolean doAction(String choice) {
+    public boolean doActionHelp(String choice){
     
+        // this is the help menu do action function
+        
         choice = choice.toUpperCase(); //convert choice to upper case
         
         switch (choice){
             
-            case "N"://create and start a new game
-                this.startNewGame();
+            case "G"://what is the goal?
+                System.out.println("\nThe Goal is to get safely to the refugee camp");
                 break;
             
-            case "L"://get and start existing game
-               this.loadGame();
+            case "M"://How to move
+                System.out.println("\nTo move...");
                break;
                
-            case "H"://get help
-                this.displayHelpMenu();
+            case "I"://how to get items
+                System.out.println("\nTo get items...");
                 break;
                 
-            case "S"://save the current game
-                this.saveGame();
+            case "F"://combat - how to fight
+                System.out.println("\nTo engage in combat...");
                 break;
  
             default:
@@ -170,69 +154,13 @@ END
         }
         return false;
         
-    }
-    
-    
+    }    
 
-    
-    
-    
-    
-    
-        
-        
-    //    System.out.println("\n*** do action function called");
-    //    return true;
-
-    private void startNewGame() {
- 
-        //create new game 
-        GameControl.createNewGame(ZombieGame.getPlayer());
-        
-        //display the game menu
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
-        
-        
-        
-        
-    }
-
-    private void loadGame() {
-
-        System.out.println("\n*** loadGame function called");    
-    
-    }
-
-    private void displayHelpMenu() {
-
-       
-     HelpMenuView helpMenuView = new HelpMenuView();
- 
-     
-        helpMenuView.displayHelpMenuView();
-     
-       // System.out.println(helpMenuView);    
-  
-    
-    }
-
-    private void saveGame() {
-
-
-        System.out.println("\n*** saveGame function called");  
-
-    }
-
-
-   
-
-    private void doAction(char selection) {
+    private void doActionHelp(char selection) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-  
-    
-    
-    
+
+
+
     
 }
