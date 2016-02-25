@@ -19,7 +19,7 @@ public class HelpMenuView {
             + "\n++++++++++++++++++++++++++++++++++++++"
             + "\nG - What is the goal?"
             + "\nM - How do you move?"
-            + "\nI - How do you get items?"
+            + "\nI - How do you view and use items?" // Luanches the inventory view
             + "\nF - How do you fight enemies?"
             + "\nQ - Quit"
             + "\n++++++++++++++++++++++++++++++++++++++"
@@ -135,15 +135,27 @@ public class HelpMenuView {
                 break;
             
             case "M"://How to move
-                System.out.println("\nTo move...");
+                System.out.println("\nTo move... use the arrows and the spacebar bal ha bal");
                break;
                
-            case "I"://how to get items
-                System.out.println("\nTo get items...");
+            case "I"://how to get items noted out to test inventory menu -Evan
+                //System.out.println("\nYou collect items in different areas of the map."
+                  //                  + "\n Here you can Look at what Items you currently have" 
+                     //               + "\n You can use these items to help you on your journey"
+                      //              + "\n You can also drop these idems if you are carring to much" 
+                         //               );
+               
+                
+                InventoryView inventoryView = new InventoryView();
+ 
+     
+                    inventoryView.displayInventoryView();
+                
+                
                 break;
                 
             case "F"://combat - how to fight
-                System.out.println("\nTo engage in combat...");
+                System.out.println("\nTo engage in combat..KILL EVERYTHING!!!!!.");
                 break;
  
             default:
