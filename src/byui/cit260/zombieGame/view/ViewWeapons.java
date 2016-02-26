@@ -184,10 +184,9 @@ public class ViewWeapons {
     private void dropWeapon() {
         //System.out.println("\n*** dropInventoryItem called");
         
-         DropItem dropItem = new DropItem();
  
-     
-                    dropItem.dropItemView();
+        System.out.println("\n*** dropWeapon()function called");
+                    
         
         
     }
