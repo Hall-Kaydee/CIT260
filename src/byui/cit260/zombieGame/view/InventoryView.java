@@ -21,7 +21,7 @@ public class InventoryView {
             + "\n+      You collect items in different areas of the map         +"
             + "\n+     Here you can Look at what Items you currently have       +" 
             + "\n+     You can use these items to help you on your journey      +"
-            + "\n+   You can also drop these idems if you are carring to much   +"                                        
+            + "\n+   You can also drop these items if you are carrying to much  +"                                        
             + "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
             + "\n+ V - View Your Inventory                                      +"
             + "\n+ U - Use Inventory Item                                       +"
@@ -42,7 +42,7 @@ public class InventoryView {
             String input = this.getInput();// get the user selection
             selection = input.charAt(0);//get first character of string
             
-            this.doActionHelp(selection);//do action based on selection
+            this.doActionInventory(selection);//do action based on selection
             
           }
         
@@ -157,9 +157,7 @@ public class InventoryView {
         
     }     
 
-    private void doActionHelp(char selection) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   
 
     private void viewInventoryItems() {
         System.out.println("\n*** viewInventoryItems()function called");
@@ -175,9 +173,13 @@ public class InventoryView {
          DropItem dropItem = new DropItem();
  
      
-                    dropItem.dropItemView();
+                    dropItem.dropInventoryItem();
         
         
+    }
+
+    private void doActionInventory(char selection) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
    
