@@ -7,7 +7,7 @@ package byui.cit260.zombieGame.control;
 
 /**
  *
- * @author tyler
+ * @author kaydee
  */
 public class InventoryControl {
     

@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author tyler
+ * @author kaydee
  */
 public class InventoryControlTest {
     

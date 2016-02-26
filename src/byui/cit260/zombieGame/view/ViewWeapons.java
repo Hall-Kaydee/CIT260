@@ -6,22 +6,25 @@
 package byui.cit260.zombieGame.view;
 
 import java.util.Scanner;
+import byui.cit260.zombieGame.view.HelpMenuView;
 /**
  *
- * @author Boyd
+ * @author kaydeehall
  */
-public class HelpMenuView {
-
-    public final String HELPMENU = "\n"
-            + "\n++++++++++++++++++++++++++++++++++++++"
-            + "\n+  Help Menu                          "
-            + "\n++++++++++++++++++++++++++++++++++++++"
-            + "\nG - What is the goal?"
-            + "\nM - How do you move?"
-            + "\nI - How do you view and use items?" // Luanches the inventory view
-            + "\nF - How do you fight enemies?"
-            + "\nQ - Quit"
-            + "\n++++++++++++++++++++++++++++++++++++++"
+public class ViewWeapons {
+    public final String WEAPONMENU = "\n"
+            + "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+            + "\n+                      Weapon Menu                             +"               
+            + "\n+      You collect weapons in different areas of the map       +"
+            + "\n+     Here you can Look at what weapons you currently have     +" 
+            + "\n+     You can choose which weapon to help you on your journey  +"
+            + "\n+   You can also drop these weapons if you are carring to much +"                                        
+            + "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+            + "\n+ V - View Your Weapons                                        +"
+            + "\n+ U - Use Weapon                                               +"
+            + "\n+ D - Drop Weapon                                              +"
+            + "\n+ Q - Quit                                                     +"   
+            + "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
             ;
     private boolean promptMessage;
 
@@ -31,7 +34,7 @@ public class HelpMenuView {
         
         do {
             
-            System.out.println(HELPMENU);// display the main menu
+            System.out.println(WEAPONMENU);// display the main menu
             
             String input = this.getInput();// get the user selection
             selection = input.charAt(0);//get first character of string
@@ -44,7 +47,9 @@ public class HelpMenuView {
         
     }    
 
-    void displayHelpMenuView() {
+    void displayViewWeapons() {
+        
+       
 
                 boolean done = false;// set flag to not done.
         do{
@@ -53,7 +58,7 @@ public class HelpMenuView {
             if (menuOption.toUpperCase().equals("Q")) //user wants to quit
                 return;//exit the game
                 //do the requested action and display the next view
-                done = this.doActionHelp(menuOption);
+            done = this.doActionWeapon(menuOption);
             }
         while (!done);
     
@@ -94,7 +99,7 @@ public class HelpMenuView {
                 
                 //prompt for the players name
                 
-                System.out.println(this.HELPMENU);
+                System.out.println(this.WEAPONMENU);
                 
                 value = keyboard.nextLine();//get the name from the keyboard
                 
@@ -121,7 +126,7 @@ public class HelpMenuView {
     
     
     }
-    public boolean doActionHelp(String choice){
+    public boolean doActionWeapon(String choice){
     
         // this is the help menu do action function
         
@@ -129,49 +134,61 @@ public class HelpMenuView {
         
         switch (choice){
             
-            case "G"://what is the goal?
-                System.out.println("\nThe Goal is to get safely to the refugee camp");
+            case "V"://View weapon items?
+                this.viewWeapons();
                 break;
             
-            case "M"://How to move
-                System.out.println("\nTo move... use the arrows and the spacebar bal ha bal");
-               break;
-               
-            case "I"://how to get items noted out to test inventory menu -Evan
-                //System.out.println("\nYou collect items in different areas of the map."
-                  //                  + "\n Here you can Look at what Items you currently have" 
-                     //               + "\n You can use these items to help you on your journey"
-                      //              + "\n You can also drop these idems if you are carring to much" 
-                         //               );
-               
-                
-                InventoryView inventoryView = new InventoryView();
- 
-     
-                    inventoryView.displayInventoryView();
-                
-                
+            case "U"://Use weapon
+                this.useWeapon();
                 break;
-                
-            case "F"://combat - how to fight
-                System.out.println("\nTo engage in combat..KILL EVERYTHING!!!!!.");
+               
+            case "D"://Drop weapon
+                this.dropWeapon();
                 break;
  
             default:
                 System.out.println("\nInvalid selection. Try again");
-                break;
-                
-            
+                break;    
         }
         return false;
         
-    }    
+        
+        /*if (choice == "V") {
+        this.viewWeapons();
+        }
+        else if (choice == "U") {
+        this.useWeapon();
+        }
+        else if (choice == "D") {
+        this.dropWeapon(); 
+        }
+        else {
+        System.out.println("\nInvalid selection. Try again");
+        }
+        */
+        
+    }     
 
     private void doActionHelp(char selection) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    private void viewWeapons() {
+        System.out.println("\n*** viewWeapons()function called");
+    }
 
+    private void useWeapon() {
+        System.out.println("\n*** useWeapon()function called");
+    }
 
-    
+    private void dropWeapon() {
+        //System.out.println("\n*** dropInventoryItem called");
+        
+         DropItem dropItem = new DropItem();
+ 
+     
+                    dropItem.dropItemView();
+        
+        
+    }
 }
