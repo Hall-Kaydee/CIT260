@@ -14,8 +14,7 @@ import java.util.Scanner;
 public class DropItem {
  
   
-
-    public void displayMenu(){
+    public void displayDropItem(){
         
         char selection = ' ';
         
@@ -34,11 +33,11 @@ public class DropItem {
         
     }    
 
-    void dropItemView() {
+    void dropInvetoryItem() {
 
                 boolean done = false;// set flag to not done.
         do{
-            //prompt for and get player's name
+            //prompt for input
             String menuOption = this.getMenuOption();
             if (menuOption.toUpperCase().equals("Q")) //user wants to quit
                 return;//exit the game
@@ -60,13 +59,13 @@ public class DropItem {
      
         
         Scanner keyboard = new Scanner(System.in);//keyboard input string
-        String value = "";
+        String value = "     ";
             boolean valid = false;//setflag to invalid valid entered
             while (!valid) {
                 //while a valid name has not been retrieved
                 
               
-                
+               
               
                 
                 value = keyboard.nextLine();//get the name from the keyboard
@@ -75,7 +74,7 @@ public class DropItem {
                 
                 // if the name is invalid < one character in length
                 
-                if (value.length()< 1){
+                if (value.length() < 1){
                 
                 System.out.println("invalid value - the value cannot be blank.");
                 
@@ -102,11 +101,11 @@ public class DropItem {
         
         switch (choice){
             
-            case "Water"://View inventory items?
+            case "W"://View inventory items?
                 this.dropWaterItem();
                 break;
             
-            case "Energy Bar"://Use inventory item
+            case "E"://Use inventory item
                 this.dropEnergybarItem();
                break;
                
@@ -136,9 +135,16 @@ public class DropItem {
         System.out.println("\n*** dropWaterItem() called");
     }
 
-    private void doActionDrop(char selection) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
+    void dropInventoryItem() {
+        this.displayDropItem();
     }
+
+    public void doActionDrop(char selection) {
+        this.dropInvetoryItem();
+    }
+
+    
     
     
     
