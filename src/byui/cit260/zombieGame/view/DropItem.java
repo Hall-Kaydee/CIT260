@@ -101,15 +101,15 @@ public class DropItem {
         
         switch (choice){
             
-            case "W"://View inventory items?
+            case "WATER"://View inventory items?
                 this.dropWaterItem();
                 break;
             
-            case "E"://Use inventory item
+            case "ENERGYBAR"://Use inventory item
                 this.dropEnergybarItem();
                break;
                
-            case "MedKit"://Drop item
+            case "MEDKIT"://Drop item
                 this.dropMedkititem();
                 break;
  

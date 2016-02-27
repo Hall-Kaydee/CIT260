@@ -33,20 +33,20 @@ public class InventoryView {
 
     public void displayMenu(){
         
-        char selection = ' ';
+        String selection = " ";
         
         do {
             
             System.out.println(INVENTORYMENU);// display the main menu
             
             String input = this.getInput();// get the user selection
-            selection = input.charAt(0);//get first character of string
+            
             
             this.doActionInventory(selection);//do action based on selection
             
           }
         
-        while (selection != 'E');//while selection is not exit
+        while (selection != "E");//while selection is not exit
         
     }    
 
@@ -178,9 +178,7 @@ public class InventoryView {
         
     }
 
-    private void doActionInventory(char selection) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   
 
    
     
