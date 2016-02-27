@@ -44,7 +44,7 @@ public class MainMenuView {
             
           }
         
-        while (selection != 'E');//while selection is not exit
+        while (selection != 'Q');//while selection is not exit
         
     }
 /* BEGIN
@@ -191,7 +191,7 @@ END
         
         //display the game menu
         GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
+        gameMenu.displayGameMenuView();
         
         
         

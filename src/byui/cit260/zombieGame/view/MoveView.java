@@ -3,44 +3,47 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byui.cit260.zombieGame.model;
+package byui.cit260.zombieGame.view;
 
-import byui.cit260.zombieGame.view.MapView;
-import byui.cit260.zombieGame.view.MoveView;
+import byui.cit260.zombieGame.control.MoveControl;
 import java.util.Scanner;
+
+
 
 /**
  *
  * @author Boyd
  */
-public class GameMenuView {
-   
-    public final String GAMEMENU = "\n"
+public class MoveView {
+ 
+        int xCoord = 0;
+        int yCoord = 0;
+    
+    public final String MOVEMENU = "\n"
             + "\n++++++++++++++++++++++++++++++++++++++"
-            + "\n+  Game Menu                          "
+            + "\n+  Move Menu                          "
             + "\n++++++++++++++++++++++++++++++++++++++"
-            + "\nV - View Map"
-            + "\nE - View Equipment"
-            + "\nM - Move"
-            + "\nU - Use Equipment"
-            + "\nW - Select Weapon"            
+            + "\nR - Right"
+            + "\nL - Left"
+            + "\nF - Forward"
+            + "\nB - Back"
             + "\nQ - Quit"
             + "\n++++++++++++++++++++++++++++++++++++++"
             ;
     private boolean promptMessage;
 
- /*   public void displayMenu(){
+/*    public void displayMenu(){
         
         char selection = ' ';
         
         do {
             
-            System.out.println(GAMEMENU);// display the main menu
+            System.out.println(MOVEMENU);// display the main menu
             
             String input = this.getInput();// get the user selection
             selection = input.charAt(0);//get first character of string
             
-            this.doActionGame(selection);//do action based on selection
+            this.doActionMove(selection);//do action based on selection
             
           }
         
@@ -50,7 +53,7 @@ public class GameMenuView {
     
     */
 
-    public void displayGameMenuView() {
+    public void displayMoveMenuView() {
 
                 boolean done = false;// set flag to not done.
         do{
@@ -59,15 +62,15 @@ public class GameMenuView {
             if (menuOption.toUpperCase().equals("Q")) //user wants to quit
                 return;//exit the game
                 //do the requested action and display the next view
-                done = this.doActionGame(menuOption);
+                done = this.doActionMove(menuOption);
             }
         while (!done);
     
     }
 
-     /*   private String getInput() {
+    private String getInput() {
 
-
+    /*
         
     getInput(): value
         BEGIN
@@ -83,13 +86,11 @@ public class GameMenuView {
         ENDWHILE
         RETURN value    
         
- 
+     */
  
 
     return "WHAT_AM_I? See line 95";
     }
-
-    */
 
     private String getMenuOption() {
      
@@ -102,7 +103,7 @@ public class GameMenuView {
                 
                 //prompt for the players name
                 
-                System.out.println(this.GAMEMENU);
+                System.out.println(this.MOVEMENU);
                 
                 value = keyboard.nextLine();//get the name from the keyboard
                 
@@ -129,39 +130,61 @@ public class GameMenuView {
     
     
     }
-    public boolean doActionGame(String choice){
+    public boolean doActionMove(String choice){
     
         // this is the help menu do action function
         
         choice = choice.toUpperCase(); //convert choice to upper case
+        FightView fightView = new FightView();        
+
+        //int xCoord = 0;
+        //int yCoord = 0;        
+        MoveControl moveControl = new MoveControl();
         
         switch (choice){
             
-            case "V"://what is the goal?
-                this.displayMapView();
-               break;
+
             
-            case "E"://How to move
-                System.out.println("\nView Equipment");
+            case "R"://right
+                
+
+                int result[] = moveControl.movePlayerRight(xCoord, yCoord);
+                
+                System.out.println("\nPlayer location is " + result[0] + "," + result[1]);
+                System.out.println("\nYou have moved to the right");
+
+                fightView.getFightResult();
+                break;
+            
+            case "L"://Left
+
+
+                int resultL[] = moveControl.movePlayerLeft(xCoord, yCoord);
+                
+                System.out.println("\nPlayer location is " + resultL[0] + "," + resultL[1]);
+                System.out.println("\nYou have moved to the left");
+
+                fightView.getFightResult();
                break;
                
-            case "M"://how to get items noted out to test inventory menu -Evan
+            case "F"://Forward
 
-                MoveView moveMenu = new MoveView();
-                moveMenu.displayMoveMenuView();
+                int resultF[] = moveControl.movePlayerForward(xCoord, yCoord);
+                
+                System.out.println("\nPlayer location is " + resultF[0] + "," + resultF[1]);
+                System.out.println("\nYou have moved forward");
 
-
-                //System.out.println("\nYou have moved");
-
+                fightView.getFightResult();
                 break;
                 
-            case "U"://combat - how to fight
-                System.out.println("\nSelect Equipment");
-                break;
+            case "B"://Back
+
+                int resultB[] = moveControl.movePlayerBack(xCoord, yCoord);
                 
-                
-            case "W"://combat - how to fight
-                System.out.println("\nView and Select Weapons");
+                System.out.println("\nPlayer location is " + resultB[0] + "," + resultB[1]);
+                System.out.println("\nYou have moved backward");
+
+                fightView.getFightResult();
                 break;
  
             default:
@@ -174,17 +197,13 @@ public class GameMenuView {
         
     }    
 
-   
-
-    private void displayMapView() {
- 
-      MapView mapView = new MapView();
- 
-     
-      mapView.displayMapView();   
+    private void doActionHelp(char selection) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }    
     
     
-    }
-
+    
+    
+    
     
 }

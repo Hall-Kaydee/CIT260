@@ -38,7 +38,7 @@ public class FightControl {
  
     
     
-    public double calcCharacterHealth (double enemyDamage, double numberOfEnemies, double characterHealth, int charHitPoints ){
+    public double calcCharacterHealth(double enemyDamage, double numberOfEnemies, double characterHealth, int charHitPoints ){
     
         if (numberOfEnemies <= 0 || characterHealth <= 0){
             
