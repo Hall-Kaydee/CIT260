@@ -7,6 +7,7 @@ package byui.cit260.zombieGame.model;
 //
 import java.io.Serializable;
 import java.util.Objects;
+import zombiegame.ZombieGame;
 
 /**
  *
@@ -17,8 +18,10 @@ public class MainCharacter implements Serializable{
     //Class vars
     private String name;
     private String description;
-    private double coordinates;
+//    public int xCoordinate = 6;
+//    public int yCoordinate = 12;
     private double hitPoints;
+    private double xCoordinate;
 
     public MainCharacter() {
     }
@@ -43,13 +46,27 @@ public class MainCharacter implements Serializable{
         this.description = description;
     }
 
-    public double getCoordinates() {
-        return coordinates;
+    public int getXCoordinate() {
+       
+        return ZombieGame.xCoordinate;
     }
 
-    public void setCoordinates(double coordinates) {
-        this.coordinates = coordinates;
+    public int getYCoordinate() {
+       
+        return ZombieGame.yCoordinate;
+    }    
+    
+    
+    
+    public void setXCoordinate(int xCoord) {
+        ZombieGame.xCoordinate = xCoord;
     }
+
+    public void setYCoordinate(int yCoord) {
+        ZombieGame.yCoordinate = yCoord;
+    }    
+    
+    
 
     public double getHitPoints() {
         return hitPoints;
@@ -64,13 +81,13 @@ public class MainCharacter implements Serializable{
         int hash = 3;
         hash = 79 * hash + Objects.hashCode(this.name);
         hash = 79 * hash + Objects.hashCode(this.description);
-        hash = 79 * hash + (int) (Double.doubleToLongBits(this.coordinates) ^ (Double.doubleToLongBits(this.coordinates) >>> 32));
+//        hash = 79 * hash + (int) (Double.doubleToLongBits(this.xCoordinate) ^ (Double.doubleToLongBits(this.xCoordinate) >>> 32));
         return hash;
     }
 
     @Override
     public String toString() {
-        return "MainCharacter{" + "name=" + name + ", description=" + description + ", coordinates=" + coordinates + ", hitPoints=" + hitPoints + '}';
+        return "MainCharacter{" + "name=" + name + ", description=" + description + ", coordinates=" + getXCoordinate() + "," + getYCoordinate() + " hitPoints=" + hitPoints + '}';
     }
 
     
@@ -88,7 +105,8 @@ public class MainCharacter implements Serializable{
             return false;
         }
         final MainCharacter other = (MainCharacter) obj;
-        if (Double.doubleToLongBits(this.coordinates) != Double.doubleToLongBits(other.coordinates)) {
+        int xCoordinate = ZombieGame.xCoordinate;
+        if (Double.doubleToLongBits(this.xCoordinate) != Double.doubleToLongBits(other.xCoordinate)) {
             return false;
         }
         if (Double.doubleToLongBits(this.hitPoints) != Double.doubleToLongBits(other.hitPoints)) {

@@ -6,6 +6,7 @@
 package byui.cit260.zombieGame.view;
 
 import byui.cit260.zombieGame.control.MoveControl;
+import byui.cit260.zombieGame.model.MainCharacter;
 import java.util.Scanner;
 
 
@@ -15,9 +16,12 @@ import java.util.Scanner;
  * @author Boyd
  */
 public class MoveView {
- 
-        int xCoord = 0;
-        int yCoord = 0;
+
+int result[];
+    
+
+//        int xCoord = 0;
+//        int yCoord = 0;
     
     public final String MOVEMENU = "\n"
             + "\n++++++++++++++++++++++++++++++++++++++"
@@ -32,26 +36,6 @@ public class MoveView {
             ;
     private boolean promptMessage;
 
-/*    public void displayMenu(){
-        
-        char selection = ' ';
-        
-        do {
-            
-            System.out.println(MOVEMENU);// display the main menu
-            
-            String input = this.getInput();// get the user selection
-            selection = input.charAt(0);//get first character of string
-            
-            this.doActionMove(selection);//do action based on selection
-            
-          }
-        
-        while (selection != 'Q');//while selection is not Quit
-        
-    } 
-    
-    */
 
     public void displayMoveMenuView() {
 
@@ -68,29 +52,7 @@ public class MoveView {
     
     }
 
-    private String getInput() {
 
-    /*
-        
-    getInput(): value
-        BEGIN
-        WHILE valid value has not been entered
-         DISPLAY a message prompting the user to enter a value
-         GET the value entered from keyboard
-         Trim blanks off front and end of value
-         IF invalid value entered THEN
-         DISPLAY invalid value message
-         CONTINUE
-         ENDIF
-         BREAK
-        ENDWHILE
-        RETURN value    
-        
-     */
- 
-
-    return "WHAT_AM_I? See line 95";
-    }
 
     private String getMenuOption() {
      
@@ -141,29 +103,35 @@ public class MoveView {
         //int yCoord = 0;        
         MoveControl moveControl = new MoveControl();
         
+          MainCharacter xCoordinate = new MainCharacter();
+          MainCharacter yCoordinate = new MainCharacter();
+
+          int xCoord = xCoordinate.getXCoordinate();
+          int yCoord = yCoordinate.getYCoordinate();        
+
         switch (choice){
-            
-
-            
+          
             case "R"://right
-                
-
                 int result[] = moveControl.movePlayerRight(xCoord, yCoord);
                 
                 System.out.println("\nPlayer location is " + result[0] + "," + result[1]);
                 System.out.println("\nYou have moved to the right");
-
+                
                 fightView.getFightResult();
                 break;
             
             case "L"://Left
 
 
+        
                 int resultL[] = moveControl.movePlayerLeft(xCoord, yCoord);
                 
                 System.out.println("\nPlayer location is " + resultL[0] + "," + resultL[1]);
                 System.out.println("\nYou have moved to the left");
 
+                //xCoordinate.setXCoordinate(resultL[0]);
+                //yCoordinate.setYCoordinate(resultL[1]);                
+                
                 fightView.getFightResult();
                break;
                
@@ -173,6 +141,9 @@ public class MoveView {
                 
                 System.out.println("\nPlayer location is " + resultF[0] + "," + resultF[1]);
                 System.out.println("\nYou have moved forward");
+
+                //xCoordinate.setXCoordinate(resultF[0]);
+                //yCoordinate.setYCoordinate(resultF[1]); 
 
                 fightView.getFightResult();
                 break;
@@ -184,6 +155,9 @@ public class MoveView {
                 System.out.println("\nPlayer location is " + resultB[0] + "," + resultB[1]);
                 System.out.println("\nYou have moved backward");
 
+                //xCoordinate.setXCoordinate(resultB[0]);
+                //yCoordinate.setYCoordinate(resultB[1]);                 
+                
                 fightView.getFightResult();
                 break;
  

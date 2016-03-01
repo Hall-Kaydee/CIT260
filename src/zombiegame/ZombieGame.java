@@ -20,21 +20,18 @@ import byui.cit260.zombieGame.model.Locations;
 import byui.cit260.zombieGame.model.NormalScene;
 import byui.cit260.zombieGame.view.StartProgramView;
 
-
 /**
- *
  * @author Evanator
  */
 public class ZombieGame {
-
     /**
      * @param args the command line arguments
      */
-    
     private static Game currentGame = null;
     private static Player player = null;
-    
-    
+
+    public static int xCoordinate = 0;//initial player X coordinate
+    public static int yCoordinate = 0;//initial player Y coordinate
     
     
      public static Game getCurrentGame() {
@@ -52,21 +49,14 @@ public class ZombieGame {
     public static void setPlayer(Player player) {
         ZombieGame.player = player;
     }
-       
-    
-    
-    
+  
     public static void main(String[] args) {
        
         //create startProgramview origin - display start program view
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.displayStartProgramView();
-        
-    
-        
-    }
-    
 
-    
-    
+       
+    }
+   
 }
