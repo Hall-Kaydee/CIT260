@@ -14,9 +14,10 @@ import zombiegame.ZombieGame;
  *
  * @author Boyd
  */
-public class MainMenuView {
+public class MainMenuView extends View {
 
-    private final String MENU = "\n"
+    public MainMenuView(){
+    super("\n"
             + "\n++++++++++++++++++++++++++++++++++++++"
             + "\n+  Main Menu                          "
             + "\n++++++++++++++++++++++++++++++++++++++"
@@ -26,38 +27,14 @@ public class MainMenuView {
             + "\nS - Save Game"
             + "\nQ - Quit"
             + "\n++++++++++++++++++++++++++++++++++++++"
-            ;
+     );
+    }
     private boolean promptMessage;
 
-    public void displayMenu(){
-        
-        char selection = ' ';
-        
-        do {
-            
-            System.out.println(MENU);// display the main menu
-            
-            String input = this.getInput();// get the user selection
-            selection = input.charAt(0);//get first character of string
-            
-            this.doAction(selection);//do action based on selection
-            
-          }
-        
-        while (selection != 'Q');//while selection is not exit
-        
+    public MainMenuView(String message) {
+        super(message);
     }
-/* BEGIN
-DO
-	 	 DISPLAY the Main Menu
-	 	 GET the user’s selection
-	 	 Perform the action associated with selection
-		
 
-WHILE the letter “E” has not been selected
-END
-
-*/
     
     
     
@@ -66,7 +43,7 @@ END
                 boolean done = false;// set flag to not done.
         do{
             //prompt for and get player's name
-            String menuOption = this.getMenuOption();
+            String menuOption = this.getInput();
             if (menuOption.toUpperCase().equals("Q")) //user wants to quit
                 return;//exit the game
                 //do the requested action and display the next view
@@ -76,75 +53,15 @@ END
     
     }
 
-    private String getInput() {
-
-    /*
-        
-    getInput(): value
-        BEGIN
-        WHILE valid value has not been entered
-         DISPLAY a message prompting the user to enter a value
-         GET the value entered from keyboard
-         Trim blanks off front and end of value
-         IF invalid value entered THEN
-         DISPLAY invalid value message
-         CONTINUE
-         ENDIF
-         BREAK
-        ENDWHILE
-        RETURN value    
-        
-     */
- 
-
-    return "WHAT_AM_I? See line 95";
-    }
-
-    private String getMenuOption() {
-     
-        
-        Scanner keyboard = new Scanner(System.in);//keyboard input string
-        String value = "";
-            boolean valid = false;//setflag to invalid valid entered
-            while (!valid) {
-                //while a valid name has not been retrieved
-                
-                //prompt for the players name
-                
-                System.out.println(this.MENU);
-                
-                value = keyboard.nextLine();//get the name from the keyboard
-                
-                value = value.trim();//trim off the excess blanks
-                
-                // if the name is invalid < one character in length
-                
-                if (value.length()< 1){
-                
-                System.out.println("invalid value - the value cannot be blank.");
-                
-                continue;//and repeat again
-                
-                        }
-                
-                valid = true;//set flag to end repetition
-                
-                }
-
-                return value;//return the value       
-        
-        
-        
-    //    System.out.println("\n*** get main menu option function called");
-    //    return "N";
     
-    }
 
-    public boolean doAction(String choice) {
     
-        choice = choice.toUpperCase(); //convert choice to upper case
+@Override
+    public boolean doAction(String value) {
+    
+        value = value.toUpperCase(); //convert choice to upper case
         
-        switch (choice){
+        switch (value){
             
             case "N"://create and start a new game
                 this.startNewGame();

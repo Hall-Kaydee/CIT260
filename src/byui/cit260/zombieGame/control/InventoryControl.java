@@ -14,8 +14,6 @@ public class InventoryControl {
     
     public double calcItemWeight(double quantity, double gramsPerItem) {
         
-        
-
         if (quantity < 0 || quantity > 50) {
             return -1;
             }
