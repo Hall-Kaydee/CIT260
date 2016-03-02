@@ -10,9 +10,10 @@ import java.util.Scanner;
  *
  * @author Boyd
  */
-public class HelpMenuView {
+public class HelpMenuView extends View {
 
-    public final String HELPMENU = "\n"
+    public HelpMenuView(){
+    super("\n"
             + "\n++++++++++++++++++++++++++++++++++++++"
             + "\n+  Help Menu                          "
             + "\n++++++++++++++++++++++++++++++++++++++"
@@ -22,106 +23,36 @@ public class HelpMenuView {
             + "\nF - How do you fight enemies?"
             + "\nQ - Quit"
             + "\n++++++++++++++++++++++++++++++++++++++"
-            ;
+    );
+    }
     private boolean promptMessage;
+    
+    public HelpMenuView(String message) {
+        super (message);
+    }
 
-    public void displayMenu(){
-        
-        char selection = ' ';
-        
-        do {
-            
-            System.out.println(HELPMENU);// display the main menu
-            
-            String input = this.getInput();// get the user selection
-            selection = input.charAt(0);//get first character of string
-            
-            this.doActionHelp(selection);//do action based on selection
-            
-          }
-        
-        while (selection != 'E');//while selection is not exit
-        
-    }    
+    
 
     void displayHelpMenuView() {
 
                 boolean done = false;// set flag to not done.
         do{
             //prompt for and get player's name
-            String menuOption = this.getMenuOption();
+            String menuOption = this.getInput();
             if (menuOption.toUpperCase().equals("Q")) //user wants to quit
                 return;//exit the game
                 //do the requested action and display the next view
-                done = this.doActionHelp(menuOption);
+                done = this.doAction(menuOption);
             }
         while (!done);
     
     }
 
-    private String getInput() {
+    
 
-    /*
-        
-    getInput(): value
-        BEGIN
-        WHILE valid value has not been entered
-         DISPLAY a message prompting the user to enter a value
-         GET the value entered from keyboard
-         Trim blanks off front and end of value
-         IF invalid value entered THEN
-         DISPLAY invalid value message
-         CONTINUE
-         ENDIF
-         BREAK
-        ENDWHILE
-        RETURN value    
-        
-     */
- 
-
-    return "WHAT_AM_I? See line 95";
-    }
-
-    private String getMenuOption() {
-     
-        
-        Scanner keyboard = new Scanner(System.in);//keyboard input string
-        String value = "";
-            boolean valid = false;//setflag to invalid valid entered
-            while (!valid) {
-                //while a valid name has not been retrieved
-                
-                //prompt for the players name
-                
-                System.out.println(this.HELPMENU);
-                
-                value = keyboard.nextLine();//get the name from the keyboard
-                
-                value = value.trim();//trim off the excess blanks
-                
-                // if the name is invalid < one character in length
-                
-                if (value.length()< 1){
-                
-                System.out.println("invalid value - the value cannot be blank.");
-                
-                continue;//and repeat again
-                
-                        }
-                
-                valid = true;//set flag to end repetition
-                
-                }
-
-                return value;//return the value       
     
-    
-    
-    
-    
-    }
-    public boolean doActionHelp(String choice){
+    @Override
+    public boolean doAction(String choice){
     
         // this is the help menu do action function
         
@@ -148,7 +79,7 @@ public class HelpMenuView {
                 InventoryView inventoryView = new InventoryView();
  
      
-                    inventoryView.displayInventoryView();
+                    inventoryView.display();
                 
                 
                 break;

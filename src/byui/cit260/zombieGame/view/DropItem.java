@@ -11,11 +11,11 @@ import java.util.Scanner;
  *
  * @author Evanator
  */
-public class DropItem {
+public class DropItem  {
  
   
     public void displayDropItem(){
-        
+       
         char selection = ' ';
         
         do {

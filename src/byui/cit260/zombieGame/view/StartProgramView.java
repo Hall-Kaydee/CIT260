@@ -49,13 +49,13 @@ is entered and the player is prompted to re-enter a valid name or quit.
  *
  * @author Boyd
  */
-public class StartProgramView {
+public class StartProgramView extends View {
     
-    private String promptMessage;
+    public String displayMessage;
     
     public StartProgramView(){
         
-        this.promptMessage = "\nPlease enter your name:";
+        this.displayMessage = "\nPlease enter your name:";
         
         //display banner when view is created
         this.displayBanner();
@@ -91,7 +91,7 @@ public class StartProgramView {
         boolean done = false;// set flag to not done.
         do{
             //prompt for and get player's name
-            String playersName = this.getPlayersName();
+            String playersName = this.getInput();
             if (playersName.toUpperCase().equals("Q")) //user wants to quit
                 return;//exit the game
                 //do the requested action and display the next view
@@ -100,8 +100,8 @@ public class StartProgramView {
         while (!done);
     
             }
-
-    private String getPlayersName() {
+// When deleted just get null
+    public String getInput() {
     
         Scanner keyboard = new Scanner(System.in);//keyboard input string
         String value = "";
@@ -111,7 +111,7 @@ public class StartProgramView {
                 
                 //prompt for the players name
                 
-                System.out.println(this.promptMessage);
+                System.out.println(this.displayMessage);
                 
                 value = keyboard.nextLine();//get the name from the keyboard
                 
@@ -134,8 +134,8 @@ public class StartProgramView {
                 return value;//return the value
  
     }
-
-    private boolean doAction(String playersName) {
+@Override
+    public boolean doAction(String playersName) {
     
         /*
         doAction(playersName): boolean
