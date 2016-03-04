@@ -7,7 +7,6 @@ package byui.cit260.zombieGame.view;
 
 import byui.cit260.zombieGame.control.MoveControl;
 import byui.cit260.zombieGame.model.MainCharacter;
-import java.util.Scanner;
 
 
 
@@ -15,15 +14,13 @@ import java.util.Scanner;
  *
  * @author Boyd
  */
-public class MoveView {
+public class MoveView extends View{
 
 int result[];
     
-
-//        int xCoord = 0;
-//        int yCoord = 0;
     
-    public final String MOVEMENU = "\n"
+        public MoveView() {
+        super ("\n"
             + "\n++++++++++++++++++++++++++++++++++++++"
             + "\n+  Move Menu                          "
             + "\n++++++++++++++++++++++++++++++++++++++"
@@ -33,66 +30,14 @@ int result[];
             + "\nB - Back"
             + "\nQ - Quit"
             + "\n++++++++++++++++++++++++++++++++++++++"
-            ;
-    private boolean promptMessage;
-
-
-    public void displayMoveMenuView() {
-
-                boolean done = false;// set flag to not done.
-        do{
-            //prompt for and get player's name
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q")) //user wants to quit
-                return;//exit the game
-                //do the requested action and display the next view
-                done = this.doActionMove(menuOption);
+               );
             }
-        while (!done);
-    
-    }
 
 
 
-    private String getMenuOption() {
-     
-        
-        Scanner keyboard = new Scanner(System.in);//keyboard input string
-        String value = "";
-            boolean valid = false;//setflag to invalid valid entered
-            while (!valid) {
-                //while a valid name has not been retrieved
-                
-                //prompt for the players name
-                
-                System.out.println(this.MOVEMENU);
-                
-                value = keyboard.nextLine();//get the name from the keyboard
-                
-                value = value.trim();//trim off the excess blanks
-                
-                // if the name is invalid < one character in length
-                
-                if (value.length()< 1){
-                
-                System.out.println("invalid value - the value cannot be blank.");
-                
-                continue;//and repeat again
-                
-                        }
-                
-                valid = true;//set flag to end repetition
-                
-                }
 
-                return value;//return the value       
-    
-    
-    
-    
-    
-    }
-    public boolean doActionMove(String choice){
+    @Override
+    public boolean doAction(String choice){
     
         // this is the help menu do action function
         
@@ -171,13 +116,5 @@ int result[];
         
     }    
 
-    private void doActionHelp(char selection) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }    
-    
-    
-    
-    
-    
-    
+
 }

@@ -6,7 +6,6 @@
 package byui.cit260.zombieGame.view;
 
 import byui.cit260.zombieGame.control.GameControl;
-import byui.cit260.zombieGame.model.GameMenuView;
 import java.util.Scanner;
 import zombiegame.ZombieGame;
 
@@ -32,31 +31,12 @@ public class MainMenuView extends View {
     private boolean promptMessage;
 
     public MainMenuView(String message) {
-        super(message);
+        super (message);
     }
 
-    
-    
-    
-    void displayMainMenuView() {
-
-                boolean done = false;// set flag to not done.
-        do{
-            //prompt for and get player's name
-            String menuOption = this.getInput();
-            if (menuOption.toUpperCase().equals("Q")) //user wants to quit
-                return;//exit the game
-                //do the requested action and display the next view
-                done = this.doAction(menuOption);
-            }
-        while (!done);
-    
-    }
 
     
-
-    
-@Override
+    @Override
     public boolean doAction(String value) {
     
         value = value.toUpperCase(); //convert choice to upper case
@@ -88,18 +68,7 @@ public class MainMenuView extends View {
         return false;
         
     }
-    
-    
 
-    
-    
-    
-    
-    
-        
-        
-    //    System.out.println("\n*** do action function called");
-    //    return true;
 
     private void startNewGame() {
  
@@ -108,11 +77,8 @@ public class MainMenuView extends View {
         
         //display the game menu
         GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayGameMenuView();
-        
-        
-        
-        
+        gameMenu.display();
+           
     }
 
     private void loadGame() {
@@ -142,14 +108,5 @@ public class MainMenuView extends View {
     }
 
 
-   
-
-    private void doAction(char selection) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-  
-    
-    
-    
     
 }

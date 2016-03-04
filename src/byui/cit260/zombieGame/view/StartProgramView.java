@@ -54,13 +54,13 @@ public class StartProgramView extends View {
     public String displayMessage;
     
     public StartProgramView(){
-        
+        super();         
         this.displayMessage = "\nPlease enter your name:";
         
         //display banner when view is created
         this.displayBanner();
         
-        
+   
     } 
 
     private void displayBanner() {
@@ -134,25 +134,9 @@ public class StartProgramView extends View {
                 return value;//return the value
  
     }
-@Override
+    @Override
     public boolean doAction(String playersName) {
     
-        /*
-        doAction(playersName): boolean
-        BEGIN
-            if the length of the playersName < 2 then
-            display “Invalid name: The name must be > 1 character”
-            return false
-
-            create Player with specified name
-            if unsuccessful then
-            display “Invalid name: The name is too short”
-            return false
-            display customized welcome message
-            display mainMenuView
-            return true
-           END
-          */
     
         if (playersName.length()< 2){
             
@@ -198,20 +182,8 @@ public class StartProgramView extends View {
                         //create main menu view object
                         MainMenuView mainMenuView = new MainMenuView();
                         // display the main menu view
-                        mainMenuView.displayMainMenuView();
-                        
-        
+                        mainMenuView.display();
+       
     }
-
-
-
-
-        
+       
  } 
-
-    
-   
-    
-   
-    
-
