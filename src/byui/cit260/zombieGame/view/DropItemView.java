@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Evanator
  */
-public class DropItem  {
+public class DropItemView  {
  
   
     public void displayDropItem(){

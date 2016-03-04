@@ -101,7 +101,7 @@ public class InventoryView extends View {
     private void dropInventoryItem() {
         //System.out.println("\n*** dropInventoryItem called");
         
-         DropItem dropItem = new DropItem();
+         DropItemView dropItem = new DropItemView();
  
      
                     dropItem.dropInventoryItem();
