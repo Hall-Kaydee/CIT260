@@ -78,6 +78,13 @@ public class InventoryView extends View {
                 this.dropInventoryItem();
                 break;
  
+                
+              case "S"://testing the search
+                this.searchArea();
+                break;
+                
+                
+                
             default:
                 System.out.println("\nInvalid selection. Try again");
                 break;
@@ -108,6 +115,11 @@ public class InventoryView extends View {
         
         
     }
+
+   private void searchArea() {
+        SearchAreaView searchArea = new SearchAreaView();
+                searchArea.searchArea();
+                  }
 
    
 
