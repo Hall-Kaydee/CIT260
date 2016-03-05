@@ -46,7 +46,9 @@ public class GameMenuView extends View{
                break;
             
             case "E"://How to move
-                System.out.println("\nView Equipment");
+                //System.out.println("\nView Equipment");
+                InventoryView inventoryMenu = new InventoryView();
+                inventoryMenu.display();
                break;
                
             case "M"://how to get items noted out to test inventory menu -Evan
@@ -60,7 +62,10 @@ public class GameMenuView extends View{
                 break;
                 
             case "U"://combat - how to fight
-                System.out.println("\nSelect Equipment");
+                
+                UseEquipmentView useEquipmentMenu = new UseEquipmentView();
+                useEquipmentMenu.display();
+                
                 break;
                 
                 

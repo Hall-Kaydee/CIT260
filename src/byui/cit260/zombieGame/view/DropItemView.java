@@ -11,89 +11,36 @@ import java.util.Scanner;
  *
  * @author Evanator
  */
-public class DropItemView  {
- 
-  
-    public void displayDropItem(){
-       
-        char selection = ' ';
-        
-        do {
-            
-            System.out.println("Enter an Item to drop");// display the main menu
-            
-            String input = this.getInput();// get the user selection
-            selection = input.charAt(0);//get first character of string
-            
-            this.doActionDrop(selection);//do action based on selection
-            
-          }
-        
-        while (selection != 'E');//while selection is not exit
-        
-    }    
+public class DropItemView extends View {
 
-    void dropInvetoryItem() {
+    public DropItemView() {
+    super ("\nEnter an Item to drop");
+    }
+
+
+
+  
+    
+
+    void dropInventoryItem() {
 
                 boolean done = false;// set flag to not done.
         do{
             //prompt for input
-            String menuOption = this.getMenuOption();
+            String menuOption = this.getInput();
             if (menuOption.toUpperCase().equals("Q")) //user wants to quit
                 return;//exit the game
                 //do the requested action and display the next view
-                done = this.doActionDrop(menuOption);
+                done = this.doAction(menuOption);
             }
         while (!done);
     
     }
 
-    private String getInput() {
 
 
-
-    return "WHAT_AM_I? See line 95";
-    }
-
-    private String getMenuOption() {
-     
-        
-        Scanner keyboard = new Scanner(System.in);//keyboard input string
-        String value = "     ";
-            boolean valid = false;//setflag to invalid valid entered
-            while (!valid) {
-                //while a valid name has not been retrieved
-                
-              
-               
-              
-                
-                value = keyboard.nextLine();//get the name from the keyboard
-                
-                value = value.trim();//trim off the excess blanks
-                
-                // if the name is invalid < one character in length
-                
-                if (value.length() < 1){
-                
-                System.out.println("invalid value - the value cannot be blank.");
-                
-                continue;//and repeat again
-                
-                        }
-                
-                valid = true;//set flag to end repetition
-                
-                }
-
-                return value;//return the value       
-    
-    
-    
-    
-    
-    }
-    public boolean doActionDrop(String choice){
+    @Override
+    public boolean doAction(String choice){
     
         // this is the drop item do action function
         
@@ -136,14 +83,14 @@ public class DropItemView  {
     }
 
 
-    void dropInventoryItem() {
+/*    void dropInventoryItem() {
         this.displayDropItem();
     }
 
     public void doActionDrop(char selection) {
-        this.dropInvetoryItem();
+        this.dropInventoryItem();
     }
-
+*/
     
     
     

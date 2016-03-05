@@ -5,8 +5,6 @@
  */
 package byui.cit260.zombieGame.view;
 
-import java.util.Scanner;
-
 /**
  *
  * @author Evanator
@@ -31,9 +29,9 @@ public class InventoryView extends View {
             + "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
     );
   }
-    private boolean promptMessage;
+    //private boolean promptMessage;
 
-    public void displayMenu(){
+/*    public void displayMenu(){
         
         String selection = " ";
         
@@ -48,11 +46,11 @@ public class InventoryView extends View {
             
           }
         
-        while (selection != "E");//while selection is not exit
+        while (selection != "Q");//while selection is not exit
         
     }    
 
-
+*/
 
    
 
@@ -121,12 +119,5 @@ public class InventoryView extends View {
                 searchArea.searchArea();
                   }
 
-   
-
-   
-    
-    
-    
-    
-    
+  
 }

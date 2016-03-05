@@ -56,12 +56,21 @@ public class MainCharacter implements Serializable{
         return ZombieGame.yCoordinate;
     }    
     
+    public int getRadioListenCount() {
+       
+        return ZombieGame.radioListenCount;
+    }
+
+    public void setRadioListenCount(int listenCount) {
+        ZombieGame.radioListenCount = listenCount;
+    }    
     
     
     public void setXCoordinate(int xCoord) {
         ZombieGame.xCoordinate = xCoord;
     }
-
+    
+    
     public void setYCoordinate(int yCoord) {
         ZombieGame.yCoordinate = yCoord;
     }    
