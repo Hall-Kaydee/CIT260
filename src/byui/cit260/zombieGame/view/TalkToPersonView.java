@@ -22,8 +22,11 @@ public class TalkToPersonView extends View{
                 + "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
                 + "\n             Talking to a person                         +"
                 + "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-                + "\nL - Listen                                               +"
-                + "\nT - Talk                                                 +"
+                + "\nA - Have you been bitten?                                +"
+                + "\nB - Do you need food?                                    +"
+                + "\nC - Are you injured?                                     +"
+                + "\nD - Where are you going?                                 +"
+                + "\nE - What is your name?                                   +"
                 + "\nQ - Quit and return to Menu                              +"
                 + "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
                
@@ -46,19 +49,36 @@ public class TalkToPersonView extends View{
         
         switch (choice){
           
-            case "L":
+            case "A":
 
-            phrase = "Things I would hear if I were listening...";
+            phrase = "\nHave you been bitten?";
             System.out.println(phrase); 
 
             break;
             
-            case "T":
+            case "B":
 
-                System.out.println("\nHello, Its me");                
+                System.out.println("\nDo you need food?");                
 
                break;
- 
+            case "C":
+
+            phrase = "\nAre you injured?";
+            System.out.println(phrase); 
+
+            break;
+            
+            case "D":
+
+                System.out.println("\nWhere are you going?");                
+
+               break;
+               
+            case "E":
+
+                System.out.println("\nWhat is your name?");                
+
+               break;
  
             default:
                 System.out.println("\nInvalid selection. Try again");
