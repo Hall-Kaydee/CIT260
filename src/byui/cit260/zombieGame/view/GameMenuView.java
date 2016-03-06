@@ -19,6 +19,7 @@ public class GameMenuView extends View{
                 + "\nV - View Map"
                 + "\nE - View Equipment"
                 + "\nM - Move"
+                + "\nT - Talk"
                 + "\nU - Use Equipment"
                 + "\nW - Select Weapon"            
                 + "\nQ - Quit"
@@ -60,6 +61,13 @@ public class GameMenuView extends View{
                 //System.out.println("\nYou have moved");
 
                 break;
+                
+            case "T":
+
+                TalkToPersonView talkMenu = new TalkToPersonView();
+                talkMenu.display();
+                
+                break;    
                 
             case "U"://combat - how to fight
                 
