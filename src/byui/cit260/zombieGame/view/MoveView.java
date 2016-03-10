@@ -6,7 +6,7 @@
 package byui.cit260.zombieGame.view;
 
 import byui.cit260.zombieGame.control.MoveControl;
-import byui.cit260.zombieGame.model.MainCharacter;
+import byui.cit260.zombieGame.model.Actor;
 
 
 
@@ -48,8 +48,8 @@ int result[];
         //int yCoord = 0;        
         MoveControl moveControl = new MoveControl();
         
-          MainCharacter xCoordinate = new MainCharacter();
-          MainCharacter yCoordinate = new MainCharacter();
+          Actor xCoordinate = new Actor();
+          Actor yCoordinate = new Actor();
 
           int xCoord = xCoordinate.getXCoordinate();
           int yCoord = yCoordinate.getYCoordinate();        
