@@ -8,9 +8,11 @@ package byui.cit260.zombieGame.control;
 import byui.cit260.zombieGame.Enum.SceneType;
 import byui.cit260.zombieGame.model.Game;
 import byui.cit260.zombieGame.model.InventoryItem;
+import byui.cit260.zombieGame.model.Location;
 import byui.cit260.zombieGame.model.Map;
 import byui.cit260.zombieGame.model.Player;
 import javafx.scene.Scene;
+
 import zombiegame.ZombieGame;
 
 /**
@@ -37,11 +39,11 @@ public class GameControl {
    // System.out.println("called movemainc har");
     }
 
-   static void assignScenesToLocations(Map map, Scene[] scenes) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-   }
+ //  static void assignScenesToLocations(Map map, Scene[] scenes) {
+ //       throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+ //  }
 
-   static void assignScenesToLocations(Map map, byui.cit260.zombieGame.model.Scene[] scenes) {
+   public void assignScenesToLocations(Map map, Scene[] scenes) {
         Location[][] locations = map.getLocations();
         
         locations[0][0].setScene(scenes[SceneType.start.ordinal()]);
