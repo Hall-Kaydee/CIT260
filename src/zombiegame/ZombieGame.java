@@ -12,11 +12,11 @@ import byui.cit260.zombieGame.model.Thug;
 import byui.cit260.zombieGame.model.Weapon;
 import byui.cit260.zombieGame.model.Zombie;
 import byui.cit260.zombieGame.model.Game;
-import byui.cit260.zombieGame.model.Actor;
+import byui.cit260.zombieGame.model.MainCharacter;
 import byui.cit260.zombieGame.model.NPC;
 import byui.cit260.zombieGame.model.ConversationScene;
-import byui.cit260.zombieGame.model.EventScene;
-import byui.cit260.zombieGame.model.Locations;
+import byui.cit260.zombieGame.model.Scene;
+import byui.cit260.zombieGame.model.Location;
 import byui.cit260.zombieGame.model.NormalScene;
 import byui.cit260.zombieGame.view.StartProgramView;
 

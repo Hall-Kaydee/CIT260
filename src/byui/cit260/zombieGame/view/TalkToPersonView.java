@@ -6,7 +6,7 @@
 package byui.cit260.zombieGame.view;
 
 import byui.cit260.zombieGame.control.UseRadioControl;
-import byui.cit260.zombieGame.model.Actor;
+import byui.cit260.zombieGame.model.MainCharacter;
 
 /**
  *

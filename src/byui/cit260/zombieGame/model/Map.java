@@ -5,10 +5,11 @@
  */
 package byui.cit260.zombieGame.model;
 import java.io.Serializable;
+
 //
 /**
  *
- * @author Boyd
+ * @author Boyd/Evan
  */
 
 
@@ -18,10 +19,48 @@ public class Map implements Serializable {
     private int distanceTraveled;
     private int playerXCoordinate;
     private int playerYCoordinate;
+    private int noOfRows;
+    private int noOfColumns;
+    private Location[] [] locations;
 
     public Map() {
     }
+
+    public Map(int noOfRows, int noOfColumns) {
+       
+     if (noOfRows < 1 || noOfColumns < 1){
+        System.out.println("The number of rows and coloumns must be greater then zero");
+        return;
+     }   
+        
+     this.noOfRows = noOfRows;
+     this.noOfColumns = noOfColumns;
+     
+     //create 2-D array for location objects
+     this.locations = new Location[noOfRows][noOfColumns];
+     
+     for (int row = 0; row < noOfRows; row++) {
+         for (int column = 0; column < noOfColumns; column++){
+         //create and intialize new location object instance
+         Location location = new Location();
+         location.setColumn(column);
+         location.setRow(row);
+         location.setVisited(false);
+         
+         //assign the locationobject to the current postion in array
+         locations [row] [column] = location;
+     }
+     } 
+    }
     
+    
+public Location[][] getLocations() {
+        return locations;
+    }
+
+    public void setLocations(Location[][] locations) {
+        this.locations = locations;
+    }
     
 
     public int getDistanceToDestination() {
@@ -99,6 +138,13 @@ public class Map implements Serializable {
         }
         return true;
     }
+    
+    
+    
+    
+    
+    
+    
     
     
     

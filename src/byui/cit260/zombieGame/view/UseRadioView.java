@@ -6,7 +6,7 @@
 package byui.cit260.zombieGame.view;
 
 import byui.cit260.zombieGame.control.UseRadioControl;
-import byui.cit260.zombieGame.model.Actor;
+import byui.cit260.zombieGame.model.MainCharacter;
 
 
 /**
@@ -39,7 +39,7 @@ public class UseRadioView extends View{
     
     choice = choice.toUpperCase();
     
-    Actor radioListenCount = new Actor();
+    MainCharacter radioListenCount = new MainCharacter();
 
     int listenCount = radioListenCount.getRadioListenCount();           
 

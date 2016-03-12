@@ -5,21 +5,77 @@
  */
 package byui.cit260.zombieGame.model;
 //
+import byui.cit260.zombieGame.Enum.Actor;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
+import javafx.scene.Scene;
 
 /**
  *
- * @author kaydee
+ * @author kaydee/Evan
  */
-public class Locations implements Serializable{
+public class Location implements Serializable{
     // class instance variables 
     private String type;
     private double timeOfDay;
+    private int row;
+    private int column;
+    private boolean visited;
+    private Scene scene;
+    private ArrayList<Actor> actors;
 
-    public Locations() {
+    public Location(int row, int column, Scene scene, ArrayList<Actor> actors) {
+        this.row = row;
+        this.column = column;
+        this.scene = scene;
+        this.visited = false;
+        this.actors = actors;
     }
 
+    
+     public Location() {
+        this.actors = new ArrayList<Actor>();
+    }
+
+   
+    public Location(int row, int column) {
+        this.row = row;
+        this.column = column;
+    }
+    
+    
+    public int getRow() {
+        return row;
+    }
+
+    public void setRow(int row) {
+        this.row = row;
+    }
+
+    public int getColumn() {
+        return column;
+    }
+
+    public void setColumn(int column) {
+        this.column = column;
+    }
+    
+    public boolean isVisited() {
+        return visited;
+    }
+
+    public void setVisited(boolean visited) {
+        this.visited = visited;
+    }
+    
+    public Scene getScene() {
+        return scene;
+    }
+
+    public void setScene(Scene scene) {
+        this.scene = scene;
+    }
     
     
     public String getType() {
@@ -54,7 +110,7 @@ public class Locations implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Locations other = (Locations) obj;
+        final Location other = (Location) obj;
         if (!Objects.equals(this.type, other.type)) {
             return false;
         }

@@ -5,7 +5,7 @@
  */
 package byui.cit260.zombieGame.control;
 
-import byui.cit260.zombieGame.model.Actor;
+import byui.cit260.zombieGame.model.MainCharacter;
 
 /**
  *
@@ -16,7 +16,7 @@ public class UseRadioControl {
 
 // move player to the right
     
-        Actor radioListenCount = new Actor();
+        MainCharacter radioListenCount = new MainCharacter();
 
         int listenCount = radioListenCount.getRadioListenCount();
 

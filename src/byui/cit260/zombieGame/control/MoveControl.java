@@ -5,7 +5,7 @@
  */
 package byui.cit260.zombieGame.control;
 
-import byui.cit260.zombieGame.model.Actor;
+import byui.cit260.zombieGame.model.MainCharacter;
 
 /**
  *
@@ -15,8 +15,8 @@ public class MoveControl {
    
 // move player to the right
     
-        Actor xCoordinate = new Actor();
-        Actor yCoordinate = new Actor();
+        MainCharacter xCoordinate = new MainCharacter();
+        MainCharacter yCoordinate = new MainCharacter();
 
         int xCoord = xCoordinate.getXCoordinate();
         int yCoord = yCoordinate.getYCoordinate();  

@@ -12,15 +12,19 @@ import java.util.Objects;
  *
  * @author kaydee
  */
-public class EventScene implements Serializable{
+public class Scene implements Serializable{
     // class instance variables 
     private String description; 
     private double travelDistance;
 
-    public EventScene() {
+    public Scene() {
     }
     
-    
+    public Scene(String description) {
+        
+        this.description = description;
+        
+    }
 
     public String getDescription() {
         return description;
@@ -60,7 +64,7 @@ public class EventScene implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final EventScene other = (EventScene) obj;
+        final Scene other = (Scene) obj;
         if (!Objects.equals(this.description, other.description)) {
             return false;
         }

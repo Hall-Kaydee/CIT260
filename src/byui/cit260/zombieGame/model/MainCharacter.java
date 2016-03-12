@@ -13,26 +13,19 @@ import zombiegame.ZombieGame;
  *
  * @author Evanator
  */
-public enum Actor implements Serializable{
-    Rick("He's the boss..the insane leader."), 
-    Carl("The whiney son of Rick"), 
-    Glen("The token asian"),
-    Maggie("The farmer's daughter and girlfriend of Glen");
+public class MainCharacter implements Serializable{
     
     
-    //Class vars
-    private final String description;
-    private final Point coordinates;
+
+    
+    
+   
 //    public int xCoordinate = 6;
 //    public int yCoordinate = 12;
     private double hitPoints;
     private double xCoordinate;
     
-    public Actor(string description) {
-        this.description = description;
-        coordinates = new Point (1,1);
-    }
-    
+   
 
    
 
@@ -77,10 +70,10 @@ public enum Actor implements Serializable{
 
     
 
-    @Override
-    public String toString() {
-        return "MainCharacter{" + "name=" + name + ", description=" + description + ", coordinates=" + getXCoordinate() + "," + getYCoordinate() + " hitPoints=" + hitPoints + '}';
-    }
+   // @Override
+    //public String toString() {
+      //  return "MainCharacter{" + "name=" + name + ", description=" + description + ", coordinates=" + getXCoordinate() + "," + getYCoordinate() + " hitPoints=" + hitPoints + '}';
+   // }
 
     
     
