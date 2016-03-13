@@ -5,14 +5,34 @@
  */
 package byui.cit260.zombieGame.control;
 
+import java.util.Scanner;
+
 /**
  *
- * @author kaydee
+ * @author Evan
  */
 public class InventoryControl {
     
     
-    public double calcItemWeight(double quantity, double gramsPerItem) {
+   
+   
+    public void calcInventoryItem() {
+
+    /**
+     *
+     * @return
+     */
+    
+       Scanner in = new Scanner(System.in); 
+       System.out.printf("\nEnter quantity ");
+       double quantity = in.nextDouble();
+
+       System.out.printf("\nEnter grams Per Item  ");
+       double gramsPerItem = in.nextDouble();       
+    
+    }
+     
+        public double calcItemWeight(double quantity, double gramsPerItem) {
         
         if (quantity < 0 || quantity > 50) {
             return -1;
@@ -23,8 +43,17 @@ public class InventoryControl {
         
 double totalKilograms = (quantity * gramsPerItem) / 1000;
 
-return totalKilograms;
-    } 
 
-    }
+  System.out.println("\n that weighs " + totalKilograms "Kilograms");   
+     
+    
+
+        
+        
+   
+    
+    
+    
+    
+    
 

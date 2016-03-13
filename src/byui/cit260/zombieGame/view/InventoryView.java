@@ -5,6 +5,8 @@
  */
 package byui.cit260.zombieGame.view;
 
+import byui.cit260.zombieGame.control.InventoryControl;
+
 /**
  *
  * @author Evanator
@@ -24,6 +26,7 @@ public class InventoryView extends View {
             + "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
             + "\n+ V - View Your Inventory                                      +"
             + "\n+ U - Use Inventory Item                                       +"
+            + "\n+ C - Calculate Inventory Item Weight                          +"
             + "\n+ D - Drop Inventory Item                                      +"
             + "\n+ Q - Quit                                                     +"   
             + "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
@@ -75,6 +78,10 @@ public class InventoryView extends View {
             case "D"://Drop item
                 this.dropInventoryItem();
                 break;
+                
+            case "C"://calculate
+                this.calcInventoryItem();
+                break;
  
                 
               case "S"://testing the search
@@ -107,13 +114,20 @@ public class InventoryView extends View {
         //System.out.println("\n*** dropInventoryItem called");
         
          DropItemView dropItem = new DropItemView();
- 
-     
-                    dropItem.dropInventoryItem();
-        
-        
+
+                    dropItem.dropInventoryItem(); 
     }
 
+    private void calcInventoryItem() {
+
+         InventoryControl calcItem = new InventoryControl();
+ 
+                    calcItem.calcInventoryItem();
+                    
+                    
+                    
+    }
+    
    private void searchArea() {
         SearchAreaView searchArea = new SearchAreaView();
                 searchArea.searchArea();
