@@ -18,17 +18,12 @@ public class InventoryControl {
    
     public void calcInventoryItem() {
 
-    /**
-     *
-     * @return
-     */
-    
        Scanner in = new Scanner(System.in); 
        System.out.printf("\nEnter quantity ");
-       double quantity = in.nextDouble();
+       int quantity = in.nextint();
 
        System.out.printf("\nEnter grams Per Item  ");
-       double gramsPerItem = in.nextDouble();       
+       int gramsPerItem = in.nextint();       
     
     }
      

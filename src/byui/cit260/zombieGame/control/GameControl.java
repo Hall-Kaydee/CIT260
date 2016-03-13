@@ -8,9 +8,12 @@ package byui.cit260.zombieGame.control;
 import byui.cit260.zombieGame.Enum.SceneType;
 import byui.cit260.zombieGame.model.Game;
 import byui.cit260.zombieGame.model.InventoryItem;
+import byui.cit260.zombieGame.model.Location;
 import byui.cit260.zombieGame.model.Map;
 import byui.cit260.zombieGame.model.Player;
-import javafx.scene.Scene;
+import byui.cit260.zombieGame.model.Scene;
+
+
 import zombiegame.ZombieGame;
 
 /**
@@ -37,9 +40,9 @@ public class GameControl {
    // System.out.println("called movemainc har");
     }
 
-    
 
    
+
     
    public enum Item {
        

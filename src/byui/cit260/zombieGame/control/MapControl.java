@@ -1,3 +1,4 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -278,7 +279,7 @@ Scene refugeeCamp2Scene = new Scene();
         locations[6][1].setScene(scenes[SceneType.refugeeCamp2.ordinal()]);
         locations[6][2].setScene(scenes[SceneType.zoo.ordinal()]);
     }
+}
     
     
     
-    }
