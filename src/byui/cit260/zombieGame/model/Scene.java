@@ -17,14 +17,14 @@ public class Scene implements Serializable{
     private String description; 
     private double travelDistance;
 
-    public Scene() {
+   public Scene() {
     }
     
-    public Scene(String description) {
+ //   public Scene(String description) {
         
-        this.description = description;
+ //       this.description = description;
         
-    }
+ //   }
 
     public String getDescription() {
         return description;

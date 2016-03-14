@@ -20,10 +20,10 @@ public class InventoryControl {
 
        Scanner in = new Scanner(System.in); 
        System.out.printf("\nEnter quantity ");
-       int quantity = in.nextint();
+       int quantity = in.nextInt();
 
        System.out.printf("\nEnter grams Per Item  ");
-       int gramsPerItem = in.nextint();       
+       int gramsPerItem = in.nextInt();       
     
     }
      
@@ -39,10 +39,11 @@ public class InventoryControl {
 double totalKilograms = (quantity * gramsPerItem) / 1000;
 
 
-  System.out.println("\n that weighs " + totalKilograms "Kilograms");   
+  System.out.println("\n that weighs " + totalKilograms + "Kilograms");   
      
-    
-
+    return totalKilograms;
+        }
+}
         
         
    
