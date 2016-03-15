@@ -112,7 +112,7 @@ int result[];
                 
 
 
-                for (String u : listArray){
+                for (String[] u : listArray){
                     
                    System.out.println("\n" + u);  
                 }                
