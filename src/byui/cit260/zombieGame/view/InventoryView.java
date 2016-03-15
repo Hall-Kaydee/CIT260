@@ -104,6 +104,18 @@ public class InventoryView extends View {
 
     private void viewInventoryItems() {
         System.out.println("\n*** viewInventoryItems()function called");
+        
+       
+     
+             String[ ] items = {"gun", "baseball bat", "axe"};
+             InventoryControl viewSortedInventory = new InventoryControl();
+             
+             viewSortedInventory.inventorySort(items);
+             
+             for ( int i = 0;  i < items.length;  i++ )
+                System.out.println( items [ i ] );
+      
+
     }
 
     private void useInventoryItem() {
