@@ -29,10 +29,12 @@ public class ZombieGame {
      */
     private static Game currentGame = null;
     private static Player player = null;
-
+    
     public static int xCoordinate = 0;//initial player X coordinate
     public static int yCoordinate = 0;//initial player Y coordinate
     public static int radioListenCount = 0;    
+
+    
     
      public static Game getCurrentGame() {
         return currentGame;

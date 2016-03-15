@@ -6,7 +6,10 @@
 package byui.cit260.zombieGame.view;
 
 import byui.cit260.zombieGame.control.MoveControl;
+import byui.cit260.zombieGame.model.Location;
 import byui.cit260.zombieGame.model.MainCharacter;
+import byui.cit260.zombieGame.model.Map;
+import java.util.Arrays;
 
 
 
@@ -50,17 +53,31 @@ int result[];
         
           MainCharacter xCoordinate = new MainCharacter();
           MainCharacter yCoordinate = new MainCharacter();
+          Map playerMapLocation = new Map();
 
           int xCoord = xCoordinate.getXCoordinate();
-          int yCoord = yCoordinate.getYCoordinate();        
+          int yCoord = yCoordinate.getYCoordinate();  
+          
+
+
 
         switch (choice){
-          
+
+            
             case "R"://right
-                int result[] = moveControl.movePlayerRight(xCoord, yCoord);
+                int resultR[] = moveControl.movePlayerRight(xCoord, yCoord);
                 
-                System.out.println("\nPlayer location is " + result[0] + "," + result[1]);
+                System.out.println("\nPlayer location is " + resultR[0] + "," + resultR[1]);
                 System.out.println("\nYou have moved to the right");
+                
+
+                int xCoordR = xCoordinate.getXCoordinate();
+                int yCoordR = yCoordinate.getYCoordinate();
+
+                String playerLocationR = playerMapLocation.buildMap(xCoordR, yCoordR);
+                System.out.println("\nPlayer location is " + playerLocationR);
+                
+                
                 
                 fightView.getFightResult();
                 break;
@@ -73,9 +90,12 @@ int result[];
                 
                 System.out.println("\nPlayer location is " + resultL[0] + "," + resultL[1]);
                 System.out.println("\nYou have moved to the left");
+                
+                int xCoordL = xCoordinate.getXCoordinate();
+                int yCoordL = yCoordinate.getYCoordinate();
 
-                //xCoordinate.setXCoordinate(resultL[0]);
-                //yCoordinate.setYCoordinate(resultL[1]);                
+                String playerLocationL = playerMapLocation.buildMap(xCoordL, yCoordL);
+                System.out.println("\nPlayer location is " + playerLocationL);
                 
                 fightView.getFightResult();
                break;
@@ -87,8 +107,13 @@ int result[];
                 System.out.println("\nPlayer location is " + resultF[0] + "," + resultF[1]);
                 System.out.println("\nYou have moved forward");
 
-                //xCoordinate.setXCoordinate(resultF[0]);
-                //yCoordinate.setYCoordinate(resultF[1]); 
+                int xCoordF = xCoordinate.getXCoordinate();
+                int yCoordF = yCoordinate.getYCoordinate();
+
+
+                String playerLocationF = playerMapLocation.buildMap(xCoordF, yCoordF);
+                System.out.println("\nPlayer location is " + playerLocationF);
+ 
 
                 fightView.getFightResult();
                 break;
@@ -100,8 +125,12 @@ int result[];
                 System.out.println("\nPlayer location is " + resultB[0] + "," + resultB[1]);
                 System.out.println("\nYou have moved backward");
 
-                //xCoordinate.setXCoordinate(resultB[0]);
-                //yCoordinate.setYCoordinate(resultB[1]);                 
+
+                int xCoordB = xCoordinate.getXCoordinate();
+                int yCoordB = yCoordinate.getYCoordinate();
+
+                String playerLocationB = playerMapLocation.buildMap(xCoordB, yCoordB);
+                System.out.println("\nPlayer location is " + playerLocationB);             
                 
                 fightView.getFightResult();
                 break;

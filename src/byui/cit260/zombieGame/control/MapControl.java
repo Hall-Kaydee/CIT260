@@ -21,7 +21,7 @@ public class MapControl {
     
    public static Map createMap() {
         // create map
-     Map map = new Map(7, 14);
+     Map map = new Map(3, 7);
      
      //create a list of scenes in game
      Scene[] scenes = createScenes();
@@ -250,6 +250,15 @@ Scene refugeeCamp2Scene = new Scene();
         //startingScene.setTravelTime(240);
         scenes[SceneType.refugeeCamp2.ordinal()] = refugeeCamp2Scene;
         
+Scene zoo = new Scene();
+        zooScene.setDescription(
+                  "You have navigated the Refugee camp and have located your family. "
+                + "Good work! it can only get better from here... Or will it?");
+        //startingScene.setMapSymbol(" START ");
+        //startingScene.setBlocked(false);
+        //startingScene.setTravelTime(240);
+        scenes[SceneType.zoo.ordinal()] = zooScene;        
+        
      return scenes;   
     
     }
@@ -269,15 +278,15 @@ Scene refugeeCamp2Scene = new Scene();
         locations[0][3].setScene(scenes[SceneType.busStation.ordinal()]);
         locations[1][3].setScene(scenes[SceneType.park.ordinal()]);
         locations[2][3].setScene(scenes[SceneType.cityHall.ordinal()]);
-        locations[4][0].setScene(scenes[SceneType.conventionCenter1.ordinal()]);
-        locations[4][1].setScene(scenes[SceneType.hotel.ordinal()]);
-        locations[4][2].setScene(scenes[SceneType.apartmentBuilding.ordinal()]);
-        locations[5][0].setScene(scenes[SceneType.conventionCenter2.ordinal()]);
-        locations[5][1].setScene(scenes[SceneType.shoppingMall.ordinal()]);
-        locations[5][2].setScene(scenes[SceneType.cathedral.ordinal()]);
-        locations[6][0].setScene(scenes[SceneType.refugeeCamp1.ordinal()]);
-        locations[6][1].setScene(scenes[SceneType.refugeeCamp2.ordinal()]);
-        locations[6][2].setScene(scenes[SceneType.zoo.ordinal()]);
+        locations[0][4].setScene(scenes[SceneType.conventionCenter1.ordinal()]);
+        locations[1][4].setScene(scenes[SceneType.hotel.ordinal()]);
+        locations[2][4].setScene(scenes[SceneType.apartmentBuilding.ordinal()]);
+        locations[0][5].setScene(scenes[SceneType.conventionCenter2.ordinal()]);
+        locations[1][5].setScene(scenes[SceneType.shoppingMall.ordinal()]);
+        locations[2][5].setScene(scenes[SceneType.cathedral.ordinal()]);
+        locations[0][6].setScene(scenes[SceneType.refugeeCamp1.ordinal()]);
+        locations[1][6].setScene(scenes[SceneType.refugeeCamp2.ordinal()]);
+        locations[2][6].setScene(scenes[SceneType.zoo.ordinal()]);
     }
 }
     

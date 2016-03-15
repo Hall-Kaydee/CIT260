@@ -14,20 +14,10 @@ import zombiegame.ZombieGame;
  * @author Evanator
  */
 public class MainCharacter implements Serializable{
-    
-    
 
-    
-    
-   
-//    public int xCoordinate = 6;
-//    public int yCoordinate = 12;
+
     private double hitPoints;
-    private double xCoordinate;
     
-   
-
-   
 
     public int getXCoordinate() {
        

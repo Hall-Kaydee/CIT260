@@ -5,6 +5,9 @@
  */
 package byui.cit260.zombieGame.view;
 
+import byui.cit260.zombieGame.model.MainCharacter;
+import byui.cit260.zombieGame.model.Map;
+
 /**
  *
  * @author Boyd
@@ -55,6 +58,16 @@ public class GameMenuView extends View{
             case "M"://how to get items noted out to test inventory menu -Evan
 
                 MoveView moveMenu = new MoveView();
+                MainCharacter xCoordinate = new MainCharacter();
+                MainCharacter yCoordinate = new MainCharacter();  
+                
+                int xCoord = xCoordinate.getXCoordinate();
+                int yCoord = yCoordinate.getYCoordinate();
+                          
+                Map playerMapLocation = new Map();
+                String playerLocation = playerMapLocation.buildMap(xCoord, yCoord);
+                System.out.println("\nPlayer location is " + playerLocation);
+                
                 moveMenu.display();
 
 

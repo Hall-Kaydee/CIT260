@@ -52,8 +52,73 @@ public class Map implements Serializable {
      }
      } 
     }
+
+
+public String buildMap(int num1, int num2){
+  
+        String[][] locationArray = null;
+        locationArray = new String [3][7];
+        locationArray[0][0] = "START";
+        locationArray[1][0] = "SCHOOL";
+        locationArray[2][0] = "FIRE STATION";
+        
+        locationArray[0][1] = "SPORTING GOODS STORE";
+        locationArray[1][1] = "HOSPITAL";
+        locationArray[2][1] = "CONVENIENCE STORE";
+        
+        locationArray[0][2] = "RESIDENTIAL LOT";
+        locationArray[1][2] = "GROCERY STORE";
+        locationArray[2][2] = "POLICE STATION";
+        
+        locationArray[0][3] = "BUS STATION";
+        locationArray[1][3] = "PARK";
+        locationArray[2][3] = "CITY HALL";
+        
+        locationArray[0][4] = "CONVENTION CENTER 1";
+        locationArray[1][4] = "HOTEL";
+        locationArray[2][4] = "APARTMENT BUILDING";
+        
+        locationArray[0][5] = "CONVENTION CENTER 2";
+        locationArray[1][5] = "SHOPPING MALL";
+        locationArray[2][5] = "CATHEDRAL";
+        
+        locationArray[0][6] = "REFUGEE CAMP 1";
+        locationArray[1][6] = "REFUGEE CAMP 2";
+        locationArray[2][6] = "ZOO";
+        
+        return locationArray[num1][num2];
+}
+
+public enum SceneType {
     
+    start,
+    fireStation,
+    school,
+    sportingGoodsStore,
+    hospital,
+    convienceStore,
+    lot,
+    groceryStore,
+    policeStation,
+    busStation,
+    park,
+    cityHall,
+    conventionCenter1,
+    hotel,
+    apartmentBuilding,
+    conventionCenter2,
+    shoppingMall,
+    cathedral,
+    zoo,
+    refugeeCamp1,
+    refugeeCamp2;
+ 
     
+
+    
+}
+
+
 public Location[][] getLocations() {
         return locations;
     }
