@@ -77,6 +77,47 @@ int result[];
                 String playerLocationR = playerMapLocation.buildMap(xCoordR, yCoordR);
                 System.out.println("\nPlayer location is " + playerLocationR);
                 
+
+                String[][] listArray = null;
+                listArray = new String [3][7];
+                listArray[0][0] = "START";
+                listArray[1][0] = "SCHOOL";
+                listArray[2][0] = "FIRE STATION";
+
+                listArray[0][1] = "SPORTING GOODS STORE";
+                listArray[1][1] = "HOSPITAL";
+                listArray[2][1] = "CONVENIENCE STORE";
+
+                listArray[0][2] = "RESIDENTIAL LOT";
+                listArray[1][2] = "GROCERY STORE";
+                listArray[2][2] = "POLICE STATION";
+
+                listArray[0][3] = "BUS STATION";
+                listArray[1][3] = "PARK";
+                listArray[2][3] = "CITY HALL";
+
+                listArray[0][4] = "CONVENTION CENTER 1";
+                listArray[1][4] = "HOTEL";
+                listArray[2][4] = "APARTMENT BUILDING";
+
+                listArray[0][5] = "CONVENTION CENTER 2";
+                listArray[1][5] = "SHOPPING MALL";
+                listArray[2][5] = "CATHEDRAL";
+
+                listArray[0][6] = "REFUGEE CAMP 1";
+                listArray[1][6] = "REFUGEE CAMP 2";
+                listArray[2][6] = "ZOO";
+
+
+                
+
+
+                for (String u : listArray){
+                    
+                   System.out.println("\n" + u);  
+                }                
+                
+
                 
                 
                 fightView.getFightResult();
@@ -96,6 +137,45 @@ int result[];
 
                 String playerLocationL = playerMapLocation.buildMap(xCoordL, yCoordL);
                 System.out.println("\nPlayer location is " + playerLocationL);
+
+                String[][] locationArray = null;
+                locationArray = new String [3][7];
+                locationArray[0][0] = "START";
+                locationArray[1][0] = "SCHOOL";
+                locationArray[2][0] = "FIRE STATION";
+
+                locationArray[0][1] = "SPORTING GOODS STORE";
+                locationArray[1][1] = "HOSPITAL";
+                locationArray[2][1] = "CONVENIENCE STORE";
+
+                locationArray[0][2] = "RESIDENTIAL LOT";
+                locationArray[1][2] = "GROCERY STORE";
+                locationArray[2][2] = "POLICE STATION";
+
+                locationArray[0][3] = "BUS STATION";
+                locationArray[1][3] = "PARK";
+                locationArray[2][3] = "CITY HALL";
+
+                locationArray[0][4] = "CONVENTION CENTER 1";
+                locationArray[1][4] = "HOTEL";
+                locationArray[2][4] = "APARTMENT BUILDING";
+
+                locationArray[0][5] = "CONVENTION CENTER 2";
+                locationArray[1][5] = "SHOPPING MALL";
+                locationArray[2][5] = "CATHEDRAL";
+
+                locationArray[0][6] = "REFUGEE CAMP 1";
+                locationArray[1][6] = "REFUGEE CAMP 2";
+                locationArray[2][6] = "ZOO";
+
+
+                
+
+                
+                for (String[] u : locationArray){
+                    
+                   System.out.println("\n" + u);  
+                }
                 
                 fightView.getFightResult();
                break;
