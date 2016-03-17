@@ -58,6 +58,10 @@ public class MainMenuView extends View {
             case "S"://save the current game
                 this.saveGame();
                 break;
+                
+                case "D"://save the current game
+                this.callDoubleNumber();
+                break;
  
             default:
                 System.out.println("\nInvalid selection. Try again");
@@ -105,6 +109,12 @@ public class MainMenuView extends View {
 
         System.out.println("\n*** saveGame function called");  
 
+    }
+
+    private void callDoubleNumber() {
+        doubleNumber DoubleNumber = new callDoubleNumber();
+        
+        helpMenuView.display
     }
 
 
