@@ -24,6 +24,7 @@ public class MainMenuView extends View {
             + "\nL - Load Game"
             + "\nH - Help"
             + "\nS - Save Game"
+            + "\nD - Test Double Number Exception"
             + "\nQ - Quit"
             + "\n++++++++++++++++++++++++++++++++++++++"
      );
@@ -112,9 +113,10 @@ public class MainMenuView extends View {
     }
 
     private void callDoubleNumber() {
-        doubleNumber DoubleNumber = new callDoubleNumber();
         
-        helpMenuView.display
+        System.out.println("\n*** callDoubleNumber function called");
+        DoubleFormat doubleNumber = new DoubleFormat();
+        doubleNumber.getDoubleNumber();
     }
 
 
