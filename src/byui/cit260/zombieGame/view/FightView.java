@@ -6,6 +6,7 @@
 package byui.cit260.zombieGame.view;
 
 import byui.cit260.zombieGame.control.FightControl;
+import byui.cit260.zombieGame.exceptions.DoubleFormatException;
 import java.util.Scanner;
 
 
@@ -16,12 +17,24 @@ import java.util.Scanner;
 public class FightView {
     
     
-    public void getFightResult(){
+    public void getFightResult() /*throws DoubleFormatException */ {
+ 
+     Scanner in = new Scanner(System.in);        
         
-       Scanner in = new Scanner(System.in); 
-       System.out.printf("\nEnter character damage:  ");
-       double charDam = in.nextDouble();
+     //try {
 
+       System.out.printf("\nEnter character damage:  ");
+       double charDam = in.nextDouble();        
+
+
+     
+      //  catch (DoubleFormatException nf){
+   
+      // System.out.println("\nValue must be a double number:  ");   
+          
+      //  }    
+       
+       
        System.out.printf("\nEnter enemy health:  ");
        double enmHealth = in.nextDouble();       
 
@@ -52,7 +65,13 @@ public class FightView {
        
        System.out.println("\nCharacter health is " + charHealthResult);
 
+       
+ 
+     
     }
+    
+    
+   
     
     
 

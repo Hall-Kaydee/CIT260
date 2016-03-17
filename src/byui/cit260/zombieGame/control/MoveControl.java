@@ -5,6 +5,7 @@
  */
 package byui.cit260.zombieGame.control;
 
+import byui.cit260.zombieGame.exceptions.MoveControlException;
 import byui.cit260.zombieGame.model.MainCharacter;
 
 /**
@@ -21,7 +22,7 @@ public class MoveControl {
         int xCoord = xCoordinate.getXCoordinate();
         int yCoord = yCoordinate.getYCoordinate();  
    
-public int [] movePlayerRight(int xCoord, int yCoord){
+public int [] movePlayerRight(int xCoord, int yCoord) throws MoveControlException {
 
     //int number1 = xCoord;
     //int number2 = yCoord;
@@ -32,13 +33,14 @@ public int [] movePlayerRight(int xCoord, int yCoord){
         yCoordinate.setYCoordinate(yCoord);
         }
     else {
-       System.out.println("\nYou have reached the east border of the map.");
-       System.out.println("\nYou cannot go any farther that direction");
-    }
+        
+       throw new MoveControlException("\nYou have reached the EAST border of the map. You cannot go any farther");
+
+        }
     return new int[] {xCoord, yCoord};
 }
 
-public int[] movePlayerLeft(int xCoord, int yCoord){
+public int[] movePlayerLeft(int xCoord, int yCoord) throws MoveControlException {
 
     //int number1 = xCoord;
     //int number2 = yCoord;
@@ -48,9 +50,10 @@ public int[] movePlayerLeft(int xCoord, int yCoord){
         xCoordinate.setXCoordinate(xCoord);
     }
     else {
-       System.out.println("\nYou have reached the west border of the map.");
-       System.out.println("\nYou cannot go any farther that direction");
-    }
+        
+       throw new MoveControlException("\nYou have reached the WEST border of the map. You cannot go any farther");
+
+        }
    
     // number2 = 2;
     return new int[] {xCoord, yCoord};
@@ -59,7 +62,7 @@ public int[] movePlayerLeft(int xCoord, int yCoord){
 
 
 
-public int[] movePlayerForward(int xCoord, int yCoord){
+public int[] movePlayerForward(int xCoord, int yCoord) throws MoveControlException {
 
     //int number1 = xCoord;
     //int number2 = yCoord;    
@@ -69,17 +72,16 @@ public int[] movePlayerForward(int xCoord, int yCoord){
         yCoordinate.setYCoordinate(yCoord);
     }
     else {
-       System.out.println("\nYou have reached the north border of the map.");
-       System.out.println("\nYou cannot go any farther that direction");
-    }
+        
+       throw new MoveControlException("\nYou have reached the NORTH border of the map. You cannot go any farther");
 
-
-    
+        }
+   
     // number2 = 2;
     return new int[] {xCoord, yCoord};
 }
 
-public int[] movePlayerBack(int xCoord, int yCoord){
+public int[] movePlayerBack(int xCoord, int yCoord) throws MoveControlException {
 
     //int number1 = xCoord;
     //int number2 = yCoord;    
@@ -91,16 +93,14 @@ public int[] movePlayerBack(int xCoord, int yCoord){
     }
     
     else {
-       System.out.println("\nYou have reached the south border of the map.");
-       System.out.println("\nYou cannot go any farther that direction");
-    }
 
-   
+        throw new MoveControlException("\nYou have reached the SOUTH border of the map. You cannot go any farther");
+
+        }
+
     // number2 = 2;
     return new int[] {xCoord, yCoord};
  }
 
-
-
-    
+  
 }
