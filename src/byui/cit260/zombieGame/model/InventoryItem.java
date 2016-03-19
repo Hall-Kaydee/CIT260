@@ -6,7 +6,7 @@
 package byui.cit260.zombieGame.model;
 import java.io.Serializable;
 import java.util.Objects;
-
+   
 /**
  *
  * @author Boyd
@@ -23,8 +23,8 @@ public class InventoryItem implements Serializable{
     public InventoryItem() {
     }
     
-    
-    
+     
+    //blah
 
     public String getItemType() {
         return ItemType;
