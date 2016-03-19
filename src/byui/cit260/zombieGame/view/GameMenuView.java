@@ -51,7 +51,12 @@ public class GameMenuView extends View{
             
             case "E"://How to move
                 //System.out.println("\nView Equipment");
-                InventoryView inventoryMenu = new InventoryView();
+                InventoryView inventoryMenu = new InventoryView() {
+            @Override
+            public boolean doAction(String value) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        };
                 inventoryMenu.display();
                break;
                

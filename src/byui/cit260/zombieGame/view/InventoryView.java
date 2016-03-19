@@ -6,6 +6,7 @@
 package byui.cit260.zombieGame.view;
 
 import byui.cit260.zombieGame.control.InventoryControl;
+import byui.cit260.zombieGame.exceptions.InventoryException;
 
 /**
  *
@@ -15,7 +16,7 @@ import byui.cit260.zombieGame.control.InventoryControl;
  */
 public class InventoryView extends View {
    
-  public InventoryView(){
+  public InventoryView(){ 
     super("\n"
             + "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
             + "\n+                      Inventory Menu                          +"               
@@ -58,8 +59,9 @@ public class InventoryView extends View {
    
 
     
-    @Override
-    public boolean doAction(String value){
+    
+  
+    public  InventoryView(String value)throws InventoryException{
     
         // this is the help menu do action function
         
@@ -91,12 +93,10 @@ public class InventoryView extends View {
                 
                 
             default:
-                System.out.println("\nInvalid selection. Try again");
-                break;
+                throw new InventoryException ("\nInvalid selection. Try again");
                 
             
         }
-        return false;
         
     }     
 
@@ -116,6 +116,9 @@ public class InventoryView extends View {
                 System.out.println( items [ i ] );
       
 
+             
+             
+             
     }
 
     private void useInventoryItem() {

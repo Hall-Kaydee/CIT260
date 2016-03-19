@@ -5,6 +5,7 @@
  */
 package byui.cit260.zombieGame.control;
 
+import byui.cit260.zombieGame.exceptions.InventoryException;
 import java.util.Scanner;
 
 /**
@@ -46,13 +47,15 @@ public class InventoryControl {
     
     }
      
-        public double calcItemWeight(double quantity, double gramsPerItem) {
+        public double calcItemWeight(double quantity, double gramsPerItem) throws InventoryException {
         
         if (quantity < 0 || quantity > 50) {
-            return -1;
+            throw new InventoryException ("quantity must be between 0 and 50 Try again");
+                
             }
         if (gramsPerItem > 5000 || gramsPerItem < 1) {
-            return -1;
+            throw new InventoryException ("grams per Item must be between 1 and 5000. Try again");
+                
         }
         
 double totalKilograms = (quantity * gramsPerItem) / 1000;

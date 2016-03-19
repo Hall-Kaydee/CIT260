@@ -76,12 +76,14 @@ public class HelpMenuView extends View {
                          //               );
                
                 
-                InventoryView inventoryView = new InventoryView();
+                InventoryView inventoryView = new InventoryView() {
+          
+                 inventoryView.display();
+                
+            
+        };
  
-     
-                    inventoryView.display();
-                
-                
+
                 break;
                 
             case "F"://combat - how to fight
@@ -98,11 +100,7 @@ public class HelpMenuView extends View {
         
     }    
 
-    private void doActionHelp(char selection) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-
+  
 
     
 }
