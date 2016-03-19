@@ -69,22 +69,17 @@ public class HelpMenuView extends View {
                break;
                
             case "I"://how to get items noted out to test inventory menu -Evan
-                //System.out.println("\nYou collect items in different areas of the map."
-                  //                  + "\n Here you can Look at what Items you currently have" 
-                     //               + "\n You can use these items to help you on your journey"
-                      //              + "\n You can also drop these idems if you are carring to much" 
-                         //               );
-               
-                
-                InventoryView inventoryView = new InventoryView() {
-          
-                 inventoryView.display();
-                
-            
-        };
- 
-
+               System.out.println("\nYou collect items in different areas of the map."
+                                 + "\n Here you can Look at what Items you currently have" 
+                                 + "\n You can use these items to help you on your journey"
+                               + "\n You can also drop these idems if you are carring to much" 
+                                );
+                    
+                InventoryView inventoryView = new InventoryView();
+                  inventoryView.display();
                 break;
+            
+      
                 
             case "F"://combat - how to fight
                 System.out.println("\nTo engage in combat..KILL EVERYTHING!!!!!.");

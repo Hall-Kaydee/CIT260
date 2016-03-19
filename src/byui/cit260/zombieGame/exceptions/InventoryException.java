@@ -12,6 +12,7 @@ package byui.cit260.zombieGame.exceptions;
 public class InventoryException extends Exception {
 
     public InventoryException() {
+        
     }
 
     public InventoryException(String message) {

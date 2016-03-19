@@ -36,36 +36,64 @@ public class InventoryControl {
       } 
     
    
-    public void calcInventoryItem() {
+    public static void calcInventoryItem() throws InventoryException {
 
        Scanner in = new Scanner(System.in); 
-       System.out.printf("\nEnter quantity ");
-       int quantity = in.nextInt();
+       int x = 1;
+       
+       
+       do {
+           try{
+             System.out.println("Enter quantity ");  
+             int quantity = in.nextInt();
+             System.out.println("\nEnter grams Per Item  ");
+             int gramsPerItem = in.nextInt();
+             
+             
+             
+             int totalKilograms = (quantity * gramsPerItem) / 1000;
+       
+                
 
-       System.out.printf("\nEnter grams Per Item  ");
-       int gramsPerItem = in.nextInt();       
-    
+             System.out.println("\n that weighs " + totalKilograms + " Kilograms"); 
+             x = 2;
+       }
+         catch(Exception InventoryException) {  
+                System.out.println("quantity must be between 0 and 50 and grams per Item must be between 1 and 5000 Try again");
+       return;
+         }
+          
+       }while(x==1);
     }
-     
-        public double calcItemWeight(double quantity, double gramsPerItem) throws InventoryException {
-        
-        if (quantity < 0 || quantity > 50) {
-            throw new InventoryException ("quantity must be between 0 and 50 Try again");
-                
-            }
-        if (gramsPerItem > 5000 || gramsPerItem < 1) {
-            throw new InventoryException ("grams per Item must be between 1 and 5000. Try again");
-                
-        }
-        
-double totalKilograms = (quantity * gramsPerItem) / 1000;
-
-
-  System.out.println("\n that weighs " + totalKilograms + "Kilograms");   
-     
-    return totalKilograms;
-        }
 }
+           
+      // System.out.printf("\nEnter quantity ");
+      // int quantity = in.nextInt();
+
+      // System.out.printf("\nEnter grams Per Item  ");
+      // int gramsPerItem = in.nextInt();       
+    
+    
+     
+       // public double calcItemWeight(double quantity, double gramsPerItem) throws InventoryException {
+        
+     //   if (quantity < 0 || quantity > 50) {
+      //      throw new InventoryException ("quantity must be between 0 and 50 Try again");
+      //          
+     //       }
+     //   if (gramsPerItem > 5000 || gramsPerItem < 1) {
+    //        throw new InventoryException ("grams per Item must be between 1 and 5000. Try again");
+                
+    //    }
+        
+//double totalKilograms = (quantity * gramsPerItem) / 1000;
+
+
+ // System.out.println("\n that weighs " + totalKilograms + "Kilograms");   
+     
+  //  return totalKilograms;
+   //     }
+//}
         
         
    

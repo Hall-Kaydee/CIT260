@@ -61,7 +61,11 @@ public class InventoryView extends View {
     
     
   
-    public  InventoryView(String value)throws InventoryException{
+   
+    @Override
+    public boolean doAction(String value) {
+        
+       
     
         // this is the help menu do action function
         
@@ -93,12 +97,12 @@ public class InventoryView extends View {
                 
                 
             default:
-                throw new InventoryException ("\nInvalid selection. Try again");
+                
                 
             
         }
-        
-    }     
+        return false;
+    }
 
    
 
@@ -148,5 +152,8 @@ public class InventoryView extends View {
                 searchArea.searchArea();
                   }
 
+        
+    }
+
   
-}
+
