@@ -7,6 +7,7 @@ package byui.cit260.zombieGame.view;
 
 import byui.cit260.zombieGame.control.UseRadioControl;
 import byui.cit260.zombieGame.model.MainCharacter;
+import java.util.IllegalFormatException;
 
 /**
  *
@@ -39,7 +40,8 @@ public class TalkToPersonView extends View{
     
     
     @Override
-    public boolean doAction(String choice){
+    public boolean doAction(String choice)throws IllegalFormatException {
+        try {
     
     choice = choice.toUpperCase();
 
@@ -86,6 +88,12 @@ public class TalkToPersonView extends View{
                 
             
         }
+        
+        } catch 
+                (IllegalFormatException me){
+                System.out.println(me.getMessage());
+                }
+        
         return false;
         
     }
