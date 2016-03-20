@@ -8,6 +8,7 @@ package byui.cit260.zombieGame.view;
 import byui.cit260.zombieGame.control.FightControl;
 import byui.cit260.zombieGame.exceptions.DoubleFormatException;
 import byui.cit260.zombieGame.exceptions.FightControlException;
+import java.util.IllegalFormatException;
 import java.util.Scanner;
 
 
@@ -17,17 +18,32 @@ import java.util.Scanner;
  */
 public class FightView {
     
+
+    
+    
     
     public void getFightResult() throws FightControlException {
  
-     Scanner in = new Scanner(System.in);        
+    double charDam = 0;
+    double enmHealth = 0;
+    int numOfEnemies = 0;
+    double enmDamage = 0;
+    double chrHealth = 0;
+    int chrHitPnts = 0;
         
-     //try {
+    Scanner in = new Scanner(System.in);        
+        
+    try {
 
        System.out.printf("\nEnter character damage:  ");
-       double charDam = in.nextDouble();        
-
-
+       charDam = in.nextDouble();        
+    }
+    catch                   
+            
+       (IllegalFormatException me){
+        System.out.println(me.getMessage());
+        
+        }
      
       //  catch (DoubleFormatException nf){
    
@@ -35,32 +51,90 @@ public class FightView {
           
       //  }    
        
-       
+    try { 
+        
+      
        System.out.printf("\nEnter enemy health:  ");
-       double enmHealth = in.nextDouble();       
-
+       enmHealth = in.nextDouble(); 
+        } 
+    catch                   
+            
+       (IllegalFormatException me){
+        System.out.println(me.getMessage());
+        
+        }  
+    
+    
+    try {   
+  
        System.out.printf("\nEnter number of enemies:  ");
-       int numOfEnemies = in.nextInt();   
+       numOfEnemies = in.nextInt(); 
+       
+        } 
+    catch                   
+            
+       (IllegalFormatException me){
+        System.out.println(me.getMessage());
+        
+        }         
+       
        
        FightControl fightControl = new FightControl();
        double enemyHealthResult = fightControl.calcEnemyHealth(charDam, enmHealth, numOfEnemies);
         //return enemyHealthResult;
         
+        
+
+        
        System.out.println("\nEnemy health is " + enemyHealthResult);
        
 
+       
+    try {   
+       
        System.out.printf("\nEnter enemy damage:  ");
-       double enmDamage = in.nextDouble();
+       enmDamage = in.nextDouble();
+
+        } 
+    
+    catch                   
+            
+       (IllegalFormatException me){
+        System.out.println(me.getMessage());
+        
+        }        
+       
 
        //System.out.printf("\nEnter number of enemies:  "); redundantl
        
        //double numEnemies = in.nextDouble();       
        
-       System.out.printf("\nEnter character health:  ");
-       double chrHealth = in.nextDouble();       
+    try {
 
+       System.out.printf("\nEnter character health:  ");
+       chrHealth = in.nextDouble(); 
+    }
+    catch                   
+            
+       (IllegalFormatException me){
+        System.out.println(me.getMessage());
+        
+        } 
+
+    try {
+        
+    
        System.out.printf("\nEnter character hit points:  ");
-       int chrHitPnts = in.nextInt();
+       chrHitPnts = in.nextInt();
+        }
+
+    catch                   
+            
+       (IllegalFormatException me){
+        System.out.println(me.getMessage());
+        
+        } 
+
        
        double charHealthResult = fightControl.calcCharacterHealth(enmDamage, numOfEnemies, chrHealth, chrHitPnts);
        

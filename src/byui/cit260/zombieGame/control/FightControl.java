@@ -45,15 +45,17 @@ public class FightControl {
  
     
     
-    public double calcCharacterHealth(double enemyDamage, double numberOfEnemies, double characterHealth, int charHitPoints ){
+    public double calcCharacterHealth(double enemyDamage, double numberOfEnemies, double characterHealth, int charHitPoints )
+    
+                            throws FightControlException {
     
         if (numberOfEnemies <= 0 || characterHealth <= 0){
             
-            return -1;
+            throw new FightControlException("\nNumber of Enemies or or Player Health cannot be zero or below.");  
             }
         if (charHitPoints <= 0 || enemyDamage <= 0){
             
-            return -1;
+            throw new FightControlException("\nPlayer Hitpoints or Enemy Damage cannot be zero or below."); 
             }       
         
         double charHpFactor;
