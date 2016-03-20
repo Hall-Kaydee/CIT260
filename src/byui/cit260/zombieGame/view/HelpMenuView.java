@@ -5,7 +5,7 @@
  */
 package byui.cit260.zombieGame.view;
 
-import java.util.Scanner;
+import java.util.IllegalFormatException;
 /**
  *
  * @author Boyd
@@ -33,20 +33,34 @@ public class HelpMenuView extends View {
 
     
 
-    void displayHelpMenuView() {
+    void displayHelpMenuView()
+            throws IllegalFormatException{
+        
+        try {
 
-                boolean done = false;// set flag to not done.
+        boolean done = false;// set flag to not done.
         do{
             //prompt for and get player's name
             String menuOption = this.getInput();
-            if (menuOption.toUpperCase().equals("Q")) //user wants to quit
-                return;//exit the game
+           
+                if (menuOption.toUpperCase().equals("Q")) //user wants to quit
+                    return;//exit the game
                 //do the requested action and display the next view
                 done = this.doAction(menuOption);
-            }
+             }
         while (!done);
+        
+        }
+            catch 
+               (IllegalFormatException me){
+               System.out.println(me.getMessage());
+             }
+        
+
+        }
+        
     
-    }
+   
 
     
 

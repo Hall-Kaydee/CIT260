@@ -5,17 +5,24 @@
  */
 package byui.cit260.zombieGame.control;
 
+import byui.cit260.zombieGame.exceptions.FightControlException;
+
 /**
  *
  * @author tyler
  */
 public class FightControl {
     
-    public double calcEnemyHealth(double charDamage, double enemyHealth, int numberOfEnemies){
+    public double calcEnemyHealth(double charDamage, double enemyHealth, int numberOfEnemies)
+    
+                                throws FightControlException {
  
          if (enemyHealth <= 0 || numberOfEnemies <= 0 || charDamage <=0){
             
-            return -1;
+
+            throw new FightControlException("\nNumber of enemies cannot be below zero or above 10.");     
+
+            //return -1;
             }
       
         

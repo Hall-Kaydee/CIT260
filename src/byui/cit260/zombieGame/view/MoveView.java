@@ -6,12 +6,10 @@
 package byui.cit260.zombieGame.view;
 
 import byui.cit260.zombieGame.control.MoveControl;
-import byui.cit260.zombieGame.exceptions.DoubleFormatException;
+import byui.cit260.zombieGame.exceptions.FightControlException;
 import byui.cit260.zombieGame.exceptions.MoveControlException;
-import byui.cit260.zombieGame.model.Location;
 import byui.cit260.zombieGame.model.MainCharacter;
 import byui.cit260.zombieGame.model.Map;
-import java.util.Arrays;
 
 
 
@@ -89,8 +87,15 @@ public class MoveView extends View{
                 String playerLocationR = playerMapLocation.buildMap(xCoordR, yCoordR);
                 System.out.println("\nPlayer location is " + playerLocationR);
 
-               
-                fightView.getFightResult();
+                try {
+                    fightView.getFightResult();
+                    }
+                catch
+                        
+                  (FightControlException me){
+                   System.out.println(me.getMessage());
+                  }                        
+                        
                 break;
             
             case "L"://Left
@@ -119,9 +124,16 @@ public class MoveView extends View{
                 System.out.println("\nPlayer location is " + playerLocationL);
 
 
-                fightView.getFightResult();
-                       
-               break;
+                try {
+                    fightView.getFightResult();
+                    }
+                catch
+                        
+                  (FightControlException me){
+                   System.out.println(me.getMessage());
+                  }                        
+                        
+                break;
                
             case "F"://Forward
 
@@ -150,7 +162,15 @@ public class MoveView extends View{
                 System.out.println("\nPlayer location is " + playerLocationF);
  
 
-                fightView.getFightResult();
+                try {
+                    fightView.getFightResult();
+                    }
+                catch
+                        
+                  (FightControlException me){
+                   System.out.println(me.getMessage());
+                  }                        
+                        
                 break;
                 
             case "B"://Back
@@ -178,7 +198,15 @@ public class MoveView extends View{
                 String playerLocationB = playerMapLocation.buildMap(xCoordB, yCoordB);
                 System.out.println("\nPlayer location is " + playerLocationB);             
                 
-                fightView.getFightResult();
+                try {
+                    fightView.getFightResult();
+                    }
+                catch
+                        
+                  (FightControlException me){
+                   System.out.println(me.getMessage());
+                  }                        
+                        
                 break;
  
             default:
@@ -190,6 +218,5 @@ public class MoveView extends View{
         return false;
         
     }    
-
 
 }

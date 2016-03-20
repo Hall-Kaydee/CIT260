@@ -7,6 +7,7 @@ package byui.cit260.zombieGame.view;
 
 import byui.cit260.zombieGame.control.FightControl;
 import byui.cit260.zombieGame.exceptions.DoubleFormatException;
+import byui.cit260.zombieGame.exceptions.FightControlException;
 import java.util.Scanner;
 
 
@@ -17,7 +18,7 @@ import java.util.Scanner;
 public class FightView {
     
     
-    public void getFightResult() /*throws DoubleFormatException */ {
+    public void getFightResult() throws FightControlException {
  
      Scanner in = new Scanner(System.in);        
         

@@ -34,7 +34,7 @@ public class DoubleFormat {
           } catch (NumberFormatException nf){ 
               
              
-              System.out.println("\n You must enter a valid number. Tray again or enter Q to quit.");
+              System.out.println("\n You must enter a valid number. Try again or enter Q to quit.");
           } 
           finally{System.out.println("sup"); }
         }

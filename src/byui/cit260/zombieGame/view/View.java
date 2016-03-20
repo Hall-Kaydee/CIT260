@@ -5,6 +5,8 @@
  */
 package byui.cit260.zombieGame.view;
 
+import byui.cit260.zombieGame.exceptions.FightControlException;
+import java.util.IllegalFormatException;
 import java.util.Scanner;
 
 
@@ -20,13 +22,15 @@ public abstract class View implements ViewInterface {
     public View(){
     }
     
-    public View(String message) {
+    public View(String message)  {
         this.displayMessage = message;
 }
 
 @Override
-public void display() {
-                
+public void display()throws IllegalFormatException {
+
+    try {
+    
      boolean done = false;    // set flag to not done.
      
         do{
@@ -38,15 +42,22 @@ public void display() {
             done = this.doAction(value);
             }
         while (!done);
+    
+        }
+        catch 
+           (IllegalFormatException me){
+            System.out.println(me.getMessage());
+          }    
+        
     }
 
 @Override
- public String getInput() {
+ public String getInput() throws IllegalFormatException {
      
             Scanner keyboard = new Scanner(System.in);
             boolean valid = false;   //setflag to invalid valid entered
             String selection = null;
-            
+     try {       
        while (!valid) {
                 //while a valid name has not been retrieved
                 //het value
@@ -65,9 +76,14 @@ public void display() {
                 }
                 
                 break;
-                
-                }
+         }
 
+     }
+     
+     catch (IllegalFormatException me){
+            System.out.println(me.getMessage());
+          }
+       
                 return selection;  //return the value       
         
     }

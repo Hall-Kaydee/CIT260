@@ -86,7 +86,18 @@ public class InventoryView extends View {
                 break;
                 
             case "C"://calculate
+                
+                try {// Boyd adding this line
+                    
                 this.calcInventoryItem();
+                
+                } catch // Boyd adding this line
+            
+                    (InventoryException me) { // Boyd adding this line
+                     System.out.println(me.getMessage()); // Boyd adding this line
+         
+                    }    // Boyd adding this line        
+                        
                 break;
  
                 
@@ -137,7 +148,7 @@ public class InventoryView extends View {
                     dropItem.dropInventoryItem(); 
     }
 
-    private void calcInventoryItem() {
+    private void calcInventoryItem() throws InventoryException { // Boyd adding "throws InventoryException" to this line
 
          InventoryControl calcItem = new InventoryControl();
  

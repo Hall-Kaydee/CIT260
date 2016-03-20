@@ -21,55 +21,52 @@ public class UseRadioControl {
         int listenCount = radioListenCount.getRadioListenCount();
 
    
-public String useRadio(int listenCount){
-    
+public String useRadio(int listenCount)  {
+ 
     String radioMessage = "";
     int number1 = listenCount;
-
     if (number1 >= 3){
-
-    radioMessage = "\n The static is gone... the radio is dead. ";
-   
-        }
+        
+        radioMessage = "\n The static is gone... the radio is dead. ";
+        
+    }
     
     else {
         
         
-               switch (number1){
-
-                    case 0://right
-                        
-                        radioMessage = this.setMessageOne(); 
-
-                        break;
-
-                    case 1://Left
-
-                        radioMessage = this.setMessageTwo();                        
-
-                       break;
-
-                    case 2://Forward
-
-                        radioMessage = this.setMessageThree();                         
-                        
-                        break;
-
-
-                    default:
-                        System.out.println("\nInvalid selection. Try again");
-                        break;
-
+        switch (number1){
             
-                    } 
+            case 0://right
+                
+                radioMessage = this.setMessageOne();
+                
+                break;
+                
+            case 1://Left
+                
+                radioMessage = this.setMessageTwo();
+                
+                break;
+                
+            case 2://Forward
+                
+                radioMessage = this.setMessageThree();
+                
+                break;
+                
+                
+            default:
+                System.out.println("\nInvalid selection. Try again");
+                break;
+                
+                
+        }
         
         number1 = number1 + 1;// 
         radioListenCount.setRadioListenCount(number1);
     }
-    
-
-
     return radioMessage;
+    
   }
 
 

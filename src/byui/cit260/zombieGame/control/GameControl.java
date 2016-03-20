@@ -6,6 +6,7 @@
 package byui.cit260.zombieGame.control;
 
 import byui.cit260.zombieGame.Enum.SceneType;
+import byui.cit260.zombieGame.exceptions.SneakControlException;
 import byui.cit260.zombieGame.model.Game;
 import byui.cit260.zombieGame.model.InventoryItem;
 import byui.cit260.zombieGame.model.Location;
@@ -113,14 +114,18 @@ public class GameControl {
     
     }
     
-    public double calcSneak(double numEnemy, double dist){
+    public double calcSneak(double numEnemy, double dist) throws SneakControlException{
         
      if (numEnemy < 0 || numEnemy > 10 ) {
-        return -1;
+        
+         throw new SneakControlException("\nNumber of enemies cannot be below zero or above 10.");
+        //return -1;
     }
      
     if (dist > 1000 || dist < 1 ) {
-        return -1;
+
+         throw new SneakControlException("\nDistance to enemies cannot be below one or above 1000.");
+        //return -1;
     }
     
     double preSneakSuccess = (5* numEnemy )+(2*( dist /100));

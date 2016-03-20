@@ -5,6 +5,8 @@
  */
 package byui.cit260.zombieGame.view;
 
+import java.util.IllegalFormatException;
+
 /**
  *
  * @author Boyd
@@ -81,10 +83,10 @@ public class MapView extends View{
 
 
     @Override
-    public boolean doAction(String choice){
+    public boolean doAction(String choice)throws IllegalFormatException {
     
         // this is the help menu do action function
-        
+        try {
         choice = choice.toUpperCase(); //convert choice to upper case
         
         switch (choice){
@@ -97,9 +99,14 @@ public class MapView extends View{
             default:
                 System.out.println("\nInvalid selection. Try again");
                 break;
-                
-            
-        }
+   
+            }
+        
+        } catch 
+                (IllegalFormatException me){
+                System.out.println(me.getMessage());
+                }
+        
         return false;
         
     }    

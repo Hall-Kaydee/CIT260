@@ -7,6 +7,7 @@ package byui.cit260.zombieGame.view;
 
 import byui.cit260.zombieGame.control.UseRadioControl;
 import byui.cit260.zombieGame.model.MainCharacter;
+import java.util.IllegalFormatException;
 
 
 /**
@@ -35,20 +36,24 @@ public class UseRadioView extends View{
     
     
     @Override
-    public boolean doAction(String choice){
+    public boolean doAction(String choice) throws IllegalFormatException {
     
     choice = choice.toUpperCase();
     
     MainCharacter radioListenCount = new MainCharacter();
 
-    int listenCount = radioListenCount.getRadioListenCount();           
-
-    UseRadioControl useRadioControl = new UseRadioControl();
-
-
-
-    String radioMessage = "";    
+    try{
         
+        int listenCount = radioListenCount.getRadioListenCount();           
+
+        UseRadioControl useRadioControl = new UseRadioControl();
+
+
+
+        String radioMessage = "";    
+     
+ 
+    
         switch (choice){
           
             case "L"://right
@@ -68,9 +73,15 @@ public class UseRadioView extends View{
             default:
                 System.out.println("\nInvalid selection. Try again");
                 break;
-                
-            
+   
         }
+        
+     } catch(IllegalFormatException me) {
+         
+         System.out.println(me.getMessage());
+         
+        }
+        
         return false;
         
     }
