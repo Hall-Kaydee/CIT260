@@ -103,9 +103,11 @@ public class StartProgramView extends View {
 // When deleted just get null
     public String getInput() {
     
-        Scanner keyboard = new Scanner(System.in);//keyboard input string
+        //Scanner keyboard = new Scanner(System.in);//keyboard input string
         String value = "";
             boolean valid = false;//setflag to invalid valid entered
+
+          try{
             while (!valid) {
                 //while a valid name has not been retrieved
                 
@@ -113,7 +115,7 @@ public class StartProgramView extends View {
                 
                 System.out.println(this.displayMessage);
                 
-                value = keyboard.nextLine();//get the name from the keyboard
+                value = keyboard.readLine();//get the name from the keyboard
                 
                 value = value.trim();//trim off the excess blanks
                 
@@ -130,6 +132,14 @@ public class StartProgramView extends View {
                 valid = true;//set flag to end repetition
                 
                 }
+            
+          }
+          
+          catch (Exception e){
+         
+         System.out.println("\nError reading inputs" + e.getMessage());
+         
+     }
 
                 return value;//return the value
  

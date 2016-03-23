@@ -52,7 +52,7 @@ public class DoubleFormat {
             Scanner keyboard = new Scanner(System.in);
             boolean valid = false;   //setflag to invalid valid entered
             String selection = null;
-            
+//     try{       
        while (!valid) {
                 //while a valid name has not been retrieved
                 //het value
@@ -73,6 +73,15 @@ public class DoubleFormat {
                 break;
                 
                 }
+ //    }
+     
+ //    catch (Exception e){
+         
+ //        System.out.println("\nError reading inputs" + e.getMessage());
+         
+ //    }
+       
+       
 
                 return selection;  //return the value       
         
