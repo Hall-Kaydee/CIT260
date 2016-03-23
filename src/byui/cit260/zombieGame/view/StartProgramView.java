@@ -65,7 +65,7 @@ public class StartProgramView extends View {
 
     private void displayBanner() {
      
-        System.out.println(
+        this.console.println(
         "\n+---------+---------+---------+---------+---------+---------+---------+" +
         "\n+   In Salt Lake City in the year 2020, strange things are starting   +" +
         "\n+ to happen. People are getting sick, stores and businesses have      +" +
@@ -113,7 +113,7 @@ public class StartProgramView extends View {
                 
                 //prompt for the players name
                 
-                System.out.println(this.displayMessage);
+                this.console.println(this.displayMessage);
                 
                 value = keyboard.readLine();//get the name from the keyboard
                 
@@ -183,7 +183,7 @@ public class StartProgramView extends View {
   
        
         
-    System.out.println("\n++++++++++++++++++++++++++++++++++++++++++"
+    this.console.println("\n++++++++++++++++++++++++++++++++++++++++++"
                      + "\n+ Welcome to the Game " + player.getName()
                      + "\n+ R.I.P. " + player.getName()
                      + "\n++++++++++++++++++++++++++++++++++++++++++"

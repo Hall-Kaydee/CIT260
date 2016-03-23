@@ -54,31 +54,31 @@ public class TalkToPersonView extends View{
             case "A":
 
             phrase = "\nHave you been bitten?";
-            System.out.println(phrase); 
+            this.console.println(phrase); 
 
             break;
             
             case "B":
 
-                System.out.println("\nDo you need food?");                
+                this.console.println("\nDo you need food?");                
 
                break;
             case "C":
 
             phrase = "\nAre you injured?";
-            System.out.println(phrase); 
+            this.console.println(phrase); 
 
             break;
             
             case "D":
 
-                System.out.println("\nWhere are you going?");                
+                this.console.println("\nWhere are you going?");                
 
                break;
                
             case "E":
 
-                System.out.println("\nWhat is your name?");                
+                this.console.println("\nWhat is your name?");                
 
                break;
  

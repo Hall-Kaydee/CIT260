@@ -65,15 +65,15 @@ public class UseEquipmentView extends View{
     }       
 
     private void useMedkit() {
-        System.out.println("\n*** useMedkit() called");
+        this.console.println("\n*** useMedkit() called");
     }
 
     private void useEnergybar() {
-        System.out.println("\n*** useEnergybar() called");
+        this.console.println("\n*** useEnergybar() called");
     }
 
     private void useWater() {
-        System.out.println("\n*** useWater() called");
+        this.console.println("\n*** useWater() called");
     }
 
     private void useRadio() {

@@ -62,18 +62,18 @@ public class ViewWeapons extends View{
 
 
     private void viewWeapons() {
-        System.out.println("\n*** viewWeapons()function called");
+        this.console.println("\n*** viewWeapons()function called");
     }
 
     private void useWeapon() {
-        System.out.println("\n*** useWeapon()function called");
+        this.console.println("\n*** useWeapon()function called");
     }
 
     private void dropWeapon() {
         //System.out.println("\n*** dropInventoryItem called");
         
  
-        System.out.println("\n*** dropWeapon()function called");
+        this.console.println("\n*** dropWeapon()function called");
       
     }
 }

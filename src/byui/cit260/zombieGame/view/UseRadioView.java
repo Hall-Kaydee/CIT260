@@ -59,13 +59,13 @@ public class UseRadioView extends View{
             case "L"://right
 
             radioMessage = useRadioControl.useRadio(listenCount);
-            System.out.println(radioMessage); 
+            this.console.println(radioMessage); 
 
             break;
             
             case "T"://Left
 
-                System.out.println("\nYou cannot send a message with this radio");                
+                this.console.println("\nYou cannot send a message with this radio");                
 
                break;
  

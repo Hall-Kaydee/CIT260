@@ -78,14 +78,14 @@ public class MoveView extends View{
                   }
               
 //                System.out.println("\nPlayer location is " + resultR[0] + "," + resultR[1]);
-                System.out.println("\nYou have moved to the right");
+                this.console.println("\nYou have moved to the right");
                 
 
                 int xCoordR = xCoordinate.getXCoordinate();
                 int yCoordR = yCoordinate.getYCoordinate();
 
                 String playerLocationR = playerMapLocation.buildMap(xCoordR, yCoordR);
-                System.out.println("\nPlayer location is " + playerLocationR);
+                this.console.println("\nPlayer location is " + playerLocationR);
 
                 try {
                     fightView.getFightResult();
@@ -115,13 +115,13 @@ public class MoveView extends View{
                 //int resultL[] = moveControl.movePlayerLeft(xCoord, yCoord);
                 
                 //System.out.println("\nPlayer location is " + resultL[0] + "," + resultL[1]);
-                System.out.println("\nYou have moved to the left");
+                this.console.println("\nYou have moved to the left");
                 
                 int xCoordL = xCoordinate.getXCoordinate();
                 int yCoordL = yCoordinate.getYCoordinate();
 
                 String playerLocationL = playerMapLocation.buildMap(xCoordL, yCoordL);
-                System.out.println("\nPlayer location is " + playerLocationL);
+                this.console.println("\nPlayer location is " + playerLocationL);
 
 
                 try {
@@ -152,14 +152,14 @@ public class MoveView extends View{
                 //int resultF[] = moveControl.movePlayerForward(xCoord, yCoord);
                 
                 //System.out.println("\nPlayer location is " + resultF[0] + "," + resultF[1]);
-                System.out.println("\nYou have moved forward");
+                this.console.println("\nYou have moved forward");
 
                 int xCoordF = xCoordinate.getXCoordinate();
                 int yCoordF = yCoordinate.getYCoordinate();
 
 
                 String playerLocationF = playerMapLocation.buildMap(xCoordF, yCoordF);
-                System.out.println("\nPlayer location is " + playerLocationF);
+                this.console.println("\nPlayer location is " + playerLocationF);
  
 
                 try {
@@ -189,14 +189,14 @@ public class MoveView extends View{
                 //int resultB[] = moveControl.movePlayerBack(xCoord, yCoord);
                 
                 //System.out.println("\nPlayer location is " + resultB[0] + "," + resultB[1]);
-                System.out.println("\nYou have moved backward");
+                this.console.println("\nYou have moved backward");
 
 
                 int xCoordB = xCoordinate.getXCoordinate();
                 int yCoordB = yCoordinate.getYCoordinate();
 
                 String playerLocationB = playerMapLocation.buildMap(xCoordB, yCoordB);
-                System.out.println("\nPlayer location is " + playerLocationB);             
+                this.console.println("\nPlayer location is " + playerLocationB);             
                 
                 try {
                     fightView.getFightResult();

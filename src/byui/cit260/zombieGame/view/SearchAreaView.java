@@ -32,7 +32,7 @@ public class SearchAreaView extends View {
     }  
 
     void searchArea() {
-        System.out.println("this is search area"); //To change body of generated methods, choose Tools | Templates.
+        this.console.println("this is search area"); //To change body of generated methods, choose Tools | Templates.
     }
     
 
