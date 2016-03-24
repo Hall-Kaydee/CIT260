@@ -123,7 +123,7 @@ public class StartProgramView extends View {
                 
                 if (value.length()< 1){
                 
-                System.out.println("invalid value - the value cannot be blank.");
+                ErrorView.display(this.getClass().getName(),"invalid value - the value cannot be blank.");
                 
                 continue;//and repeat again
                 
@@ -137,7 +137,7 @@ public class StartProgramView extends View {
           
           catch (Exception e){
          
-         System.out.println("\nError reading inputs" + e.getMessage());
+         ErrorView.display(this.getClass().getName(),"\nError reading inputs" + e.getMessage());
          
      }
 
@@ -150,7 +150,7 @@ public class StartProgramView extends View {
     
         if (playersName.length()< 2){
             
-            System.out.println("\nInvalid players name: "
+            ErrorView.display(this.getClass().getName(),"\nInvalid players name: "
                  
                     + "the name must be greater than one character in length");
             
@@ -163,7 +163,7 @@ public class StartProgramView extends View {
            
            //if unsuccessful
            
-           System.out.println("\nError creating the player");
+           ErrorView.display(this.getClass().getName(),"\nError creating the player");
            
            return false;
        }

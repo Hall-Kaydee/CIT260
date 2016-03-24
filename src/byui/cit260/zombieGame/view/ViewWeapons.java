@@ -52,7 +52,7 @@ public class ViewWeapons extends View{
                 break;
  
             default:
-                System.out.println("\nInvalid selection. Try again");
+                ErrorView.display(this.getClass().getName(),"\nInvalid selection. Try again");
                 break;    
         }
         return false;

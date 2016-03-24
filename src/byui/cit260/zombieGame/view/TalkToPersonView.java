@@ -83,7 +83,7 @@ public class TalkToPersonView extends View{
                break;
  
             default:
-                System.out.println("\nInvalid selection. Try again");
+                ErrorView.display(this.getClass().getName(),"\nInvalid selection. Try again");
                 break;
                 
             
@@ -91,7 +91,7 @@ public class TalkToPersonView extends View{
         
         } catch 
                 (IllegalFormatException me){
-                System.out.println(me.getMessage());
+                ErrorView.display(this.getClass().getName(),me.getMessage());
                 }
         
         return false;

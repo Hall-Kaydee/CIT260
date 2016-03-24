@@ -51,7 +51,7 @@ public void display()throws IllegalFormatException {
         }
         catch 
            (IllegalFormatException me){
-            System.out.println(me.getMessage());
+            ErrorView.display(this.getClass().getName(),me.getMessage());
           }    
         
     }
@@ -66,7 +66,7 @@ public void display()throws IllegalFormatException {
        while (!valid) {
                 //while a valid name has not been retrieved
                 //het value
-                System.out.println("\n" + this.displayMessage);
+                ErrorView.display(this.getClass().getName(),"\n" + this.displayMessage);
                 //get the value entered from keyboard
                 
             selection = keyboard.readLine();  //get the name from the keyboard 
@@ -78,7 +78,7 @@ public void display()throws IllegalFormatException {
                 
         if (selection.length()< 1)  { //blank value entered
                 
-                System.out.println("You must enter a value");
+                ErrorView.display(this.getClass().getName(),"You must enter a value");
                 continue;//and repeat again
                 
                 }
@@ -89,7 +89,7 @@ public void display()throws IllegalFormatException {
      }
      catch (Exception e){
          
-         System.out.println("\nError reading inputs" + e.getMessage());
+         ErrorView.display(this.getClass().getName(),"\nError reading inputs" + e.getMessage());
          
      }
      

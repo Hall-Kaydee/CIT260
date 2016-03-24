@@ -71,14 +71,14 @@ public class UseRadioView extends View{
  
  
             default:
-                System.out.println("\nInvalid selection. Try again");
+                ErrorView.display(this.getClass().getName(),"\nInvalid selection. Try again");
                 break;
    
         }
         
      } catch(IllegalFormatException me) {
          
-         System.out.println(me.getMessage());
+         ErrorView.display(this.getClass().getName(),me.getMessage());
          
         }
         

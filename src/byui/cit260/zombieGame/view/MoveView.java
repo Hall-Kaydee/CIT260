@@ -74,7 +74,7 @@ public class MoveView extends View{
                 }
               catch                   
                   (MoveControlException me){
-                   System.out.println(me.getMessage());
+                   ErrorView.display(this.getClass().getName(),me.getMessage());
                   }
               
 //                System.out.println("\nPlayer location is " + resultR[0] + "," + resultR[1]);
@@ -93,7 +93,7 @@ public class MoveView extends View{
                 catch
                         
                   (FightControlException me){
-                   System.out.println(me.getMessage());
+                   ErrorView.display(this.getClass().getName(),me.getMessage());
                   }                        
                         
                 break;
@@ -107,7 +107,7 @@ public class MoveView extends View{
                 }
               catch                   
                   (MoveControlException me){
-                   System.out.println(me.getMessage());
+                   ErrorView.display(this.getClass().getName(),me.getMessage());
                   }
                 
                 
@@ -130,7 +130,7 @@ public class MoveView extends View{
                 catch
                         
                   (FightControlException me){
-                   System.out.println(me.getMessage());
+                   ErrorView.display(this.getClass().getName(),me.getMessage());
                   }                        
                         
                 break;
@@ -144,7 +144,7 @@ public class MoveView extends View{
                 }
               catch                   
                   (MoveControlException me){
-                   System.out.println(me.getMessage());
+                   ErrorView.display(this.getClass().getName(),me.getMessage());
                   }               
                 
                 
@@ -168,7 +168,7 @@ public class MoveView extends View{
                 catch
                         
                   (FightControlException me){
-                   System.out.println(me.getMessage());
+                   ErrorView.display(this.getClass().getName(),me.getMessage());
                   }                        
                         
                 break;
@@ -182,7 +182,7 @@ public class MoveView extends View{
                 }
               catch                   
                   (MoveControlException me){
-                   System.out.println(me.getMessage());
+                   ErrorView.display(this.getClass().getName(),me.getMessage());
                   }                
                 
                 
@@ -204,13 +204,13 @@ public class MoveView extends View{
                 catch
                         
                   (FightControlException me){
-                   System.out.println(me.getMessage());
+                   ErrorView.display(this.getClass().getName(),me.getMessage());
                   }                        
                         
                 break;
  
             default:
-                System.out.println("\nInvalid selection. Try again");
+                ErrorView.display(this.getClass().getName(),"\nInvalid selection. Try again");
                 break;
                 
             
