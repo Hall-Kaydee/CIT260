@@ -57,7 +57,7 @@ public class StartProgramView extends View {
         super();         
         this.displayMessage = "\nPlease enter your name:";
         
-        //display banner when view is created
+        //  display banner when view is created
         this.displayBanner();
         
    
@@ -101,6 +101,7 @@ public class StartProgramView extends View {
     
             }
 // When deleted just get null
+    @Override
     public String getInput() {
     
         //Scanner keyboard = new Scanner(System.in);//keyboard input string
