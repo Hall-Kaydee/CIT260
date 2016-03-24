@@ -5,26 +5,14 @@
  */
 package zombiegame;
 //
-import byui.cit260.zombieGame.model.InventoryItem;
-import byui.cit260.zombieGame.model.Map;
 import byui.cit260.zombieGame.model.Player;
-import byui.cit260.zombieGame.model.Thug;
-import byui.cit260.zombieGame.model.Weapon;
-import byui.cit260.zombieGame.model.Zombie;
 import byui.cit260.zombieGame.model.Game;
-import byui.cit260.zombieGame.model.MainCharacter;
-import byui.cit260.zombieGame.model.NPC;
-import byui.cit260.zombieGame.model.ConversationScene;
-import byui.cit260.zombieGame.model.Scene;
-import byui.cit260.zombieGame.model.Location;
-import byui.cit260.zombieGame.model.NormalScene;
+
 import byui.cit260.zombieGame.view.StartProgramView;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * @author Evanator
@@ -48,13 +36,67 @@ public class ZombieGame {
     public static int radioListenCount = 0; 
     
     
+    
+  
+    public static void main(String[] args) {
+       
+        
+      
+        
+        try{ 
+       
+        ZombieGame.inFile = 
+                new BufferedReader(new InputStreamReader(System.in));
+        
+        ZombieGame.outFile = 
+                new PrintWriter(System.out, true);
+        
 
+        
+         String filePath = "log.txt";
+        ZombieGame.logFile = new PrintWriter(filePath);  
+        
+          //create startProgramview origin - display start program view
+        StartProgramView startProgramView = new StartProgramView();    
+            
+        startProgramView.displayStartProgramView();
+        return;
+            }
+       
+        catch (Throwable e){
+    
+           System.out.println("\nException" + e.toString() +
+                                 "\ncause" + e.getCause() + 
+                                   "\nmessage" + e.getMessage());
+            
+            
+           e.printStackTrace();;
+           
+        }  
+   
+        
+        finally {
+            
+            try {
+                
+                if (ZombieGame.inFile != null) 
+                ZombieGame.inFile.close();
+ 
+                if (ZombieGame.outFile != null) 
+                ZombieGame.outFile.close();
+                
+                if (ZombieGame.logFile != null) 
+                ZombieGame.logFile.close();                
+                
+            } catch (IOException ex) {
+                System.out.println("\n***Error closing files***");
+                return;
+            }
 
-    
-    
-    
-    
-    
+        }
+    }
+
+   
      public static Game getCurrentGame() {
         return currentGame;
     }
@@ -95,84 +137,4 @@ public class ZombieGame {
         ZombieGame.logFile = logFile;
     }
     
-    
-    
-  
-    public static void main(String[] args) {
-       
-        
-        //create startProgramview origin - display start program view
-        StartProgramView startProgramView = new StartProgramView();
-        
-        try{ 
-       
-        ZombieGame.inFile = 
-                new BufferedReader(new InputStreamReader(System.in));
-        
-        ZombieGame.outFile = 
-                new PrintWriter(System.out, true);
-        
-
-            
-            
-        startProgramView.displayStartProgramView();
-        
-            }
-       
-        catch (Throwable te){
-            
-            System.out.println(te.getMessage());
-            te.printStackTrace();
-            startProgramView.displayStartProgramView();
-        }
-        
-        finally {
-            
-            try {
-                
-                if (ZombieGame.inFile != null) 
-              
-                ZombieGame.inFile.close();
- 
-                if (ZombieGame.outFile != null)
-                    
-                ZombieGame.outFile.close();
-
-                if (ZombieGame.logFile != null)
-                    
-                ZombieGame.logFile.close();                
-                
-            } catch (IOException ex) {
-                System.out.println("\n***Error closing files***");
-                return;
-            }
-            
-
-            
-        }
-        
-        try{
-            
-        String filePath = "logtxt";
-        ZombieGame.logFile = new PrintWriter(filePath);            
-            
-        }
-        
-        catch 
-          
-          (Exception e){
-            
-           System.out.println("\nException" + e.toString() +
-                   "\ncause" + e.getCause() + 
-                   "\nmessage" + e.getMessage());
-        }
-            
-            
-       
-        
-        
-        
-    }
-
-   
 }

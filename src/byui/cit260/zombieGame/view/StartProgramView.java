@@ -151,9 +151,9 @@ public class StartProgramView extends View {
     
         if (playersName.length()< 2){
             
-            ErrorView.display(this.getClass().getName(),"\nInvalid players name: "
+           ErrorView.display(this.getClass().getName(),"\nInvalid players name: "
                  
-                    + "the name must be greater than one character in length");
+                  + "the name must be greater than one character in length");
             
             return false;
         }
