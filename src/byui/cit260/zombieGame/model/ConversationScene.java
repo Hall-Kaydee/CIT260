@@ -20,7 +20,7 @@ public class ConversationScene implements Serializable{
     public ConversationScene() {
     }
     
-    
+      
 
     public String getDescription() {
         return description;
