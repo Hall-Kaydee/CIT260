@@ -9,42 +9,6 @@ import byui.cit260.zombieGame.control.GameControl;
 import byui.cit260.zombieGame.model.Player;
 import java.util.Scanner;
 
-/*
-Start Game Story follows:
-
-Launch The Game Program
-
-The end user enters the command to start the program. The computer 
-displays a banner screen with the following description of the game: 
-....
-
-The player is prompted for and enters their name. The user enters 
-their name and the computer displays a personalized welcome message 
-and the Main Menu. An error message is displayed if an invalid name 
-is entered and the player is prompted to re-enter a valid name or quit.
-
-
-
-*/
-/* banner message below
-+---------+---------+---------+---------+---------+---------+---------+
-+   In Salt Lake City in the year 2020, strange things are starting   +
-+ to happen. People are getting sick, stores and businesses have      +
-+ closed their doors as crime is rising at an alarming rate. Police   +
-+ are overwhelmed.                                                    +
-+                                                                     +
-+   You are a National guardsman whose unit has been activated and    +
-+ ordered to report to a Military checkpoint for assignment. While    +
-+ traveling to your unit you are in an accident. When you awaken,     +
-+ you are in a world of utter bedlam. What has happened? Where is     +
-+ your unit? Where is your family? You must get to them and make sure + 
-+ they are safe!                                                      +
-+---------+---------+---------+---------+---------+---------+---------+
-
-*/
-
-
-
 /**
  *
  * @author Boyd
