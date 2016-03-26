@@ -92,30 +92,34 @@ public String buildMap(int num1, int num2){
 public enum SceneType {
     
     start,
-    fireStation,
     school,
+    fireStation,
+    
     sportingGoodsStore,
     hospital,
     convienceStore,
+    
     lot,
     groceryStore,
     policeStation,
+    
     busStation,
     park,
     cityHall,
+    
     conventionCenter1,
     hotel,
     apartmentBuilding,
+    
     conventionCenter2,
     shoppingMall,
     cathedral,
-    zoo,
+    
     refugeeCamp1,
-    refugeeCamp2;
+    refugeeCamp2,
+    zoo;
  
-    
-
-    
+   
 }
 
 

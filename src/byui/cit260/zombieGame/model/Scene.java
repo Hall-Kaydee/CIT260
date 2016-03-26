@@ -16,6 +16,7 @@ public class Scene implements Serializable{
     // class instance variables 
     private String description; 
     private double travelDistance;
+    private String map;
 
    public Scene() {
     }
@@ -33,6 +34,20 @@ public class Scene implements Serializable{
     public void setDescription(String description) {
         this.description = description;
     }
+    
+    
+    public String getMap() {
+        return map;
+    }    
+    
+    
+    
+    
+        public void setMap(String map) {
+        this.map = map;
+    }
+    
+    
 
     public double getTravelDistance() {
         return travelDistance;

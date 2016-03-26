@@ -46,36 +46,293 @@ public class MapControl {
                 + "You exit the APC and look around. the street is empty and there is no sign of life. "
                 + "You hear in the distance the sounds of the ocasional gun shot and distant shouts. "
                 + "What will you do now?");
+        
+                startingScene.setMap(
+        
+                                       
+                  "\n+---------+---------+---------+---------+---------+---------+---------+"
+                + "\n    |     |   TEMPLE SQUARE REFUGEE CAMP    |     |     ZOO     |     |"
+                + "\n    |     |---------------------------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             | XXX |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |   SHOPPING  |     | CATHEDRAL   |     |"
+                + "\n    |     |   CENTER 2  |     |     MALL    |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |                                             |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |    HOTEL    |     |  APARTMENT  |     |"
+                + "\n    |     |   CENTER 1  |     |             |     |    BLDG     |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    | XXX |-------------| XXX |-------------|     |-------------| XXX |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|                         |-------------|     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |     BUS     |          PARK           |    CITY     |     |"
+                + "\n    |     |   STATION   |                         |    HALL     |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    | XXX |-------------|                         |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     | RESIDENTIAL |     |   GROCERY   |     |   POLICE    |     |"
+                + "\n    |     |-----LOT-----|     |    STORE    |     |   STATION   |     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     |      |      |     |             |     |             | XXX |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |   SPORTING  |     |             |     | CONVENIENCE |     |"
+                + "\n    |     | GOODS STORE |     |   HOSPITAL  |     |    STORE    |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |    FIRE     |     |"
+                + "\n    |     |    START    |     |    SCHOOL   |     |   STATION   |     |"
+                + "\n    |     |   CURRENT   |     |             |     |             |     |"
+                + "\n    |     |   LOCATION  |     |             |     |             |     |"
+                + "\n|---|     |-------------|     |-------------|     |-------------|     |"
+                + "\n+                                                                     |"
+                + "\n|---------------------------------------------------------------------|"
+                +"\n "
+                    );        
+        
+        
+        
+        
+        
         //startingScene.setMapSymbol(" START ");
         //startingScene.setBlocked(false);
         //startingScene.setTravelTime(240);
         scenes[SceneType.start.ordinal()] = startingScene;
-    
+
+        
+        
+        Scene schoolScene = new Scene();
+                schoolScene.setDescription(
+                          "You arrive at the School, "
+                        + "no one appears to be here");
+                
+                schoolScene.setMap(
+        
+                                       
+                  "\n+---------+---------+---------+---------+---------+---------+---------+"
+                + "\n    |     |   TEMPLE SQUARE REFUGEE CAMP    |     |     ZOO     |     |"
+                + "\n    |     |---------------------------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             | XXX |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |   SHOPPING  |     | CATHEDRAL   |     |"
+                + "\n    |     |   CENTER 2  |     |     MALL    |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |                                             |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |    HOTEL    |     |  APARTMENT  |     |"
+                + "\n    |     |   CENTER 1  |     |             |     |    BLDG     |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    | XXX |-------------| XXX |-------------|     |-------------| XXX |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|                         |-------------|     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |     BUS     |          PARK           |    CITY     |     |"
+                + "\n    |     |   STATION   |                         |    HALL     |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    | XXX |-------------|                         |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     | RESIDENTIAL |     |   GROCERY   |     |   POLICE    |     |"
+                + "\n    |     |-----LOT-----|     |    STORE    |     |   STATION   |     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     |      |      |     |             |     |             | XXX |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |   SPORTING  |     |             |     | CONVENIENCE |     |"
+                + "\n    |     | GOODS STORE |     |   HOSPITAL  |     |    STORE    |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |    FIRE     |     |"
+                + "\n    |     |    START    |     |    SCHOOL   |     |   STATION   |     |"
+                + "\n    |     |             |     |   CURRENT   |     |             |     |"
+                + "\n    |     |             |     |   LOCATION  |     |             |     |"
+                + "\n|---|     |-------------|     |-------------|     |-------------|     |"
+                + "\n+                                                                     |"
+                + "\n|---------------------------------------------------------------------|"
+                +"\n "
+                    );                
+                
+                
+                
+                
+                //startingScene.setMapSymbol(" START ");
+                //startingScene.setBlocked(false);
+                //startingScene.setTravelTime(240);
+                scenes[SceneType.school.ordinal()] = schoolScene;        
+        
+        
+        
     
     Scene fireStationScene = new Scene();
         fireStationScene.setDescription(
                   "You arrive at the fire station, "
                 + "no one appears to be here");
+        fireStationScene.setMap(
+        
+                                       
+                  "\n+---------+---------+---------+---------+---------+---------+---------+"
+                + "\n    |     |   TEMPLE SQUARE REFUGEE CAMP    |     |     ZOO     |     |"
+                + "\n    |     |---------------------------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             | XXX |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |   SHOPPING  |     | CATHEDRAL   |     |"
+                + "\n    |     |   CENTER 2  |     |     MALL    |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |                                             |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |    HOTEL    |     |  APARTMENT  |     |"
+                + "\n    |     |   CENTER 1  |     |             |     |    BLDG     |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    | XXX |-------------| XXX |-------------|     |-------------| XXX |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|                         |-------------|     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |     BUS     |          PARK           |    CITY     |     |"
+                + "\n    |     |   STATION   |                         |    HALL     |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    | XXX |-------------|                         |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     | RESIDENTIAL |     |   GROCERY   |     |   POLICE    |     |"
+                + "\n    |     |-----LOT-----|     |    STORE    |     |   STATION   |     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     |      |      |     |             |     |             | XXX |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |   SPORTING  |     |             |     | CONVENIENCE |     |"
+                + "\n    |     | GOODS STORE |     |   HOSPITAL  |     |    STORE    |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |    FIRE     |     |"
+                + "\n    |     |    START    |     |    SCHOOL   |     |   STATION   |     |"
+                + "\n    |     |             |     |             |     |   CURRENT   |     |"
+                + "\n    |     |             |     |             |     |   LOCATION  |     |"
+                + "\n|---|     |-------------|     |-------------|     |-------------|     |"
+                + "\n+                                                                     |"
+                + "\n|---------------------------------------------------------------------|"
+                +"\n "
+                    );
         //startingScene.setMapSymbol(" START ");
         //startingScene.setBlocked(false);
         //startingScene.setTravelTime(240);
         scenes[SceneType.fireStation.ordinal()] = fireStationScene;
         
 
-Scene schoolScene = new Scene();
-        schoolScene.setDescription(
-                  "You arrive at the School, "
-                + "no one appears to be here");
-        //startingScene.setMapSymbol(" START ");
-        //startingScene.setBlocked(false);
-        //startingScene.setTravelTime(240);
-        scenes[SceneType.school.ordinal()] = schoolScene;
+
         
 
 Scene sportingGoodsStoreScene = new Scene();
         sportingGoodsStoreScene.setDescription(
                   "You arrive at the sporting Goods Store, "
                 + "no one appears to be here");
+        
+        sportingGoodsStoreScene.setMap(
+        
+                                       
+                  "\n+---------+---------+---------+---------+---------+---------+---------+"
+                + "\n    |     |   TEMPLE SQUARE REFUGEE CAMP    |     |     ZOO     |     |"
+                + "\n    |     |---------------------------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             | XXX |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |   SHOPPING  |     | CATHEDRAL   |     |"
+                + "\n    |     |   CENTER 2  |     |     MALL    |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |                                             |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |    HOTEL    |     |  APARTMENT  |     |"
+                + "\n    |     |   CENTER 1  |     |             |     |    BLDG     |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    | XXX |-------------| XXX |-------------|     |-------------| XXX |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|                         |-------------|     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |     BUS     |          PARK           |    CITY     |     |"
+                + "\n    |     |   STATION   |                         |    HALL     |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    | XXX |-------------|                         |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     | RESIDENTIAL |     |   GROCERY   |     |   POLICE    |     |"
+                + "\n    |     |-----LOT-----|     |    STORE    |     |   STATION   |     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     |      |      |     |             |     |             | XXX |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |   SPORTING  |     |             |     | CONVENIENCE |     |"
+                + "\n    |     | GOODS STORE |     |   HOSPITAL  |     |    STORE    |     |"
+                + "\n    |     |   CURRENT   |     |             |     |             |     |"
+                + "\n    |     |   LOCATION  |     |             |     |             |     |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |    FIRE     |     |"
+                + "\n    |     |    START    |     |    SCHOOL   |     |   STATION   |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n|---|     |-------------|     |-------------|     |-------------|     |"
+                + "\n+                                                                     |"
+                + "\n|---------------------------------------------------------------------|"
+                +"\n "
+                    );        
+        
+        
+        
+        
+        
+        
+        
         //startingScene.setMapSymbol(" START ");
         //startingScene.setBlocked(false);
         //startingScene.setTravelTime(240);
@@ -86,6 +343,77 @@ Scene hospitalScene = new Scene();
         hospitalScene.setDescription(
                   "You arrive at the Hospital, "
                 + "no one appears to be here");
+        
+        
+        
+        hospitalScene.setMap(
+        
+                                       
+                  "\n+---------+---------+---------+---------+---------+---------+---------+"
+                + "\n    |     |   TEMPLE SQUARE REFUGEE CAMP    |     |     ZOO     |     |"
+                + "\n    |     |---------------------------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             | XXX |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |   SHOPPING  |     | CATHEDRAL   |     |"
+                + "\n    |     |   CENTER 2  |     |     MALL    |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |                                             |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |    HOTEL    |     |  APARTMENT  |     |"
+                + "\n    |     |   CENTER 1  |     |             |     |    BLDG     |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    | XXX |-------------| XXX |-------------|     |-------------| XXX |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|                         |-------------|     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |     BUS     |          PARK           |    CITY     |     |"
+                + "\n    |     |   STATION   |                         |    HALL     |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    | XXX |-------------|                         |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     | RESIDENTIAL |     |   GROCERY   |     |   POLICE    |     |"
+                + "\n    |     |-----LOT-----|     |    STORE    |     |   STATION   |     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     |      |      |     |             |     |             | XXX |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |   SPORTING  |     |             |     | CONVENIENCE |     |"
+                + "\n    |     | GOODS STORE |     |   HOSPITAL  |     |    STORE    |     |"
+                + "\n    |     |             |     |   CURRENT   |     |             |     |"
+                + "\n    |     |             |     |   LOCATION  |     |             |     |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |    FIRE     |     |"
+                + "\n    |     |    START    |     |    SCHOOL   |     |   STATION   |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n|---|     |-------------|     |-------------|     |-------------|     |"
+                + "\n+                                                                     |"
+                + "\n|---------------------------------------------------------------------|"
+                +"\n "
+                    );        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         //startingScene.setMapSymbol(" START ");
         //startingScene.setBlocked(false);
         //startingScene.setTravelTime(240);
@@ -96,6 +424,71 @@ Scene convienceStoreScene = new Scene();
         convienceStoreScene.setDescription(
                   "You arrive at the Convience Store, "
                 + "no one appears to be here");
+        
+        
+        convienceStoreScene.setMap(
+        
+                                       
+                  "\n+---------+---------+---------+---------+---------+---------+---------+"
+                + "\n    |     |   TEMPLE SQUARE REFUGEE CAMP    |     |     ZOO     |     |"
+                + "\n    |     |---------------------------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             | XXX |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |   SHOPPING  |     | CATHEDRAL   |     |"
+                + "\n    |     |   CENTER 2  |     |     MALL    |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |                                             |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |    HOTEL    |     |  APARTMENT  |     |"
+                + "\n    |     |   CENTER 1  |     |             |     |    BLDG     |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    | XXX |-------------| XXX |-------------|     |-------------| XXX |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|                         |-------------|     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |     BUS     |          PARK           |    CITY     |     |"
+                + "\n    |     |   STATION   |                         |    HALL     |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    | XXX |-------------|                         |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     | RESIDENTIAL |     |   GROCERY   |     |   POLICE    |     |"
+                + "\n    |     |-----LOT-----|     |    STORE    |     |   STATION   |     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     |      |      |     |             |     |             | XXX |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |   SPORTING  |     |             |     | CONVENIENCE |     |"
+                + "\n    |     | GOODS STORE |     |   HOSPITAL  |     |    STORE    |     |"
+                + "\n    |     |             |     |             |     |   CURRENT   |     |"
+                + "\n    |     |             |     |             |     |   LOCATION  |     |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |    FIRE     |     |"
+                + "\n    |     |    START    |     |    SCHOOL   |     |   STATION   |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n|---|     |-------------|     |-------------|     |-------------|     |"
+                + "\n+                                                                     |"
+                + "\n|---------------------------------------------------------------------|"
+                +"\n "
+                    );         
+        
+        
+        
+        
+        
         //startingScene.setMapSymbol(" START ");
         //startingScene.setBlocked(false);
         //startingScene.setTravelTime(240);
@@ -106,6 +499,72 @@ Scene lotScene = new Scene();
         lotScene.setDescription(
                   "You arrive at an empty lot, "
                 + "no one appears to be here");
+        
+        
+        lotScene.setMap(
+        
+                                       
+                  "\n+---------+---------+---------+---------+---------+---------+---------+"
+                + "\n    |     |   TEMPLE SQUARE REFUGEE CAMP    |     |     ZOO     |     |"
+                + "\n    |     |---------------------------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             | XXX |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |   SHOPPING  |     | CATHEDRAL   |     |"
+                + "\n    |     |   CENTER 2  |     |     MALL    |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |                                             |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |    HOTEL    |     |  APARTMENT  |     |"
+                + "\n    |     |   CENTER 1  |     |             |     |    BLDG     |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    | XXX |-------------| XXX |-------------|     |-------------| XXX |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|                         |-------------|     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |     BUS     |          PARK           |    CITY     |     |"
+                + "\n    |     |   STATION   |                         |    HALL     |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    | XXX |-------------|                         |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     | RESIDENTIAL |     |   GROCERY   |     |   POLICE    |     |"
+                + "\n    |     |-----LOT-----|     |    STORE    |     |   STATION   |     |"
+                + "\n    |     |   CURRENT   |     |             |     |             |     |"
+                + "\n    |     |   LOCATION  |     |             |     |             | XXX |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |   SPORTING  |     |             |     | CONVENIENCE |     |"
+                + "\n    |     | GOODS STORE |     |   HOSPITAL  |     |    STORE    |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |    FIRE     |     |"
+                + "\n    |     |    START    |     |    SCHOOL   |     |   STATION   |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n|---|     |-------------|     |-------------|     |-------------|     |"
+                + "\n+                                                                     |"
+                + "\n|---------------------------------------------------------------------|"
+                +"\n "
+                    );         
+        
+        
+        
+        
+        
+        
         //startingScene.setMapSymbol(" START ");
         //startingScene.setBlocked(false);
         //startingScene.setTravelTime(240);
@@ -116,6 +575,72 @@ Scene  groceryStoreScene = new Scene();
         groceryStoreScene.setDescription(
                   "You arrive at the Grocery Store, "
                 + "no one appears to be here");
+        
+        
+        groceryStoreScene.setMap(
+        
+                                       
+                  "\n+---------+---------+---------+---------+---------+---------+---------+"
+                + "\n    |     |   TEMPLE SQUARE REFUGEE CAMP    |     |     ZOO     |     |"
+                + "\n    |     |---------------------------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             | XXX |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |   SHOPPING  |     | CATHEDRAL   |     |"
+                + "\n    |     |   CENTER 2  |     |     MALL    |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |                                             |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |    HOTEL    |     |  APARTMENT  |     |"
+                + "\n    |     |   CENTER 1  |     |             |     |    BLDG     |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    | XXX |-------------| XXX |-------------|     |-------------| XXX |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|                         |-------------|     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |     BUS     |          PARK           |    CITY     |     |"
+                + "\n    |     |   STATION   |                         |    HALL     |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    | XXX |-------------|                         |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     | RESIDENTIAL |     |   GROCERY   |     |   POLICE    |     |"
+                + "\n    |     |-----LOT-----|     |    STORE    |     |   STATION   |     |"
+                + "\n    |     |      |      |     |   CURRENT   |     |             |     |"
+                + "\n    |     |      |      |     |   LOCATION  |     |             | XXX |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |   SPORTING  |     |             |     | CONVENIENCE |     |"
+                + "\n    |     | GOODS STORE |     |   HOSPITAL  |     |    STORE    |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |    FIRE     |     |"
+                + "\n    |     |    START    |     |    SCHOOL   |     |   STATION   |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n|---|     |-------------|     |-------------|     |-------------|     |"
+                + "\n+                                                                     |"
+                + "\n|---------------------------------------------------------------------|"
+                +"\n "
+                    );         
+        
+        
+        
+        
+        
+        
         //startingScene.setMapSymbol(" START ");
         //startingScene.setBlocked(false);
         //startingScene.setTravelTime(240);
@@ -126,6 +651,76 @@ Scene policeStationScene = new Scene();
         policeStationScene.setDescription(
                   "You arrive at the Police station, "
                 + "no one appears to be here");
+        
+        
+        
+        policeStationScene.setMap(
+        
+                                       
+                  "\n+---------+---------+---------+---------+---------+---------+---------+"
+                + "\n    |     |   TEMPLE SQUARE REFUGEE CAMP    |     |     ZOO     |     |"
+                + "\n    |     |---------------------------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             | XXX |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |   SHOPPING  |     | CATHEDRAL   |     |"
+                + "\n    |     |   CENTER 2  |     |     MALL    |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |                                             |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |    HOTEL    |     |  APARTMENT  |     |"
+                + "\n    |     |   CENTER 1  |     |             |     |    BLDG     |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    | XXX |-------------| XXX |-------------|     |-------------| XXX |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|                         |-------------|     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |     BUS     |          PARK           |    CITY     |     |"
+                + "\n    |     |   STATION   |                         |    HALL     |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    | XXX |-------------|                         |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     | RESIDENTIAL |     |   GROCERY   |     |   POLICE    |     |"
+                + "\n    |     |-----LOT-----|     |    STORE    |     |   STATION   |     |"
+                + "\n    |     |      |      |     |             |     |   CURRENT   |     |"
+                + "\n    |     |      |      |     |             |     |   LOCATION  | XXX |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |   SPORTING  |     |             |     | CONVENIENCE |     |"
+                + "\n    |     | GOODS STORE |     |   HOSPITAL  |     |    STORE    |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |    FIRE     |     |"
+                + "\n    |     |    START    |     |    SCHOOL   |     |   STATION   |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n|---|     |-------------|     |-------------|     |-------------|     |"
+                + "\n+                                                                     |"
+                + "\n|---------------------------------------------------------------------|"
+                +"\n "
+                    );         
+        
+              
+        
+        
+        
+        
+        
+        
+        
         //startingScene.setMapSymbol(" START ");
         //startingScene.setBlocked(false);
         //startingScene.setTravelTime(240);
@@ -136,6 +731,73 @@ Scene busStationScene = new Scene();
         busStationScene.setDescription(
                   "You arrive at the Bus Station, "
                 + "no one appears to be here");
+        
+        
+        
+        busStationScene.setMap(
+        
+                                       
+                  "\n+---------+---------+---------+---------+---------+---------+---------+"
+                + "\n    |     |   TEMPLE SQUARE REFUGEE CAMP    |     |     ZOO     |     |"
+                + "\n    |     |---------------------------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             | XXX |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |   SHOPPING  |     | CATHEDRAL   |     |"
+                + "\n    |     |   CENTER 2  |     |     MALL    |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |                                             |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |    HOTEL    |     |  APARTMENT  |     |"
+                + "\n    |     |   CENTER 1  |     |             |     |    BLDG     |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    | XXX |-------------| XXX |-------------|     |-------------| XXX |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|                         |-------------|     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |     BUS     |          PARK           |    CITY     |     |"
+                + "\n    |     |   STATION   |                         |    HALL     |     |"
+                + "\n    |     |   CURRENT   |                         |             |     |"
+                + "\n    |     |   LOCATION  |                         |             |     |"
+                + "\n    | XXX |-------------|                         |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     | RESIDENTIAL |     |   GROCERY   |     |   POLICE    |     |"
+                + "\n    |     |-----LOT-----|     |    STORE    |     |   STATION   |     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     |      |      |     |             |     |             | XXX |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |   SPORTING  |     |             |     | CONVENIENCE |     |"
+                + "\n    |     | GOODS STORE |     |   HOSPITAL  |     |    STORE    |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |    FIRE     |     |"
+                + "\n    |     |    START    |     |    SCHOOL   |     |   STATION   |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n|---|     |-------------|     |-------------|     |-------------|     |"
+                + "\n+                                                                     |"
+                + "\n|---------------------------------------------------------------------|"
+                +"\n "
+                    );          
+        
+        
+        
+        
+        
+        
         //startingScene.setMapSymbol(" START ");
         //startingScene.setBlocked(false);
         //startingScene.setTravelTime(240);
@@ -146,6 +808,71 @@ Scene parkScene = new Scene();
         parkScene.setDescription(
                   "You arrive at the Park, "
                 + "no one appears to be here");
+        
+        parkScene.setMap(
+        
+                                       
+                  "\n+---------+---------+---------+---------+---------+---------+---------+"
+                + "\n    |     |   TEMPLE SQUARE REFUGEE CAMP    |     |     ZOO     |     |"
+                + "\n    |     |---------------------------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             | XXX |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |   SHOPPING  |     | CATHEDRAL   |     |"
+                + "\n    |     |   CENTER 2  |     |     MALL    |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |                                             |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |    HOTEL    |     |  APARTMENT  |     |"
+                + "\n    |     |   CENTER 1  |     |             |     |    BLDG     |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    | XXX |-------------| XXX |-------------|     |-------------| XXX |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|                         |-------------|     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |     BUS     |          PARK           |    CITY     |     |"
+                + "\n    |     |   STATION   |         CURRENT         |    HALL     |     |"
+                + "\n    |     |             |         LOCATION        |             |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    | XXX |-------------|                         |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     | RESIDENTIAL |     |   GROCERY   |     |   POLICE    |     |"
+                + "\n    |     |-----LOT-----|     |    STORE    |     |   STATION   |     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     |      |      |     |             |     |             | XXX |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |   SPORTING  |     |             |     | CONVENIENCE |     |"
+                + "\n    |     | GOODS STORE |     |   HOSPITAL  |     |    STORE    |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |    FIRE     |     |"
+                + "\n    |     |    START    |     |    SCHOOL   |     |   STATION   |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n|---|     |-------------|     |-------------|     |-------------|     |"
+                + "\n+                                                                     |"
+                + "\n|---------------------------------------------------------------------|"
+                +"\n "
+                    );        
+        
+        
+        
+        
+        
+        
         //startingScene.setMapSymbol(" START ");
         //startingScene.setBlocked(false);
         //startingScene.setTravelTime(240);
@@ -156,6 +883,71 @@ Scene cityHallScene = new Scene();
         cityHallScene.setDescription(
                   "You arrive at City Hall, "
                 + "no one appears to be here");
+        
+        
+        cityHallScene.setMap(
+        
+                                       
+                  "\n+---------+---------+---------+---------+---------+---------+---------+"
+                + "\n    |     |   TEMPLE SQUARE REFUGEE CAMP    |     |     ZOO     |     |"
+                + "\n    |     |---------------------------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             | XXX |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |   SHOPPING  |     | CATHEDRAL   |     |"
+                + "\n    |     |   CENTER 2  |     |     MALL    |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |                                             |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |    HOTEL    |     |  APARTMENT  |     |"
+                + "\n    |     |   CENTER 1  |     |             |     |    BLDG     |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    | XXX |-------------| XXX |-------------|     |-------------| XXX |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|                         |-------------|     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |     BUS     |          PARK           |    CITY     |     |"
+                + "\n    |     |   STATION   |                         |    HALL     |     |"
+                + "\n    |     |             |                         |   CURRENT   |     |"
+                + "\n    |     |             |                         |   LOCATION  |     |"
+                + "\n    | XXX |-------------|                         |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     | RESIDENTIAL |     |   GROCERY   |     |   POLICE    |     |"
+                + "\n    |     |-----LOT-----|     |    STORE    |     |   STATION   |     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     |      |      |     |             |     |             | XXX |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |   SPORTING  |     |             |     | CONVENIENCE |     |"
+                + "\n    |     | GOODS STORE |     |   HOSPITAL  |     |    STORE    |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |    FIRE     |     |"
+                + "\n    |     |    START    |     |    SCHOOL   |     |   STATION   |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n|---|     |-------------|     |-------------|     |-------------|     |"
+                + "\n+                                                                     |"
+                + "\n|---------------------------------------------------------------------|"
+                +"\n "
+                    );         
+        
+        
+        
+        
+        
         //startingScene.setMapSymbol(" START ");
         //startingScene.setBlocked(false);
         //startingScene.setTravelTime(240);
@@ -166,6 +958,73 @@ Scene conventionCenter1Scene = new Scene();
         conventionCenter1Scene.setDescription(
                   "You arrive at the convention center, "
                 + "no one appears to be here");
+        
+        
+        
+        conventionCenter1Scene.setMap(
+        
+                                       
+                  "\n+---------+---------+---------+---------+---------+---------+---------+"
+                + "\n    |     |   TEMPLE SQUARE REFUGEE CAMP    |     |     ZOO     |     |"
+                + "\n    |     |---------------------------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             | XXX |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |   SHOPPING  |     | CATHEDRAL   |     |"
+                + "\n    |     |   CENTER 2  |     |     MALL    |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |                                             |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |    HOTEL    |     |  APARTMENT  |     |"
+                + "\n    |     |   CENTER 1  |     |             |     |    BLDG     |     |"
+                + "\n    |     |   CURRENT   |     |             |     |             |     |"
+                + "\n    |     |   LOCATION  |     |             |     |             |     |"
+                + "\n    | XXX |-------------| XXX |-------------|     |-------------| XXX |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|                         |-------------|     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |     BUS     |          PARK           |    CITY     |     |"
+                + "\n    |     |   STATION   |                         |    HALL     |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    | XXX |-------------|                         |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     | RESIDENTIAL |     |   GROCERY   |     |   POLICE    |     |"
+                + "\n    |     |-----LOT-----|     |    STORE    |     |   STATION   |     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     |      |      |     |             |     |             | XXX |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |   SPORTING  |     |             |     | CONVENIENCE |     |"
+                + "\n    |     | GOODS STORE |     |   HOSPITAL  |     |    STORE    |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |    FIRE     |     |"
+                + "\n    |     |    START    |     |    SCHOOL   |     |   STATION   |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n|---|     |-------------|     |-------------|     |-------------|     |"
+                + "\n+                                                                     |"
+                + "\n|---------------------------------------------------------------------|"
+                +"\n "
+                    );         
+        
+        
+        
+        
+        
+        
         //startingScene.setMapSymbol(" START ");
         //startingScene.setBlocked(false);
         //startingScene.setTravelTime(240);
@@ -176,6 +1035,72 @@ Scene hotelScene = new Scene();
         hotelScene.setDescription(
                  "You arrive at the hotel, "
                 + "no one appears to be here");
+        
+        
+        hotelScene.setMap(
+        
+                                       
+                  "\n+---------+---------+---------+---------+---------+---------+---------+"
+                + "\n    |     |   TEMPLE SQUARE REFUGEE CAMP    |     |     ZOO     |     |"
+                + "\n    |     |---------------------------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             | XXX |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |   SHOPPING  |     | CATHEDRAL   |     |"
+                + "\n    |     |   CENTER 2  |     |     MALL    |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |                                             |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |    HOTEL    |     |  APARTMENT  |     |"
+                + "\n    |     |   CENTER 1  |     |   CURRENT   |     |    BLDG     |     |"
+                + "\n    |     |             |     |   LOCATION  |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    | XXX |-------------| XXX |-------------|     |-------------| XXX |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|                         |-------------|     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |     BUS     |          PARK           |    CITY     |     |"
+                + "\n    |     |   STATION   |                         |    HALL     |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    | XXX |-------------|                         |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     | RESIDENTIAL |     |   GROCERY   |     |   POLICE    |     |"
+                + "\n    |     |-----LOT-----|     |    STORE    |     |   STATION   |     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     |      |      |     |             |     |             | XXX |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |   SPORTING  |     |             |     | CONVENIENCE |     |"
+                + "\n    |     | GOODS STORE |     |   HOSPITAL  |     |    STORE    |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |    FIRE     |     |"
+                + "\n    |     |    START    |     |    SCHOOL   |     |   STATION   |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n|---|     |-------------|     |-------------|     |-------------|     |"
+                + "\n+                                                                     |"
+                + "\n|---------------------------------------------------------------------|"
+                +"\n "
+                    );          
+        
+        
+        
+        
+        
+        
         //startingScene.setMapSymbol(" START ");
         //startingScene.setBlocked(false);
         //startingScene.setTravelTime(240);
@@ -186,6 +1111,72 @@ Scene hotelScene = new Scene();
         apartmentBuildingScene.setDescription(
                   "You arrive at the appartment building, "
                 + "no one appears to be here");
+        
+        
+        apartmentBuildingScene.setMap(
+        
+                                       
+                  "\n+---------+---------+---------+---------+---------+---------+---------+"
+                + "\n    |     |   TEMPLE SQUARE REFUGEE CAMP    |     |     ZOO     |     |"
+                + "\n    |     |---------------------------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             | XXX |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |   SHOPPING  |     | CATHEDRAL   |     |"
+                + "\n    |     |   CENTER 2  |     |     MALL    |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |                                             |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |    HOTEL    |     |  APARTMENT  |     |"
+                + "\n    |     |   CENTER 1  |     |             |     |    BLDG     |     |"
+                + "\n    |     |             |     |             |     |   CURRENT   |     |"
+                + "\n    |     |             |     |             |     |   LOCATION  |     |"
+                + "\n    | XXX |-------------| XXX |-------------|     |-------------| XXX |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|                         |-------------|     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |     BUS     |          PARK           |    CITY     |     |"
+                + "\n    |     |   STATION   |                         |    HALL     |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    | XXX |-------------|                         |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     | RESIDENTIAL |     |   GROCERY   |     |   POLICE    |     |"
+                + "\n    |     |-----LOT-----|     |    STORE    |     |   STATION   |     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     |      |      |     |             |     |             | XXX |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |   SPORTING  |     |             |     | CONVENIENCE |     |"
+                + "\n    |     | GOODS STORE |     |   HOSPITAL  |     |    STORE    |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |    FIRE     |     |"
+                + "\n    |     |    START    |     |    SCHOOL   |     |   STATION   |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n|---|     |-------------|     |-------------|     |-------------|     |"
+                + "\n+                                                                     |"
+                + "\n|---------------------------------------------------------------------|"
+                +"\n "
+                    );         
+        
+        
+        
+        
+        
+        
         //startingScene.setMapSymbol(" START ");
         //startingScene.setBlocked(false);
         //startingScene.setTravelTime(240);
@@ -195,6 +1186,71 @@ Scene conventionCenter2Scene = new Scene();
         conventionCenter2Scene.setDescription(
                   "You arrive at the Second Convention center, "
                 + "no one appears to be here");
+        
+        
+        conventionCenter2Scene.setMap(
+        
+                                       
+                  "\n+---------+---------+---------+---------+---------+---------+---------+"
+                + "\n    |     |   TEMPLE SQUARE REFUGEE CAMP    |     |     ZOO     |     |"
+                + "\n    |     |---------------------------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             | XXX |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |   SHOPPING  |     | CATHEDRAL   |     |"
+                + "\n    |     |   CENTER 2  |     |     MALL    |     |             |     |"
+                + "\n    |     |   CURRENT   |     |             |     |             |     |"
+                + "\n    |     |   LOCATION  |     |             |     |             |     |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |                                             |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |    HOTEL    |     |  APARTMENT  |     |"
+                + "\n    |     |   CENTER 1  |     |             |     |    BLDG     |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    | XXX |-------------| XXX |-------------|     |-------------| XXX |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|                         |-------------|     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |     BUS     |          PARK           |    CITY     |     |"
+                + "\n    |     |   STATION   |                         |    HALL     |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    | XXX |-------------|                         |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     | RESIDENTIAL |     |   GROCERY   |     |   POLICE    |     |"
+                + "\n    |     |-----LOT-----|     |    STORE    |     |   STATION   |     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     |      |      |     |             |     |             | XXX |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |   SPORTING  |     |             |     | CONVENIENCE |     |"
+                + "\n    |     | GOODS STORE |     |   HOSPITAL  |     |    STORE    |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |    FIRE     |     |"
+                + "\n    |     |    START    |     |    SCHOOL   |     |   STATION   |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n|---|     |-------------|     |-------------|     |-------------|     |"
+                + "\n+                                                                     |"
+                + "\n|---------------------------------------------------------------------|"
+                +"\n "
+                    );            
+        
+        
+        
+        
+        
         //startingScene.setMapSymbol(" START ");
         //startingScene.setBlocked(false);
         //startingScene.setTravelTime(240);
@@ -205,6 +1261,73 @@ Scene shoppingMallScene = new Scene();
         shoppingMallScene.setDescription(
                   "You arrive at the Shopping Mall, "
                 + "no one appears to be here");
+        
+        
+        shoppingMallScene.setMap(
+        
+                                       
+                  "\n+---------+---------+---------+---------+---------+---------+---------+"
+                + "\n    |     |   TEMPLE SQUARE REFUGEE CAMP    |     |     ZOO     |     |"
+                + "\n    |     |---------------------------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             | XXX |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |   SHOPPING  |     | CATHEDRAL   |     |"
+                + "\n    |     |   CENTER 2  |     |     MALL    |     |             |     |"
+                + "\n    |     |             |     |   CURRENT   |     |             |     |"
+                + "\n    |     |             |     |   LOCATION  |     |             |     |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |                                             |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |    HOTEL    |     |  APARTMENT  |     |"
+                + "\n    |     |   CENTER 1  |     |             |     |    BLDG     |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    | XXX |-------------| XXX |-------------|     |-------------| XXX |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|                         |-------------|     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |     BUS     |          PARK           |    CITY     |     |"
+                + "\n    |     |   STATION   |                         |    HALL     |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    | XXX |-------------|                         |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     | RESIDENTIAL |     |   GROCERY   |     |   POLICE    |     |"
+                + "\n    |     |-----LOT-----|     |    STORE    |     |   STATION   |     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     |      |      |     |             |     |             | XXX |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |   SPORTING  |     |             |     | CONVENIENCE |     |"
+                + "\n    |     | GOODS STORE |     |   HOSPITAL  |     |    STORE    |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |    FIRE     |     |"
+                + "\n    |     |    START    |     |    SCHOOL   |     |   STATION   |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n|---|     |-------------|     |-------------|     |-------------|     |"
+                + "\n+                                                                     |"
+                + "\n|---------------------------------------------------------------------|"
+                +"\n "
+                    );            
+                
+        
+        
+        
+        
+        
+        
         //startingScene.setMapSymbol(" START ");
         //startingScene.setBlocked(false);
         //startingScene.setTravelTime(240);
@@ -215,26 +1338,150 @@ Scene cathedralScene = new Scene();
         cathedralScene.setDescription(
                   "You arrive at the Cathedral, "
                 + "no one appears to be here");
+        
+        
+        cathedralScene.setMap(
+        
+                                       
+                  "\n+---------+---------+---------+---------+---------+---------+---------+"
+                + "\n    |     |   TEMPLE SQUARE REFUGEE CAMP    |     |     ZOO     |     |"
+                + "\n    |     |---------------------------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             | XXX |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |   SHOPPING  |     | CATHEDRAL   |     |"
+                + "\n    |     |   CENTER 2  |     |     MALL    |     |             |     |"
+                + "\n    |     |             |     |             |     |   CURRENT   |     |"
+                + "\n    |     |             |     |             |     |   LOCATION  |     |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |                                             |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |    HOTEL    |     |  APARTMENT  |     |"
+                + "\n    |     |   CENTER 1  |     |             |     |    BLDG     |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    | XXX |-------------| XXX |-------------|     |-------------| XXX |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|                         |-------------|     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |     BUS     |          PARK           |    CITY     |     |"
+                + "\n    |     |   STATION   |                         |    HALL     |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    | XXX |-------------|                         |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     | RESIDENTIAL |     |   GROCERY   |     |   POLICE    |     |"
+                + "\n    |     |-----LOT-----|     |    STORE    |     |   STATION   |     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     |      |      |     |             |     |             | XXX |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |   SPORTING  |     |             |     | CONVENIENCE |     |"
+                + "\n    |     | GOODS STORE |     |   HOSPITAL  |     |    STORE    |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |    FIRE     |     |"
+                + "\n    |     |    START    |     |    SCHOOL   |     |   STATION   |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n|---|     |-------------|     |-------------|     |-------------|     |"
+                + "\n+                                                                     |"
+                + "\n|---------------------------------------------------------------------|"
+                +"\n "
+                    );          
+        
+        
+        
+        
+        
+        
+        
         //startingScene.setMapSymbol(" START ");
         //startingScene.setBlocked(false);
         //startingScene.setTravelTime(240);
         scenes[SceneType.cathedral.ordinal()] = cathedralScene;
         
 
-Scene zooScene = new Scene();
-        zooScene.setDescription(
-                  "You arrive at the Zoo, "
-                + "no one appears to be here");
-        //startingScene.setMapSymbol(" START ");
-        //startingScene.setBlocked(false);
-        //startingScene.setTravelTime(240);
-        scenes[SceneType.zoo.ordinal()] = zooScene;
-    
-        
+
     Scene refugeeCamp1Scene = new Scene();
         refugeeCamp1Scene.setDescription(
                   "You arrive at the Refugee Camp and start lookin g for your family, "
                 + "People rush to you begging you for any spare food or drink you have");
+        
+        
+        refugeeCamp1Scene.setMap(
+        
+                                       
+                  "\n+---------+---------+---------+---------+---------+---------+---------+"
+                + "\n    |     |   TEMPLE SQUARE REFUGEE CAMP    |     |     ZOO     |     |"          
+                + "\n    |     |   CURRENT  LOCATION             |     |   CURRENT   |     |"          
+                + "\n    |     |                                 |     |   LOCATION  |     |"
+                + "\n    |     |---------------------------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             | XXX |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |   SHOPPING  |     | CATHEDRAL   |     |"
+                + "\n    |     |   CENTER 2  |     |     MALL    |     |             |     |"
+                + "\n    |     |             |     |             |     |   CURRENT   |     |"
+                + "\n    |     |             |     |             |     |   LOCATION  |     |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |                                             |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |    HOTEL    |     |  APARTMENT  |     |"
+                + "\n    |     |   CENTER 1  |     |             |     |    BLDG     |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    | XXX |-------------| XXX |-------------|     |-------------| XXX |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|                         |-------------|     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |     BUS     |          PARK           |    CITY     |     |"
+                + "\n    |     |   STATION   |                         |    HALL     |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    | XXX |-------------|                         |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     | RESIDENTIAL |     |   GROCERY   |     |   POLICE    |     |"
+                + "\n    |     |-----LOT-----|     |    STORE    |     |   STATION   |     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     |      |      |     |             |     |             | XXX |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |   SPORTING  |     |             |     | CONVENIENCE |     |"
+                + "\n    |     | GOODS STORE |     |   HOSPITAL  |     |    STORE    |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |    FIRE     |     |"
+                + "\n    |     |    START    |     |    SCHOOL   |     |   STATION   |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n|---|     |-------------|     |-------------|     |-------------|     |"
+                + "\n+                                                                     |"
+                + "\n|---------------------------------------------------------------------|"
+                +"\n "
+                    );         
+        
+        
+        
+        
         //startingScene.setMapSymbol(" START ");
         //startingScene.setBlocked(false);
         //startingScene.setTravelTime(240);
@@ -245,19 +1492,158 @@ Scene refugeeCamp2Scene = new Scene();
         refugeeCamp2Scene.setDescription(
                   "You have navigated the Refugee camp and have located your family. "
                 + "Good work! it can only get better from here... Or will it?");
+        
+        
+        
+        refugeeCamp2Scene.setMap(
+        
+                                       
+                  "\n+---------+---------+---------+---------+---------+---------+---------+"
+                + "\n    |     |   TEMPLE SQUARE REFUGEE CAMP    |     |     ZOO     |     |"          
+                + "\n    |     |   CURRENT  LOCATION             |     |             |     |"          
+                + "\n    |     |                                 |     |             |     |"
+                + "\n    |     |---------------------------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             | XXX |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |   SHOPPING  |     | CATHEDRAL   |     |"
+                + "\n    |     |   CENTER 2  |     |     MALL    |     |             |     |"
+                + "\n    |     |             |     |             |     |   CURRENT   |     |"
+                + "\n    |     |             |     |             |     |   LOCATION  |     |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |                                             |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |    HOTEL    |     |  APARTMENT  |     |"
+                + "\n    |     |   CENTER 1  |     |             |     |    BLDG     |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    | XXX |-------------| XXX |-------------|     |-------------| XXX |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|                         |-------------|     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |     BUS     |          PARK           |    CITY     |     |"
+                + "\n    |     |   STATION   |                         |    HALL     |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    | XXX |-------------|                         |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     | RESIDENTIAL |     |   GROCERY   |     |   POLICE    |     |"
+                + "\n    |     |-----LOT-----|     |    STORE    |     |   STATION   |     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     |      |      |     |             |     |             | XXX |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |   SPORTING  |     |             |     | CONVENIENCE |     |"
+                + "\n    |     | GOODS STORE |     |   HOSPITAL  |     |    STORE    |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |    FIRE     |     |"
+                + "\n    |     |    START    |     |    SCHOOL   |     |   STATION   |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n|---|     |-------------|     |-------------|     |-------------|     |"
+                + "\n+                                                                     |"
+                + "\n|---------------------------------------------------------------------|"
+                +"\n "
+                    );         
+                
+        
+        
+        
         //startingScene.setMapSymbol(" START ");
         //startingScene.setBlocked(false);
         //startingScene.setTravelTime(240);
         scenes[SceneType.refugeeCamp2.ordinal()] = refugeeCamp2Scene;
         
-Scene zoo = new Scene();
+Scene zooScene = new Scene();
         zooScene.setDescription(
-                  "You have navigated the Refugee camp and have located your family. "
-                + "Good work! it can only get better from here... Or will it?");
+                  "You arrive at the Zoo, "
+                + "no one appears to be here");
+        
+        
+        
+        zooScene.setMap(
+        
+                                       
+                  "\n+---------+---------+---------+---------+---------+---------+---------+"
+                + "\n    |     |   TEMPLE SQUARE REFUGEE CAMP    |     |     ZOO     |     |"          
+                + "\n    |     |                                 |     |   CURRENT   |     |"          
+                + "\n    |     |                                 |     |   LOCATION  |     |"
+                + "\n    |     |---------------------------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             | XXX |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |   SHOPPING  |     | CATHEDRAL   |     |"
+                + "\n    |     |   CENTER 2  |     |     MALL    |     |             |     |"
+                + "\n    |     |             |     |             |     |   CURRENT   |     |"
+                + "\n    |     |             |     |             |     |   LOCATION  |     |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |                                             |"
+                + "\n    |     |             |     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |  CONVENTION |     |    HOTEL    |     |  APARTMENT  |     |"
+                + "\n    |     |   CENTER 1  |     |             |     |    BLDG     |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    | XXX |-------------| XXX |-------------|     |-------------| XXX |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|                         |-------------|     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |     BUS     |          PARK           |    CITY     |     |"
+                + "\n    |     |   STATION   |                         |    HALL     |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    |     |             |                         |             |     |"
+                + "\n    | XXX |-------------|                         |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     | RESIDENTIAL |     |   GROCERY   |     |   POLICE    |     |"
+                + "\n    |     |-----LOT-----|     |    STORE    |     |   STATION   |     |"
+                + "\n    |     |      |      |     |             |     |             |     |"
+                + "\n    |     |      |      |     |             |     |             | XXX |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |   SPORTING  |     |             |     | CONVENIENCE |     |"
+                + "\n    |     | GOODS STORE |     |   HOSPITAL  |     |    STORE    |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |                                                                 |"
+                + "\n    |     |-------------|     |-------------|     |-------------|     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |    FIRE     |     |"
+                + "\n    |     |    START    |     |    SCHOOL   |     |   STATION   |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n    |     |             |     |             |     |             |     |"
+                + "\n|---|     |-------------|     |-------------|     |-------------|     |"
+                + "\n+                                                                     |"
+                + "\n|---------------------------------------------------------------------|"
+                +"\n "
+                    );          
+                
+        
+        
+        
+        
+        
+        
         //startingScene.setMapSymbol(" START ");
         //startingScene.setBlocked(false);
         //startingScene.setTravelTime(240);
-        scenes[SceneType.zoo.ordinal()] = zooScene;        
+        scenes[SceneType.zoo.ordinal()] = zooScene;
+    
+                
         
      return scenes;   
     
