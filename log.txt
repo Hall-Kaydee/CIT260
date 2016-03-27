@@ -11,17 +11,19 @@ S - Save Game
 D - Test Double Number Exception
 Q - Quit
 ++++++++++++++++++++++++++++++++++++++
-byui.cit260.zombieGame.view.MainMenuView - 
+byui.cit260.zombieGame.view.GameMenuView - 
 
 
 ++++++++++++++++++++++++++++++++++++++
-+  Main Menu                          
++  Game Menu                          
 ++++++++++++++++++++++++++++++++++++++
-N - Start New Game
-L - Load Game
-H - Help
-S - Save Game
-D - Test Double Number Exception
+V - View Map
+E - View Equipment
+M - Move
+T - Talk
+U - Use Equipment
+W - Select Weapon
+R - Save Reports
 Q - Quit
 ++++++++++++++++++++++++++++++++++++++
 byui.cit260.zombieGame.view.GameMenuView - 
@@ -36,6 +38,7 @@ M - Move
 T - Talk
 U - Use Equipment
 W - Select Weapon
+R - Save Reports
 Q - Quit
 ++++++++++++++++++++++++++++++++++++++
 byui.cit260.zombieGame.view.MainMenuView - 

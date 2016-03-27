@@ -5,8 +5,14 @@
  */
 package byui.cit260.zombieGame.view;
 
+import byui.cit260.zombieGame.Enum.SceneType;
+import byui.cit260.zombieGame.control.MapControl;
 import byui.cit260.zombieGame.model.MainCharacter;
 import byui.cit260.zombieGame.model.Map;
+import byui.cit260.zombieGame.model.Scene;
+import java.io.IOException;
+import java.io.PrintWriter;
+import zombiegame.ZombieGame;
 
 /**
  *
@@ -24,7 +30,8 @@ public class GameMenuView extends View{
                 + "\nM - Move"
                 + "\nT - Talk"
                 + "\nU - Use Equipment"
-                + "\nW - Select Weapon"            
+                + "\nW - Select Weapon"  
+                + "\nR - Save Reports"
                 + "\nQ - Quit"
                 + "\n++++++++++++++++++++++++++++++++++++++"
                
@@ -95,6 +102,12 @@ public class GameMenuView extends View{
             case "W"://combat - how to fight
                 System.out.println("\nView and Select Weapons");
                 break;
+                
+            case "R"://save the current game
+                this.callSaveReports();
+                break;    
+                
+                
  
             default:
                 System.out.println("\nInvalid selection. Try again");
@@ -114,5 +127,106 @@ public class GameMenuView extends View{
     
     
     }
+    
+    private void callSaveReports() {
+
+ /*       Map maptxt = MapControl.createMap();
+        
+        String mapReport = maptxt.getMap();
+
+        Scene sceneMapReport = new Scene();
+        
+        String map = sceneMapReport.getMap();
+        int zombieCount = sceneMapReport.getZombieCount();
+        int medKitCount = sceneMapReport.getMedKitCount();
+        int energyBarCount = sceneMapReport.getEnergyBarCount();
+        int waterCount = sceneMapReport.getWaterBarCount();
+
+*/
+ 
+         Scene sceneMapReport = new Scene();
+         String map = sceneMapReport.getMap();
+        int zombieCount = sceneMapReport.getZombieCount();
+        int medKitCount = sceneMapReport.getMedKitCount();
+        int energyBarCount = sceneMapReport.getEnergyBarCount();
+        int waterCount = sceneMapReport.getWaterBarCount();
+ 
+        
+        try {
+            
+            
+          MainCharacter xCoordinate = new MainCharacter();
+          MainCharacter yCoordinate = new MainCharacter();
+          Map playerMapLocation = new Map();
+
+          int xCoord = xCoordinate.getXCoordinate();
+          int yCoord = yCoordinate.getYCoordinate(); 
+          String playerMapView = playerMapLocation.buildMapViews(xCoord, yCoord); 
+            
+           PrintWriter out = new PrintWriter(ZombieGame.mapReportFile);
+           
+           out.println("\n--------- THIS IS THE MAP --------------\n\n");
+           out.println("\n\n");
+           out.printf("%-71s", playerMapView);
+           
+            }
+        
+        catch (Exception e){
+            ErrorView.display(this.getClass().getName(),"\nError writing file");
+            }
+        
+        try {
+            
+           PrintWriter out2 = new PrintWriter(ZombieGame.sceneReportFile);
+           
+           out2.println("\n------------ Scene Report --------------");
+           out2.printf("%n%-20s%10s", "Description", "Quantity" );
+           out2.printf("%n%-20s%10s", "-----------", "--------" );
+           out2.printf("%n%-20s%10d", "Zombie Count", zombieCount );           
+           out2.printf("%n%-20s%10d", "Medkit Count", medKitCount ); 
+           out2.printf("%n%-20s%10d", "Energybar Count", energyBarCount );
+           out2.printf("%n%-20s%10d", "Water Count", waterCount );           
+         
+            }
+        
+        catch (Exception e){
+            ErrorView.display(this.getClass().getName(),"\nError writing file");
+            } 
+        
+        try {
+           
+          MainCharacter xCoordinate = new MainCharacter();
+          MainCharacter yCoordinate = new MainCharacter();
+          Map playerMapLocation = new Map();
+
+          int xCoord = xCoordinate.getXCoordinate();
+          int yCoord = yCoordinate.getYCoordinate(); 
+          String playerLocation = playerMapLocation.buildMap(xCoord, yCoord);  
+            
+            
+           PrintWriter out2 = new PrintWriter(ZombieGame.statsReportFile);
+           
+           out2.println("\n------------ Player Sats Report --------------");
+           out2.printf("%n%-30s%10s", "Description", "Value" );
+           out2.printf("%n%-30s%10s", "-----------", "-----" );
+           out2.printf("%n%-30s%10s", "Scene Name", playerLocation );           
+           out2.printf("%n%-30s%10d", "X Coordinate", xCoord ); 
+           out2.printf("%n%-30s%10d", "Y Coordinate", yCoord );
+           
+         
+            }
+        
+        catch (Exception e){
+            ErrorView.display(this.getClass().getName(),"\nError writing file");
+            }        
+        
+        
+        
+ 
+    }    
+    
+    
+    
+    
     
 }

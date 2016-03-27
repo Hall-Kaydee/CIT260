@@ -29,11 +29,13 @@ public class MapControl {
      //assign the differen scenes to locations in tha map
      MapControl.assignScenesToLocations(map, scenes);
      
+     
+     
      return map;
            
     }
     
-    private static Scene[] createScenes() {
+    public static Scene[] createScenes() {
      
         Game game = ZombieGame.getCurrentGame();
 
@@ -1414,7 +1416,7 @@ Scene cathedralScene = new Scene();
 
     Scene refugeeCamp1Scene = new Scene();
         refugeeCamp1Scene.setDescription(
-                  "You arrive at the Refugee Camp and start lookin g for your family, "
+                  "You arrive at the Refugee Camp and start looking for your family, "
                 + "People rush to you begging you for any spare food or drink you have");
         
         
@@ -1423,8 +1425,8 @@ Scene cathedralScene = new Scene();
                                        
                   "\n+---------+---------+---------+---------+---------+---------+---------+"
                 + "\n    |     |   TEMPLE SQUARE REFUGEE CAMP    |     |     ZOO     |     |"          
-                + "\n    |     |   CURRENT  LOCATION             |     |   CURRENT   |     |"          
-                + "\n    |     |                                 |     |   LOCATION  |     |"
+                + "\n    |     |   CURRENT  LOCATION             |     |             |     |"          
+                + "\n    |     |                                 |     |             |     |"
                 + "\n    |     |---------------------------------|     |-------------|     |"
                 + "\n    |                                                                 |"
                 + "\n    |     |-------------|     |-------------|     |-------------|     |"
@@ -1562,6 +1564,14 @@ Scene refugeeCamp2Scene = new Scene();
         //startingScene.setMapSymbol(" START ");
         //startingScene.setBlocked(false);
         //startingScene.setTravelTime(240);
+        
+        refugeeCamp1Scene.setZombieCount(25);
+        refugeeCamp1Scene.setMedkitCount(4);
+        refugeeCamp1Scene.setEnergyBarCount(2);
+        refugeeCamp1Scene.setWaterCount(4);
+        
+        
+        
         scenes[SceneType.refugeeCamp2.ordinal()] = refugeeCamp2Scene;
         
 Scene zooScene = new Scene();

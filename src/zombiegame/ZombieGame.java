@@ -28,7 +28,9 @@ public class ZombieGame {
     private static BufferedReader inFile = null;
     private static PrintWriter logFile = null;
     
-    
+    public static PrintWriter mapReportFile = null;
+    public static PrintWriter sceneReportFile = null;
+    public static PrintWriter statsReportFile = null;
     
     
     public static int xCoordinate = 0;//initial player X coordinate
@@ -51,10 +53,23 @@ public class ZombieGame {
         ZombieGame.outFile = 
                 new PrintWriter(System.out, true);
         
+        
 
         
          String filePath = "log.txt";
-        ZombieGame.logFile = new PrintWriter(filePath);  
+         String mapReportFilePath = "mapreport.txt";         
+         String sceneReportFilePath = "scenereport.txt";         
+         String statsReportFilePath = "statsreport.txt";         
+         
+        ZombieGame.logFile = new PrintWriter(filePath);
+        
+        ZombieGame.mapReportFile = new PrintWriter(mapReportFilePath);
+
+        ZombieGame.sceneReportFile = new PrintWriter(sceneReportFilePath);
+
+        ZombieGame.statsReportFile = new PrintWriter(statsReportFilePath);        
+        
+        
         
           //create startProgramview origin - display start program view
         StartProgramView startProgramView = new StartProgramView();    
@@ -86,7 +101,17 @@ public class ZombieGame {
                 ZombieGame.outFile.close();
                 
                 if (ZombieGame.logFile != null) 
-                ZombieGame.logFile.close();                
+                ZombieGame.logFile.close();
+                
+                if (ZombieGame.mapReportFile != null) 
+                ZombieGame.mapReportFile.close();
+                
+                if (ZombieGame.sceneReportFile != null) 
+                ZombieGame.sceneReportFile.close(); 
+                
+                if (ZombieGame.statsReportFile != null) 
+                ZombieGame.statsReportFile.close();             
+                
                 
             } catch (IOException ex) {
                 System.out.println("\n***Error closing files***");
@@ -136,5 +161,34 @@ public class ZombieGame {
     public static void setLogFile(PrintWriter logFile) {
         ZombieGame.logFile = logFile;
     }
+    
+    public static PrintWriter getMapReportFile() {
+        return logFile;
+    }
+
+    public static void setMapReportFile(PrintWriter logFile) {
+        ZombieGame.logFile = logFile;
+    }
+
+    public static PrintWriter getSceneReportFile() {
+        return logFile;
+    }
+
+    public static void getSceneReportFile(PrintWriter logFile) {
+        ZombieGame.logFile = logFile;
+    }
+
+    public static PrintWriter getStatsReportFile() {
+        return logFile;
+    }
+
+    public static void setStatsReportFile(PrintWriter logFile) {
+        ZombieGame.logFile = logFile;
+    }    
+    
+    
+    
+    
+    
     
 }

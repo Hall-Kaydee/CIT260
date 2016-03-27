@@ -17,6 +17,10 @@ public class Scene implements Serializable{
     private String description; 
     private double travelDistance;
     private String map;
+    private int zombieCount;
+    private int medKitCount;    
+    private int energyBarCount;    
+    private int waterCount;    
 
    public Scene() {
     }
@@ -39,9 +43,6 @@ public class Scene implements Serializable{
     public String getMap() {
         return map;
     }    
-    
-    
-    
     
         public void setMap(String map) {
         this.map = map;
@@ -106,5 +107,44 @@ public class Scene implements Serializable{
     public void waitScene() {
         
     }
+    
+
+    public void setZombieCount(int zombieCount) {
+        this.zombieCount = zombieCount;
+    }
+    
+    public int getZombieCount () {
+        return zombieCount;
+    }
+
+    public void setMedkitCount(int medKitCount) {
+        this.medKitCount = medKitCount;
+    }
+
+    public int getMedKitCount () {
+        return medKitCount;
+    }    
+   
+    public void setEnergyBarCount(int energyBarCount) {
+       
+        this.energyBarCount = energyBarCount;
+    }
+    
+    public int getEnergyBarCount () {
+        return energyBarCount;
+    }
+
+    public void setWaterCount(int waterCount) {
+        this.waterCount = waterCount;
+        
+    }
+    
+    public int getWaterBarCount () {
+        return waterCount;
+    }
+
+
+   
+    
     
 }

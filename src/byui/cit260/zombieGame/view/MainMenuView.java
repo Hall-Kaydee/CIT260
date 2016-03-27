@@ -62,10 +62,16 @@ public class MainMenuView extends View {
                 this.saveGame();
                 break;
                 
-                case "D"://save the current game
+            case "D"://save the current game
                 this.callDoubleNumber();
                 break;
- 
+
+          /*  case "R"://save the current game
+                this.callSaveReports();
+                break;
+           */     
+                
+                
             default:
                 System.out.println("\nInvalid selection. Try again");
                 break;
@@ -150,6 +156,8 @@ public class MainMenuView extends View {
         DoubleFormat doubleNumber = new DoubleFormat();
         doubleNumber.getDoubleNumber();
     }
+
+
 
 
     

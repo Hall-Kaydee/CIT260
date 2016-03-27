@@ -1,0 +1,8 @@
+
+------------ Player Sats Report --------------
+
+Description                        Value
+-----------                        -----
+Scene Name                         START
+X Coordinate                           0
+Y Coordinate                           0
