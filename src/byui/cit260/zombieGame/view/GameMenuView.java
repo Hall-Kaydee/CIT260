@@ -165,7 +165,7 @@ public class GameMenuView extends View{
             
            PrintWriter out = new PrintWriter(ZombieGame.mapReportFile);
            
-           out.println("\n--------- THIS IS THE MAP --------------\n\n");
+           out.println("\n--------- THIS IS THE MAP YO--------------\n\n");
            out.println("\n\n");
            out.printf("%-71s", playerMapView);
            
