@@ -12,6 +12,7 @@ import byui.cit260.zombieGame.model.Map;
 import byui.cit260.zombieGame.model.Scene;
 import java.io.IOException;
 import java.io.PrintWriter;
+import static jdk.nashorn.internal.objects.NativeString.length;
 import zombiegame.ZombieGame;
 
 /**
@@ -167,7 +168,42 @@ public class GameMenuView extends View{
            
            out.println("\n--------- THIS IS THE MAP YO--------------\n\n");
            out.println("\n\n");
-           out.printf("%-71s", playerMapView);
+           
+           int i = 0;
+           int mapStringLength = 0;
+           int lineCount = 0;
+           String newMapString = "";
+           char characterIn;
+           char characterOut;
+           mapStringLength = playerMapView.length() - 1;
+           
+           while (i <= mapStringLength){
+               
+
+               
+               if (lineCount <= 71) {
+                   
+                   characterIn = playerMapView.charAt(i);
+                   characterOut = characterIn;
+                   newMapString = newMapString + Character.toString(characterOut);
+                   lineCount++;
+                   i++;
+                     }
+               else {
+
+                   characterIn = playerMapView.charAt(i);
+                   characterOut = characterIn;
+                   newMapString = newMapString + Character.toString(characterOut);
+                   out.printf("%n%-71s", newMapString);
+                   newMapString = " ";
+                   lineCount = 1;
+                   i++;
+                    }
+               
+               //i++;
+               
+               }
+           //out.printf("%-71s", playerMapView);
            
             }
         
