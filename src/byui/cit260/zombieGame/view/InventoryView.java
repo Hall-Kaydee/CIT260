@@ -5,8 +5,15 @@
  */
 package byui.cit260.zombieGame.view;
 
+import byui.cit260.zombieGame.control.GameControl.Item;
 import byui.cit260.zombieGame.control.InventoryControl;
 import byui.cit260.zombieGame.exceptions.InventoryException;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import zombiegame.ZombieGame;
 
 /**
  *
@@ -28,6 +35,7 @@ public class InventoryView extends View {
             + "\n+ V - View Your Inventory                                      +"
             + "\n+ U - Use Inventory Item                                       +"
             + "\n+ C - Calculate Inventory Item Weight                          +"
+            + "\n+ R - Run inventory report                        +"
             + "\n+ D - Drop Inventory Item                                      +"
             + "\n+ Q - Quit                                                     +"   
             + "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
@@ -75,6 +83,10 @@ public class InventoryView extends View {
             
             case "V"://View inventory items?
                 this.viewInventoryItems();
+                break;
+                
+            case "R"://run report on inventory items?
+                this.printInventoryReport();
                 break;
             
             case "U"://Use inventory item
@@ -163,8 +175,94 @@ public class InventoryView extends View {
                 searchArea.searchArea();
                   }
 
+   /*
+  //Evan report
+   
+   public void printInventoryReport(ArrayList<Item> inventoryItem, String outputLocation) {
+   
+   try (PrintWriter out = new PrintWriter(outputLocation)) {
+   
+        out.println("\n\n        Inventory Report          ");
+        out.printf("%n%-20s%10s%10s", "Decription", "Quantity", "Weight");
+        out.printf("%n%-20s%10s%10s", "----------", "----------", "---------");
         
+     for (Item item : inventoryItem) {
+         out.printf("%n%-20s%7ds%13.2f" , item.getDescription()
+                                        , item.getQuantity()
+                                        , item.getWeight()
+                                                          );
+         
+     }
+            
+   } catch (IOException ex) {
+            System.out.println("I/O Error:" + ex.getMessage());
+   }
     }
+
+*/
+
+
+    private void printInventoryReport() {
+        
+   
+        try  { 
+       
+            
+        ZombieGame.inFile = 
+                new BufferedReader(new InputStreamReader(System.in));
+        
+        ZombieGame.outFile = 
+                new PrintWriter(System.out, true);
+        
+
+        
+         String filePath = "Inventory Report.txt";
+        ZombieGame.logFile = new PrintWriter(filePath);  
+        
+          //create startProgramview origin - display start program view
+        StartProgramView startProgramView = new StartProgramView();    
+            
+        startProgramView.displayStartProgramView();
+        
+        
+        
+        return;
+            }
+       
+        catch (Throwable e){
+    
+           System.out.println("\nException" + e.toString() +
+                                 "\ncause" + e.getCause() + 
+                                   "\nmessage" + e.getMessage());
+            
+            
+           e.printStackTrace();;
+           
+        }  
+   
+        
+        finally {
+            
+            try {
+                
+                if (ZombieGame.inFile != null) 
+                ZombieGame.inFile.close();
+ 
+                if (ZombieGame.outFile != null) 
+                ZombieGame.outFile.close();
+                
+                if (ZombieGame.logFile != null) 
+                ZombieGame.logFile.close();                
+                
+            } catch (IOException ex) {
+                System.out.println("\n***Error closing files***");
+                return;
+            }
+
+   
+    
+
+        }}}
 
   
 
