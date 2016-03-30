@@ -1,9 +1,0 @@
-
------------- Scene Report --------------
-
-Description           Quantity
------------           --------
-Zombie Count                 0
-Medkit Count                 0
-Energybar Count              0
-Water Count                  0
