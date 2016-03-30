@@ -27,7 +27,7 @@ public class GameControlTest {
     public void tearDown() {
     }
 
-    @Test
+/*    @Test
     //Evan tests
     public void testcalcSneak() {
         System.out.println("calcSneak");
@@ -94,6 +94,8 @@ public class GameControlTest {
         
         
        }
+
+*/
         
     }
     
