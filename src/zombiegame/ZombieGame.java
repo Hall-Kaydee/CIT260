@@ -7,6 +7,7 @@ package zombiegame;
 //
 import byui.cit260.zombieGame.model.Player;
 import byui.cit260.zombieGame.model.Game;
+import byui.cit260.zombieGame.model.Scene;
 
 import byui.cit260.zombieGame.view.StartProgramView;
 import java.io.BufferedReader;
@@ -119,6 +120,20 @@ public class ZombieGame {
             }
 
         }
+        
+        
+        Scene startScene = new Scene();
+        startScene.medKitCount = 5;
+        startScene.waterCount = 6;
+        startScene.energyBarCount = 2;        
+        
+        
+        
+        
+        
+        
+        
+        
     }
 
    

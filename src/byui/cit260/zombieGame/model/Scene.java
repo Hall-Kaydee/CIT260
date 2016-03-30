@@ -18,9 +18,9 @@ public class Scene implements Serializable{
     private double travelDistance;
     private String map;
     private int zombieCount;
-    private int medKitCount;    
-    private int energyBarCount;    
-    private int waterCount;    
+    public int medKitCount;    
+    public int energyBarCount;    
+    public int waterCount;    
 
    public Scene() {
     }
@@ -30,6 +30,63 @@ public class Scene implements Serializable{
  //       this.description = description;
         
  //   }
+   
+ public int[] buildScenes(int num1, int num2){
+     
+        //create an object reference array to store the object refs
+        
+        Scene[][] sceneObjects = new Scene [3][7];
+        
+        //create each Scene object and define its variables
+        
+        Scene startScene = new Scene();
+        startScene.description =
+                  "\nYou wake up in the wrecked APC. You are alone the doors are open "
+                + "\nLooks like everyone left in a hurry. Where did they go? what happened? "
+                + "\nYou exit the APC and look around. the street is empty and there is no sign of life. "
+                + "\nYou hear in the distance the sounds of the occasional gun shot and distant shouts. "
+                + "\nWhat will you do now?";
+        startScene.zombieCount = 5;
+        startScene.medKitCount = 5;
+        startScene.waterCount = 6;
+        startScene.energyBarCount = 2;  
+        sceneObjects [0][0] = startScene;
+        
+        
+        Scene schoolScene = new Scene();
+        schoolScene.description =
+                  "\nYou wake up in the wrecked APC. You are alone the doors are open "
+                + "\nLooks like everyone left in a hurry. Where did they go? what happened? "
+                + "\nYou exit the APC and look around. the street is empty and there is no sign of life. "
+                + "\nYou hear in the distance the sounds of the occasional gun shot and distant shouts. "
+                + "\nWhat will you do now?";
+        schoolScene.zombieCount = 5;
+        schoolScene.medKitCount = 5;
+        schoolScene.waterCount = 6;
+        schoolScene.energyBarCount = 2;
+        
+        sceneObjects [1][0] = schoolScene; 
+        
+        
+        
+        
+        
+        
+        return new int[] {sceneObjects[num1][num2].medKitCount,
+                          sceneObjects[num1][num2].waterCount,
+                          sceneObjects[num1][num2].energyBarCount};
+     
+ } 
+ 
+ 
+
+
+
+
+
+ 
+   
+   
 
     public String getDescription() {
         return description;

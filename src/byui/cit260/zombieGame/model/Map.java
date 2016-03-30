@@ -5,6 +5,7 @@
  */
 package byui.cit260.zombieGame.model;
 import java.io.Serializable;
+import byui.cit260.zombieGame.model.Scene;
 
 //
 /**
@@ -1393,6 +1394,10 @@ public String buildMapViews(int num1, int num2){
        
         return mapViewArray[num1][num2];
 }
+
+
+
+
 
 
 

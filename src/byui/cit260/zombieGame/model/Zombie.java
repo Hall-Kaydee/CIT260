@@ -14,41 +14,82 @@ import java.io.Serializable;
 
 public class Zombie implements Serializable{
     
-    private int hitPoints;
-    private boolean itemDrop;
+    public int hitDamage;
+    public int zombieHealth;
+    public String zombieDesc;
+
 
     public Zombie() {
     }
+
+ public int[] buildZombies(int num1, int num2){
+     
+
+        
+        
+        Zombie[][] zombieObjects = new Zombie [3][7];
+        
+        //create a zombie profile for each Scene object and define its variables
+        
+        
+        Zombie zombieFred = new Zombie();
+        zombieFred.zombieDesc =
+                  "\nHis name is Fred. He likes brains, strolling on the beach... more brains.";
+        zombieFred.hitDamage = 5;
+        zombieFred.zombieHealth = 6;
+  
+        zombieObjects [0][0] = zombieFred;     
+     
+ 
+        return new int[] {zombieObjects[num1][num2].hitDamage,
+                          zombieObjects[num1][num2].zombieHealth};                
+          
+   //return; 
+
+ }
+ 
+ 
+ 
+ 
+ 
+   
+   
     
     
 
-    public int getHitPoints() {
-        return hitPoints;
+    public int getHitDamage() {
+        return hitDamage;
     }
 
-    public void setHitPoints(int hitPoints) {
-        this.hitPoints = hitPoints;
+    public void setHitDamage(int hitDamage) {
+        this.hitDamage = hitDamage;
+    }
+    
+    
+    public double getZombieHealth() {
+        return zombieHealth;
     }
 
-    public boolean isItemDrop() {
-        return itemDrop;
+    public void setZombieHealth(int zombieHealth) {
+        this.zombieHealth = zombieHealth;
     }
+    
+    
+    
 
-    public void setItemDrop(boolean itemDrop) {
-        this.itemDrop = itemDrop;
-    }
+
 
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 29 * hash + this.hitPoints;
-        hash = 29 * hash + (this.itemDrop ? 1 : 0);
+        hash = 29 * hash + this.hitDamage;
+        
         return hash;
     }
 
     @Override
     public String toString() {
-        return "Zombie{" + "hitPoints=" + hitPoints + ", itemDrop=" + itemDrop + '}';
+        return "Zombie{" + "hitPoints=" + hitDamage + ", itemDrop="  + '}';
     }
     
     
@@ -65,10 +106,7 @@ public class Zombie implements Serializable{
             return false;
         }
         final Zombie other = (Zombie) obj;
-        if (this.hitPoints != other.hitPoints) {
-            return false;
-        }
-        if (this.itemDrop != other.itemDrop) {
+        if (this.hitDamage != other.hitDamage) {
             return false;
         }
         return true;
