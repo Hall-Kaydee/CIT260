@@ -6,6 +6,7 @@
 package byui.cit260.zombieGame.control;
 
 import byui.cit260.zombieGame.exceptions.FightControlException;
+import java.util.IllegalFormatException;
 
 /**
  *
@@ -13,39 +14,40 @@ import byui.cit260.zombieGame.exceptions.FightControlException;
  */
 public class FightControl {
     
-    public double calcEnemyHealth(double charDamage, double enemyHealth, int numberOfEnemies)
+    public int calcEnemyHealth(double charDamage, double enemyHealth, int numberOfEnemies)
     
-                                throws FightControlException {
+                                throws IllegalFormatException {
  
-         if (enemyHealth <= 0 || numberOfEnemies <= 0 || charDamage <=0){
+        /* if (enemyHealth <= 0 || numberOfEnemies <= 0 || charDamage <=0){
             
 
             throw new FightControlException("\nNumber of enemies cannot be below zero or above 10.");     
 
             //return -1;
             }
-      
+      */
         
         
         double healthPerEnemy = ((enemyHealth * numberOfEnemies) - charDamage) / numberOfEnemies;
+        
         
         if (healthPerEnemy <= 0) {
 
             System.out.println("Enemies are D.E.A.D."); 
             
-		return healthPerEnemy;
+		return (int) healthPerEnemy;
              }
 
 	else {
             
-            return healthPerEnemy;
+                return (int) healthPerEnemy;
             
                 }
              }
  
     
     
-    public double calcCharacterHealth(double enemyDamage, double numberOfEnemies, double characterHealth, int charHitPoints )
+    public int calcCharacterHealth(double enemyDamage, double numberOfEnemies, double characterHealth, double charHitPoints )
     
                             throws FightControlException {
     
@@ -68,12 +70,12 @@ public class FightControl {
         if (charHealth <= 0) {
 
                 System.out.println("Character is D.E.A.D."); 
-		return charHealth;
+		return (int) charHealth;
                 }
 
 	else {
             
-            return charHealth;
+            return (int) charHealth;
             
                 }
         }

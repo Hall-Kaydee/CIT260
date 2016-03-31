@@ -16,7 +16,9 @@ import zombiegame.ZombieGame;
 public class MainCharacter implements Serializable{
 
 
-    private double hitPoints;
+    public double hitPoints = 0.0;
+    public int charDam = 0;
+//    public double charHealth = 0.0; 
     
 
     public int getXCoordinate() {
@@ -51,12 +53,37 @@ public class MainCharacter implements Serializable{
     
 
     public double getHitPoints() {
-        return hitPoints;
+        return ZombieGame.hitPoints;
     }
 
     public void setHitPoints(double hitPoints) {
-        this.hitPoints = hitPoints;
+        ZombieGame.hitPoints = hitPoints;
     }
+    
+    
+    
+    public int getCharDam() {
+        return ZombieGame.charDam;
+    }
+
+    public void setCharDam(int charDam) {
+        ZombieGame.charDam = charDam;
+    }
+
+    public double getCharHealth() {
+        return ZombieGame.charHealth;
+    }
+
+    public void setCharHealth(double charHealth) {
+        ZombieGame.charHealth = charHealth;
+    }    
+    
+    
+    
+    
+    
+    
+    
 
     
 

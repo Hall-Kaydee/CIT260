@@ -8,8 +8,13 @@ package byui.cit260.zombieGame.view;
 import byui.cit260.zombieGame.control.FightControl;
 import byui.cit260.zombieGame.exceptions.DoubleFormatException;
 import byui.cit260.zombieGame.exceptions.FightControlException;
+import byui.cit260.zombieGame.model.MainCharacter;
+import byui.cit260.zombieGame.model.Scene;
+import byui.cit260.zombieGame.model.Zombie;
 import java.util.IllegalFormatException;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 /**
@@ -17,145 +22,87 @@ import java.util.Scanner;
  * @author Boyd
  */
 public class FightView {
-    
 
     
-    
-    
-    public void getFightResult() throws FightControlException {
+
+    public void getFightResult() throws FightControlException  {
  
-    double charDam = 0;
-    double enmHealth = 0;
-    int numOfEnemies = 0;
-    double enmDamage = 0;
-    double chrHealth = 0;
-    int chrHitPnts = 0;
+        double charDam = 0.0;
+        //int enmHealth;
+        //int numOfEnemies;
+        //int enmDamage;
+        double chrHealth = 0;
+        double chrHitPnts = 0;
         
-    Scanner in = new Scanner(System.in);        
         
-    try {
+        
+        
 
-       System.out.printf("\nEnter character damage:  ");
-       charDam = in.nextDouble();        
-    }
-    catch                   
-            
-       (IllegalFormatException me){
-        System.out.println(me.getMessage());
+                MainCharacter xCoordinate = new MainCharacter();
+                MainCharacter yCoordinate = new MainCharacter();
+
+                int xCoord = xCoordinate.getXCoordinate();
+                int yCoord = yCoordinate.getYCoordinate(); 
+
+                Scene sceneData = new Scene ();
+                Zombie zombieData = new Zombie ();
+
+                int[] sceneDataArray = sceneData.buildScenes(xCoord, yCoord);
+                int[] zombieDataArray = zombieData.buildZombies(xCoord, yCoord);
+
+                int enmHealth = zombieDataArray[1];
+                int enmDamage = zombieDataArray[0];
+                int numOfEnemies = sceneDataArray[0];
+                String zombieDescription = zombieData.buildZombieDescriptions(xCoord, yCoord);
+
+                Scanner in = new Scanner(System.in);        
         
-        }
-     
-      //  catch (DoubleFormatException nf){
-   
-      // System.out.println("\nValue must be a double number:  ");   
-          
-      //  }    
+
+
+                MainCharacter mainCharacter = new MainCharacter();
+
+                charDam = mainCharacter.getCharDam();        
+
+
+                FightControl fightControl = new FightControl();
+
+                double enemyHealthResult = fightControl.calcEnemyHealth
+                                     (charDam, enmHealth, numOfEnemies);
+                 //return enemyHealthResult;
+
+
+                System.out.println("\n" + zombieDescription);        
+
+                System.out.println("\nZombie health is " + enemyHealthResult);
+
+                Zombie zombieHealthWrite = new Zombie();
+
+                zombieHealthWrite.setZombieHealth((int) enemyHealthResult);
+
+                
+                chrHealth = mainCharacter.getCharHealth();   
        
-    try { 
+     
+ 
+                chrHitPnts = mainCharacter.getHitPoints();        
+   
+
+                double charHealthResult = fightControl.calcCharacterHealth
+                                (enmDamage, numOfEnemies, chrHealth, chrHitPnts);
+                
+                System.out.println("\nCharacter health is " + charHealthResult);
+       
+                MainCharacter charHealthWrite = new MainCharacter();
+       
+                charHealthWrite.setCharHealth(charHealthResult);
+                
+
+   
+        }
         
+
       
-       System.out.printf("\nEnter enemy health:  ");
-       enmHealth = in.nextDouble(); 
-        } 
-    catch                   
-            
-       (IllegalFormatException me){
-        System.out.println(me.getMessage());
-        
-        }  
-    
-    
-    try {   
-  
-       System.out.printf("\nEnter number of enemies:  ");
-       numOfEnemies = in.nextInt(); 
-       
-        } 
-    catch                   
-            
-       (IllegalFormatException me){
-        System.out.println(me.getMessage());
-        
-        }         
-       
-       
-       FightControl fightControl = new FightControl();
-       double enemyHealthResult = fightControl.calcEnemyHealth(charDam, enmHealth, numOfEnemies);
-        //return enemyHealthResult;
-        
-        
-
-        
-       System.out.println("\nEnemy health is " + enemyHealthResult);
-       
-
-       
-    try {   
-       
-       System.out.printf("\nEnter enemy damage:  ");
-       enmDamage = in.nextDouble();
-
-        } 
-    
-    catch                   
-            
-       (IllegalFormatException me){
-        System.out.println(me.getMessage());
-        
-        }        
-       
-
-       //System.out.printf("\nEnter number of enemies:  "); redundantl
-       
-       //double numEnemies = in.nextDouble();       
-       
-    try {
-
-       System.out.printf("\nEnter character health:  ");
-       chrHealth = in.nextDouble(); 
-    }
-    catch                   
-            
-       (IllegalFormatException me){
-        System.out.println(me.getMessage());
-        
-        } 
-
-    try {
-        
-    
-       System.out.printf("\nEnter character hit points:  ");
-       chrHitPnts = in.nextInt();
-        }
-
-    catch                   
-            
-       (IllegalFormatException me){
-        System.out.println(me.getMessage());
-        
-        } 
-
-       
-       double charHealthResult = fightControl.calcCharacterHealth(enmDamage, numOfEnemies, chrHealth, chrHitPnts);
-       
-       System.out.println("\nCharacter health is " + charHealthResult);
-
-       
- 
-     
     }
     
     
    
-    
-    
-
-    private void printMessage (){
-     
-        System.out.println("\nFightView class called");
-
-    }
-
-
-    
-}

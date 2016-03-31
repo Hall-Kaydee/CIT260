@@ -37,6 +37,13 @@ public class ZombieGame {
     public static int xCoordinate = 0;//initial player X coordinate
     public static int yCoordinate = 0;//initial player Y coordinate
     public static int radioListenCount = 0; 
+    public static double hitPoints = 1;
+    public static int charDam = 25;
+    public static double charHealth = 100;
+    public static int zombieCount = 0;
+    
+
+    
     
     
     

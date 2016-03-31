@@ -37,6 +37,21 @@ public class GameMenuView extends View{
                 + "\n++++++++++++++++++++++++++++++++++++++"
                
         );
+        
+        
+            MainCharacter mainCharacter = new MainCharacter();
+ 
+            double chrHealth = mainCharacter.getCharHealth();
+            
+            String characterHealth = String.valueOf(chrHealth);        
+      
+            System.out.println("\n Player Health is " + characterHealth);        
+        
+        
+        
+        
+        
+        
       }
         
     public GameMenuView(String message) {

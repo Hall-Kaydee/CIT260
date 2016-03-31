@@ -23,17 +23,36 @@ public class MoveView extends View{
     
     
         public MoveView() {
+            
+            
+
+            
         super ("\n"
-            + "\n++++++++++++++++++++++++++++++++++++++"
-            + "\n+  Move Menu                          "
-            + "\n++++++++++++++++++++++++++++++++++++++"
-            + "\nR - Right"
-            + "\nL - Left"
-            + "\nF - Forward"
-            + "\nB - Back"
-            + "\nQ - Quit"
-            + "\n++++++++++++++++++++++++++++++++++++++"
+               + "\n++++++++++++++++++++++++++++++++++++++"
+               + "\n+  Move Menu                          "
+               + "\n++++++++++++++++++++++++++++++++++++++"
+               + "\nR - Right"
+               + "\nL - Left"
+               + "\nF - Forward"
+               + "\nB - Back"
+               + "\nQ - Quit"
+               + "\n++++++++++++++++++++++++++++++++++++++"
                );
+        
+        
+            MainCharacter mainCharacter = new MainCharacter();
+ 
+            double chrHealth = mainCharacter.getCharHealth();
+            
+            String characterHealth = String.valueOf(chrHealth);        
+        
+        
+        
+            System.out.println("\n Player Health is " + characterHealth); 
+        
+        
+        
+        
             }
 
 
