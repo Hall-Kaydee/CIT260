@@ -41,7 +41,7 @@ public class ZombieGame {
     public static int charDam = 25;
     public static double charHealth = 100;
     public static int zombieCount = 0;
-    
+    public static String currentWeapon;
 
     
     
