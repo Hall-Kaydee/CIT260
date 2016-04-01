@@ -38,8 +38,26 @@ F - Forward
 B - Back
 Q - Quit
 ++++++++++++++++++++++++++++++++++++++
-byui.cit260.zombieGame.view.MoveView - 
-You have reached the WEST border of the map. You cannot go any farther
+byui.cit260.zombieGame.view.ZombieMayhemView - 
+
+
+++++++++++++++++++++++++++++++++++++++
++  Fight Zombie Menu                  
+++++++++++++++++++++++++++++++++++++++
+F - Fight the zombies
+S - Stop and take a chance on running
+Q - Quit
+++++++++++++++++++++++++++++++++++++++
+byui.cit260.zombieGame.view.ZombieMayhemView - 
+
+
+++++++++++++++++++++++++++++++++++++++
++  Fight Zombie Menu                  
+++++++++++++++++++++++++++++++++++++++
+F - Fight the zombies
+S - Stop and take a chance on running
+Q - Quit
+++++++++++++++++++++++++++++++++++++++
 byui.cit260.zombieGame.view.MoveView - 
 
 
@@ -50,6 +68,72 @@ R - Right
 L - Left
 F - Forward
 B - Back
+Q - Quit
+++++++++++++++++++++++++++++++++++++++
+byui.cit260.zombieGame.view.ZombieMayhemView - 
+
+
+++++++++++++++++++++++++++++++++++++++
++  Fight Zombie Menu                  
+++++++++++++++++++++++++++++++++++++++
+F - Fight the zombies
+S - Stop and take a chance on running
+Q - Quit
+++++++++++++++++++++++++++++++++++++++
+byui.cit260.zombieGame.view.ZombieMayhemView - 
+
+
+++++++++++++++++++++++++++++++++++++++
++  Fight Zombie Menu                  
+++++++++++++++++++++++++++++++++++++++
+F - Fight the zombies
+S - Stop and take a chance on running
+Q - Quit
+++++++++++++++++++++++++++++++++++++++
+byui.cit260.zombieGame.view.ZombieMayhemView - 
+Number of Enemies or or Player Health cannot be zero or below.
+byui.cit260.zombieGame.view.ZombieMayhemView - 
+
+
+++++++++++++++++++++++++++++++++++++++
++  Fight Zombie Menu                  
+++++++++++++++++++++++++++++++++++++++
+F - Fight the zombies
+S - Stop and take a chance on running
+Q - Quit
+++++++++++++++++++++++++++++++++++++++
+byui.cit260.zombieGame.view.ZombieMayhemView - 
+Number of Enemies or or Player Health cannot be zero or below.
+byui.cit260.zombieGame.view.ZombieMayhemView - 
+
+
+++++++++++++++++++++++++++++++++++++++
++  Fight Zombie Menu                  
+++++++++++++++++++++++++++++++++++++++
+F - Fight the zombies
+S - Stop and take a chance on running
+Q - Quit
+++++++++++++++++++++++++++++++++++++++
+byui.cit260.zombieGame.view.MoveView - 
+
+
+++++++++++++++++++++++++++++++++++++++
++  Move Menu                          
+++++++++++++++++++++++++++++++++++++++
+R - Right
+L - Left
+F - Forward
+B - Back
+Q - Quit
+++++++++++++++++++++++++++++++++++++++
+byui.cit260.zombieGame.view.ZombieMayhemView - 
+
+
+++++++++++++++++++++++++++++++++++++++
++  Fight Zombie Menu                  
+++++++++++++++++++++++++++++++++++++++
+F - Fight the zombies
+S - Stop and take a chance on running
 Q - Quit
 ++++++++++++++++++++++++++++++++++++++
 byui.cit260.zombieGame.view.MoveView - 

@@ -16,7 +16,9 @@ public class MapView extends View{
     
     
     public MapView() {
-        super ( "\n"
+        super (
+        
+                  "\n"
                 + "\n+---------+---------+---------+---------+---------+---------+---------+"
                 + "\n    |     |   TEMPLE SQUARE REFUGEE CAMP    |     |     ZOO     |     |"
                 + "\n    |     |---------------------------------|     |-------------|     |"
@@ -71,8 +73,7 @@ public class MapView extends View{
                 + "\n+    START       +         +         +         +         +         +  |"
                 + "\n|---------------------------------------------------------------------|"
                 +"\n "
-                + "\nPress Q to Quit:"
-                    );
+                + "\nPress Q to Quit:");
                 }
     private boolean promptMessage;
 

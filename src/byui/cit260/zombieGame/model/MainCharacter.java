@@ -16,8 +16,8 @@ import zombiegame.ZombieGame;
 public class MainCharacter implements Serializable{
 
 
-    public double hitPoints = 0.0;
-    public int charDam = 0;
+   // public double hitPoints = 0.0;
+    //public int charDam = 0;
 //    public double charHealth = 0.0; 
     
 

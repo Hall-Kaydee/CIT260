@@ -18,32 +18,36 @@ public class FightControl {
     
                                 throws IllegalFormatException {
  
-        /* if (enemyHealth <= 0 || numberOfEnemies <= 0 || charDamage <=0){
+            if (enemyHealth <= 0 ){
             
 
-            throw new FightControlException("\nNumber of enemies cannot be below zero or above 10.");     
+                System.out.println("\nThere are no more zombies to fight! You are safe..... for now.");     
 
-            //return -1;
+                return (int) enemyHealth;
+                //return -1;
             }
-      */
+            
+            else {
         
         
-        double healthPerEnemy = ((enemyHealth * numberOfEnemies) - charDamage) / numberOfEnemies;
+                double healthPerEnemy = ((enemyHealth * numberOfEnemies) - charDamage) / numberOfEnemies;
         
         
-        if (healthPerEnemy <= 0) {
+                if (healthPerEnemy <= 0) {
 
-            System.out.println("Enemies are D.E.A.D."); 
+                    System.out.println("Ah yeah! Zombies are D.E.A.D. You are safe..... for now."); 
             
-		return (int) healthPerEnemy;
-             }
-
-	else {
-            
-                return (int) healthPerEnemy;
-            
+                    return (int) healthPerEnemy;
                 }
+
+                else {
+            
+                    return (int) healthPerEnemy;
+            
+                    }
              }
+            
+    }
  
     
     

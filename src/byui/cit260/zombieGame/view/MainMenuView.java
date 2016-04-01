@@ -6,6 +6,7 @@
 package byui.cit260.zombieGame.view;
 
 import byui.cit260.zombieGame.control.GameControl;
+import byui.cit260.zombieGame.model.MainCharacter;
 import java.util.IllegalFormatException;
 import java.util.Scanner;
 import zombiegame.ZombieGame;
@@ -29,8 +30,20 @@ public class MainMenuView extends View {
             + "\nQ - Quit"
             + "\n++++++++++++++++++++++++++++++++++++++"
      );
+    
+        MainCharacter coordinates = new MainCharacter();
+     
+        int xCoord = coordinates.getXCoordinate();
+        int yCoord = coordinates.getYCoordinate();
+        double characterHealth = coordinates.getCharHealth();
+        
+        
+        System.out.println("\nYour health is at level " + Double.toString(characterHealth));
+        
+        System.out.println("\nThere are " + Integer.toString(ZombieGame.zombieCountArray[xCoord][yCoord]) + " zombies here.");     
+    
     }
-    private boolean promptMessage;
+
 
     public MainMenuView(String message) {
         super (message);
@@ -40,8 +53,12 @@ public class MainMenuView extends View {
     
     @Override
     public boolean doAction(String value) throws IllegalFormatException {
-    
-      try {  
+
+        
+       
+        
+        
+ 
         value = value.toUpperCase(); //convert choice to upper case
         
         switch (value){
@@ -78,11 +95,8 @@ public class MainMenuView extends View {
       
             }
  
-        }
-      catch 
-          (IllegalFormatException me){
-           System.out.println(me.getMessage());
-         }
+       
+
           return false;     
         
     }
