@@ -399,7 +399,7 @@ public class Scene implements Serializable{
     
         sceneDescriptionsArray[0][0] = 
                 
-                "\nYou wake up in the wrecked APC. You are alone the doors are open "
+                 "\nYou wake up in the wrecked APC. You are alone the doors are open "
                 + "\nLooks like everyone left in a hurry. Where did they go? what happened? "
                 + "\nYou exit the APC and look around. the street is empty and there is no sign of life. "
                 + "\nYou hear in the distance the sounds of the occasional gun shot and distant shouts. "
@@ -407,7 +407,7 @@ public class Scene implements Serializable{
         
         sceneDescriptionsArray[1][0] = 
                 
-                "\nYou enter the school yard and survey the area. You see some people huddled over a body near the tire swing "
+                  "\nYou enter the school yard and survey the area. You see some people huddled over a body near the tire swing "
                 + "\nYou can’t really tell what they are doing. You shout to them and they turn to you. They are covered in "
                 + "\nwhat looks like blood. They start to approach you making groaning and moaning noises. You think one of  "
                 + "\nthem grunts the word “…Brains?...”. You nervously back away and draw your weapon. ";
@@ -415,14 +415,14 @@ public class Scene implements Serializable{
         
         sceneDescriptionsArray[2][0] = 
                 
-                "\nAs you pass the fire station you notice the garage doors are open and the trucks are gone. The place"
+                  "\nAs you pass the fire station you notice the garage doors are open and the trucks are gone. The place"
                 + "\nlooks deserted, suddenly you hear a shout and a zombie fireman comes sliding down the fireman’s pole. "
                 + "\nHe is wielding an axe and accompanied by to feral looking Dalmatians. He signals them to attack and  "
                 + "\nthey charge you. You draw your weapon. ";
         
         sceneDescriptionsArray[0][1] = 
                 
-                "\nYou Enter the Sporting goods store in search of supplies. It already looks like it’s been hit by looters. The  "
+                  "\nYou Enter the Sporting goods store in search of supplies. It already looks like it’s been hit by looters. The  "
                 + "\nplace is a mess and there is goods all over the floor. You approach the weapon racks. There looks like  "
                 + "\nthere are a few Pink firearms still there. As you go to jump over the counter it collapses. You hear noises  "
                 + "\nelsewhere in the store… they are getting louder. They are coming for you. You draw your weapon right  "
@@ -431,7 +431,7 @@ public class Scene implements Serializable{
         
         sceneDescriptionsArray[1][1] = 
                 
-                "\nThe entrance of the Hospital is barracked and there is an Ambulance smashed in the wall. You climb on  "
+                  "\nThe entrance of the Hospital is barracked and there is an Ambulance smashed in the wall. You climb on  "
                 + "\ntop of the ambulance and use it to enter a second story window. You are now in a dark hallway. You trip  "
                 + "\nover something and fall causing a gurney to go zooming down the hallway and causing a huge  "
                 + "\ncommotion. The echoes can be heard for seconds after the gurney finally comes to a stop in an open  "
@@ -442,13 +442,13 @@ public class Scene implements Serializable{
         
         sceneDescriptionsArray[2][1] = 
                 
-                "\nIn the Convenience store you see several dead bodies. No sigh of zombies though. You walk around and  "
+                  "\nIn the Convenience store you see several dead bodies. No sigh of zombies though. You walk around and  "
                 + "\ncheck every aisle and door. Looks to be safe. You can search the area for anything of use. ";
         
         
         sceneDescriptionsArray[0][2] = 
                 
-                "\nYou walk down the alley behind some houses. A cat approaches you and starts to speak to you. It tells "
+                  "\nYou walk down the alley behind some houses. A cat approaches you and starts to speak to you. It tells "
                 + "\nyou of a magical place known as the refugee camp where you would be safe from the zombies. Before "
                 + "\nyou can fully process this conversation you are having with this feline you hear and see zombies running  "
                 + "\ndown both ends of the ally. The cat bails and leaves you to your fate. You climb atop a dumpster for high "
@@ -458,7 +458,7 @@ public class Scene implements Serializable{
         sceneDescriptionsArray[1][2] = 
                 
                 
-                "\n The Grocery store is dark no lights at all. The power must be cut. You carefully traverse the aisles in "
+                  "\n The Grocery store is dark no lights at all. The power must be cut. You carefully traverse the aisles in "
                 + "\n search of a bathroom as nature is calling. You reach a women’s bathroom without incident. You enter "
                 + "\n and quickly head to a stall to do your business. After a few minutes a zombie had reaches under from "
                 + "\n the stall next to you and grunts to ask if you have any toilet paper you can share. You freeze and quickly "
@@ -471,7 +471,7 @@ public class Scene implements Serializable{
         sceneDescriptionsArray[2][2] = 
                 
                 
-                "\nThe police station is on fire when you arrive and there are a few panicked people running from the "
+                  "\nThe police station is on fire when you arrive and there are a few panicked people running from the "
                 + "\nflames. They are chased by zombies wielding flame throwers. They are preparing for a BBQ. One of the "
                 + "\npolice officers who escaped the flames runs to you and you both take cover behind a squad car. He says  "
                 + "\nhe will join you in taking down these guys. You agree. He runs across the street firing his handgun to get  "
@@ -480,7 +480,7 @@ public class Scene implements Serializable{
         
         sceneDescriptionsArray[0][3] = 
                 
-                "\nAt the bus stations all you see are rows of empty buses and the belongings of people who were unable"
+                  "\nAt the bus stations all you see are rows of empty buses and the belongings of people who were unable"
                 + "\nto escape the city. You start to look through some of the suitcases and bags for anything that can help "
                 + "\nyou. Suddenly the bus in front of you honks. You look up to see a Zombie Bus driver sneering at you. His "
                 + "\nhonking has attracted the entire teamsters union. You are really in trouble this time. You Draw your weapon "
@@ -489,7 +489,7 @@ public class Scene implements Serializable{
         
         sceneDescriptionsArray[1][3] = 
                 
-                "\nThe Park is probably the most untouched of all the city. You take in the pretty blue sky, green grass, the "
+                  "\nThe Park is probably the most untouched of all the city. You take in the pretty blue sky, green grass, the "
                 + "\ntall trees and the napping zombie hobo on the park bench. Wait…. What.. The sleeping zombie Hobo "
                 + "\nawakes and asks you if you can spare any brains. You try to apologize saying you left your brains in your "
                 + "\nother pants. This out rages the Zombie and he waddles towards you spewing zombie profanity and "
@@ -500,7 +500,7 @@ public class Scene implements Serializable{
         sceneDescriptionsArray[2][3] = 
                 
                 
-                "\nYou aren’t really sure what you will find here in City Hall. Maybe anyone from the government will still  "
+                  "\nYou aren’t really sure what you will find here in City Hall. Maybe anyone from the government will still  "
                 + "\nbe here. All you find is lots of boring offices and lots of zombies waiting in line for various legal services. "
                 + "\nThey are two brain dead to notice you. You come across a large office and inside is a plump zombie  "
                 + "\nwearing a suit, Top hat and monocle. He is out raged by your intrusion and charges you flipping tables "
@@ -513,7 +513,7 @@ public class Scene implements Serializable{
         sceneDescriptionsArray[0][4] = 
                 
                 
-                "\nYou enter the convention center and are immediately find yourself surrounded by hundreds of zombie "
+                  "\nYou enter the convention center and are immediately find yourself surrounded by hundreds of zombie "
                 + "\nnerds and zombie cosplayers. It looks like you stumbled upon ZombieCon. The zombies wander around  "
                 + "\ngreeting each other and debating trivial facts about fictional things. One zombie approaches you and  "
                 + "\ncomplements you on your excellent human solider Cosplay. You thank him and then proceed to shoot  "
@@ -524,7 +524,7 @@ public class Scene implements Serializable{
         
         sceneDescriptionsArray[1][4] = 
                 
-                "\nThe Hotel Lobby is quite….too quite… after checking the area you come across a disgruntled Bell boy  "
+                  "\nThe Hotel Lobby is quite….too quite… after checking the area you come across a disgruntled Bell boy  "
                 + "\nzombie. He starts venting to you about how crappy the job is and that the tips suck. No one will give him  "
                 + "\ntheir brains…willingly. He offers to show you to your room in exchange for your brains. You decline and  "
                 + "\nhe goes full rage on you two more Zombie Hotel employees back him up. You draw your weapon.";
