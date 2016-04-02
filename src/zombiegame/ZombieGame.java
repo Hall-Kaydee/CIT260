@@ -79,28 +79,28 @@ public class ZombieGame {
         zombieCountArray[2][0] = 3;
         
         zombieCountArray[0][1] = 3;
-        zombieCountArray[1][1] = 5;
-        zombieCountArray[2][1] = 5;
+        zombieCountArray[1][1] = 7;
+        zombieCountArray[2][1] = 9;
         
-        zombieCountArray[0][2] = 5;
-        zombieCountArray[1][2] = 5;
-        zombieCountArray[2][2] = 5;
+        zombieCountArray[0][2] = 10;
+        zombieCountArray[1][2] = 11;
+        zombieCountArray[2][2] = 10;
         
-        zombieCountArray[0][3] = 5;
-        zombieCountArray[1][3] = 5;
-        zombieCountArray[2][3] = 5;
+        zombieCountArray[0][3] = 11;
+        zombieCountArray[1][3] = 13;
+        zombieCountArray[2][3] = 15;
         
-        zombieCountArray[0][4] = 5;
-        zombieCountArray[1][4] = 5;
-        zombieCountArray[2][4] = 5;
+        zombieCountArray[0][4] = 15;
+        zombieCountArray[1][4] = 16;
+        zombieCountArray[2][4] = 18;
         
-        zombieCountArray[0][5] = 5;
-        zombieCountArray[1][5] = 5;
+        zombieCountArray[0][5] = 17;
+        zombieCountArray[1][5] = 15;
         zombieCountArray[2][5] = 11;
         
         zombieCountArray[0][6] = 0;
-        zombieCountArray[1][6] = 10;
-        zombieCountArray[2][6] = 6; 
+        zombieCountArray[1][6] = 18;
+        zombieCountArray[2][6] = 16; 
         
         
                 Scene[][] sceneObjects = new Scene [3][7];

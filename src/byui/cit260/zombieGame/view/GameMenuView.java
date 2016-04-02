@@ -39,17 +39,25 @@ public class GameMenuView extends View{
         );
         
         MainCharacter coordinates = new MainCharacter();
+        Scene sceneDescription = new Scene();
+        Map playerMapLocation = new Map();
      
         int xCoord = coordinates.getXCoordinate();
         int yCoord = coordinates.getYCoordinate();
         double characterHealth = coordinates.getCharHealth();
         
         
-        System.out.println("\nYour health is at level " + String.valueOf(characterHealth));
-        
+
+        String playerLocation = playerMapLocation.buildMap(xCoord, yCoord);
+        this.console.println("\nPlayer location is " + playerLocation + " Your health is at level " + Double.toString(characterHealth));        
 
         
         System.out.println("\nThere are " + Integer.toString(ZombieGame.zombieCountArray[xCoord][yCoord]) + " zombies here.");
+        
+
+                
+        String currentSceneDesc = sceneDescription.buildSceneDescritpions(xCoord, yCoord);
+        this.console.println("\n" + currentSceneDesc);
  
       
       }
@@ -86,6 +94,7 @@ public class GameMenuView extends View{
             case "M"://how to get items noted out to test inventory menu -Evan
 
                 MoveView moveMenu = new MoveView();
+                /*
                 MainCharacter xCoordinate = new MainCharacter();
                 MainCharacter yCoordinate = new MainCharacter();  
                 
@@ -95,7 +104,7 @@ public class GameMenuView extends View{
                 Map playerMapLocation = new Map();
                 String playerLocation = playerMapLocation.buildMap(xCoordM, yCoordM);
                 System.out.println("\nPlayer location is " + playerLocation);
-                
+                */
                 moveMenu.display();
 
 

@@ -15,7 +15,8 @@ import java.io.Serializable;
 public class Zombie implements Serializable{
     
     public int hitDamage;
-    public int zombieHealth;
+    public double masterZombieHealth;
+    public int zombieHealth;    
     public String zombieDesc;
 
 
@@ -271,7 +272,7 @@ public class Zombie implements Serializable{
         
         Zombie zombieStart = new Zombie();
         zombieStart.zombieDesc =
-                  "\nHis name is Fred. He likes brains, strolling on the beach... more brains.";
+                  "His name is Fred. He likes brains, strolling on the beach... more brains.";
   
         zombieDescriptions [0][0] = zombieStart;
 
@@ -280,7 +281,7 @@ public class Zombie implements Serializable{
         
         Zombie zombieSchool = new Zombie();
         zombieSchool.zombieDesc =
-                  "\nHis name is Barney. He likes dandelions, early morning walks... and... brains.";
+                  "His name is Barney. He likes dandelions, early morning walks... and... brains.";
   
         zombieDescriptions [1][0] = zombieSchool;        
 
@@ -289,7 +290,7 @@ public class Zombie implements Serializable{
 
         Zombie zombieFireStation = new Zombie();
         zombieFireStation.zombieDesc =
-                  "\nHer name is Marge. She likes flannel pajamas, sunshine... and... brains.";
+                  "Her name is Marge. She likes flannel pajamas, sunshine... and... brains.";
   
         zombieDescriptions [2][0] = zombieFireStation; 
 
@@ -300,7 +301,7 @@ public class Zombie implements Serializable{
 
         Zombie zombieSportingGoodsStore = new Zombie();
         zombieSportingGoodsStore.zombieDesc =
-                  "\nHis name is Bubba. He likes dinosaurs, Facebook... and... brains.";
+                  "His name is Bubba. He likes dinosaurs, Facebook... and... brains.";
   
         zombieDescriptions [0][1] = zombieSportingGoodsStore;
 
@@ -311,7 +312,7 @@ public class Zombie implements Serializable{
         
         Zombie zombieHospital = new Zombie();
         zombieHospital.zombieDesc =
-                  "\nHer name is Penny. She likes her boyfriend, shopping... and... brains.";
+                  "Her name is Penny. She likes her boyfriend, shopping... and... brains.";
   
         zombieDescriptions [1][1] = zombieHospital;
         
@@ -319,7 +320,7 @@ public class Zombie implements Serializable{
 
         Zombie zombieConvenienceStore = new Zombie();
         zombieConvenienceStore.zombieDesc =
-                  "\nHis name is Mark. He likes basketball, Air Jordans... and... brains.";
+                  "His name is Mark. He likes basketball, Air Jordans... and... brains.";
   
         zombieDescriptions [2][1] = zombieConvenienceStore;
 
@@ -328,7 +329,7 @@ public class Zombie implements Serializable{
 
         Zombie zombieLot = new Zombie();
         zombieLot.zombieDesc =
-                  "\nHis name is Gary. He likes cats, Spongebob... and... brains.";
+                  "His name is Gary. He likes cats, Spongebob... and... brains.";
   
         zombieDescriptions [0][2] = zombieLot;
 
@@ -338,7 +339,7 @@ public class Zombie implements Serializable{
         
         Zombie zombieGroceryStore = new Zombie();
         zombieGroceryStore.zombieDesc =
-                  "\nHer name is Jenna. She likes Ho-Hos, chocolate... and... brains.";
+                  "Her name is Jenna. She likes Ho-Hos, chocolate... and... brains.";
   
         zombieDescriptions [1][2] = zombieGroceryStore;        
         
@@ -349,7 +350,7 @@ public class Zombie implements Serializable{
         
         Zombie zombiePoliceStation = new Zombie();
         zombiePoliceStation.zombieDesc =
-                  "\nHis name is Andrew. He likes his choir class, body wash... and... brains.";
+                  "His name is Andrew. He likes his choir class, body wash... and... brains.";
   
         zombieDescriptions [2][2] = zombiePoliceStation;        
         
@@ -360,7 +361,7 @@ public class Zombie implements Serializable{
         
         Zombie zombieBusStation = new Zombie();
         zombieBusStation.zombieDesc =
-                  "\nHis name is Kurt. He likes...well...Kurt. He can't get enough Kurt... and... brains.";
+                  "His name is Kurt. He likes...well...Kurt. He can't get enough Kurt... and... brains.";
   
         zombieDescriptions [0][3] = zombieBusStation;
 
@@ -371,7 +372,7 @@ public class Zombie implements Serializable{
         
         Zombie zombiePark = new Zombie();
         zombiePark.zombieDesc =
-                  "\nHer name is Pat. She likes guys with muscles, shopping at the mall... and... brains.";
+                  "Her name is Pat. She likes guys with muscles, shopping at the mall... and... brains.";
   
         zombieDescriptions [1][3] = zombiePark;        
         
@@ -382,7 +383,7 @@ public class Zombie implements Serializable{
 
         Zombie zombieCityHall = new Zombie();
         zombieCityHall.zombieDesc =
-                  "\nHis name is Brad. He likes being the Mayor, The Beatles... and... brains.";
+                  "His name is Brad. He likes being the Mayor, The Beatles... and... brains.";
   
         zombieDescriptions [2][3] = zombieCityHall; 
 
@@ -393,7 +394,7 @@ public class Zombie implements Serializable{
 
         Zombie zombieConCenter1 = new Zombie();
         zombieConCenter1.zombieDesc =
-                  "\nHis name is Marge. She likes flannel pajamas, sunshine... and... brains.";
+                  "His name is Marge. She likes flannel pajamas, sunshine... and... brains.";
   
         zombieDescriptions [0][4] = zombieConCenter1;
 
@@ -404,7 +405,7 @@ public class Zombie implements Serializable{
 
         Zombie zombieHotel = new Zombie();
         zombieHotel.zombieDesc =
-                  "\nHis name is Elena. She likes to read Harlequin novels, the beach... and... brains.";
+                  "His name is Elena. She likes to read Harlequin novels, the beach... and... brains.";
   
         zombieDescriptions [1][4] = zombieHotel;
 
@@ -414,7 +415,7 @@ public class Zombie implements Serializable{
 
         Zombie zombieAptBldg = new Zombie();
         zombieAptBldg.zombieDesc =
-                  "\nHis name is Trey. He likes eating candy.... lots of it, sitting around... and... brains.";
+                  "His name is Trey. He likes eating candy.... lots of it, sitting around... and... brains.";
   
         zombieDescriptions [2][4] = zombieAptBldg;
 
@@ -425,7 +426,7 @@ public class Zombie implements Serializable{
 
         Zombie zombieConCenter2 = new Zombie();
         zombieConCenter2.zombieDesc =
-                  "\nHer name is Cassandra. She likes playing board games, her toy dog... and... brains.";
+                  "Her name is Cassandra. She likes playing board games, her toy dog... and... brains.";
   
         zombieDescriptions [0][5] = zombieConCenter2;
 
@@ -436,7 +437,7 @@ public class Zombie implements Serializable{
 
         Zombie zombieShoppingMall = new Zombie();
         zombieShoppingMall.zombieDesc =
-                  "\nHis name is Doug. He likes hangin with the bros, his diamond grill... and... brains.";
+                  "His name is Doug. He likes hangin with the bros, his diamond grill... and... brains.";
   
         zombieDescriptions [1][5] = zombieShoppingMall;
 
@@ -447,7 +448,7 @@ public class Zombie implements Serializable{
         
         Zombie zombieCathedral = new Zombie();
         zombieCathedral.zombieDesc =
-                  "\nHis name is Father Roman. He likes preening in the mirror, jogging... and... brains.";
+                  "His name is Father Roman. He likes preening in the mirror, jogging... and... brains.";
   
         zombieDescriptions [2][5] = zombieCathedral;        
         
@@ -458,7 +459,7 @@ public class Zombie implements Serializable{
 
         Zombie zombieRefugeeCamp1 = new Zombie();
         zombieRefugeeCamp1.zombieDesc =
-                  "\nHer name is Beth. She likes to cook, look at Pinterest... and... brains.";
+                  "Her name is Beth. She likes to cook, look at Pinterest... and... brains.";
   
         zombieDescriptions [0][6] = zombieRefugeeCamp1;        
         
@@ -470,7 +471,7 @@ public class Zombie implements Serializable{
         
         Zombie zombieRefugeeCamp2 = new Zombie();
         zombieRefugeeCamp2.zombieDesc =
-                  "\nHis name is Bart. He likes trading baseball cards, country music... and... brains.";
+                  "His name is Bart. He likes trading baseball cards, country music... and... brains.";
   
         zombieDescriptions [1][6] = zombieRefugeeCamp2;          
         
@@ -480,7 +481,7 @@ public class Zombie implements Serializable{
         
         Zombie zombieZoo = new Zombie();
         zombieZoo.zombieDesc =
-                  "\nHis name is Bert. He likes hunting, getting more tattoos... and... brains.";
+                  "His name is Bert. He likes hunting, getting more tattoos... and... brains.";
   
         zombieDescriptions [2][6] = zombieZoo;
 
@@ -518,6 +519,15 @@ public class Zombie implements Serializable{
 
     public void setZombieHealth(int zombieHealth) {
         this.zombieHealth = zombieHealth;
+    }
+    
+    
+    public double getMasterZombieHealth() {
+        return masterZombieHealth;
+    }
+
+    public void setMasterZombieHealth(double zombieHealth) {
+        this.masterZombieHealth = zombieHealth;
     }
     
 

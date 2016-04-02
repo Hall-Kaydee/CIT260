@@ -47,11 +47,19 @@ public class MoveView extends View{
         int xCoord = coordinates.getXCoordinate();
         int yCoord = coordinates.getYCoordinate();
         double characterHealth = coordinates.getCharHealth();
+        Map playerMapLocation = new Map();
+        Scene sceneDescription = new Scene();
         
+        String playerLocation = playerMapLocation.buildMap(xCoord, yCoord);
+        this.console.println("\nPlayer location is " + playerLocation + " Your health is at level " + Double.toString(characterHealth));        
+
         
-        System.out.println("\nYour health is at level " + String.valueOf(characterHealth));
+        System.out.println("\nThere are " + Integer.toString(ZombieGame.zombieCountArray[xCoord][yCoord]) + " zombies here.");
         
-        System.out.println("\nThere are " + Integer.toString(ZombieGame.zombieCountArray[xCoord][yCoord]) + " zombies here."); 
+
+                
+        String currentSceneDesc = sceneDescription.buildSceneDescritpions(xCoord, yCoord);
+        this.console.println("\n" + currentSceneDesc);
         
         
         
@@ -81,8 +89,14 @@ public class MoveView extends View{
           Scene sceneDescription = new Scene();
 
           int xCoord = xCoordinate.getXCoordinate();
-          int yCoord = yCoordinate.getYCoordinate();  
+          int yCoord = yCoordinate.getYCoordinate(); 
           
+        /*  String playerLocation = playerMapLocation.buildMap(xCoord, yCoord);
+          this.console.println("\nPlayer location is " + playerLocation);
+                
+          String currentSceneDesc = sceneDescription.buildSceneDescritpions(xCoord, yCoord);
+          this.console.println("\n" + currentSceneDesc);
+        */  
 
 
 
@@ -104,7 +118,6 @@ public class MoveView extends View{
               
 //                System.out.println("\nPlayer location is " + resultR[0] + "," + resultR[1]);
                 this.console.println("\nYou have moved to the right");
-                
 
                 int xCoordR = xCoordinate.getXCoordinate();
                 int yCoordR = yCoordinate.getYCoordinate();
@@ -113,9 +126,15 @@ public class MoveView extends View{
                 this.console.println("\nPlayer location is " + playerLocationR);
                 
                 String currentSceneDescR = sceneDescription.buildSceneDescritpions(xCoordR, yCoordR);
-                this.console.println(currentSceneDescR);
+                this.console.println(currentSceneDescR);                
                 
-                mayhemView.display();                        
+                
+                
+                mayhemView.display();                 
+
+
+             
+                       
                         
                 break;
             
@@ -180,7 +199,8 @@ public class MoveView extends View{
                 String currentSceneDescF = sceneDescription.buildSceneDescritpions(xCoordF, yCoordF);
                 this.console.println(currentSceneDescF);                
                 
-
+                
+                
                 mayhemView.display();                        
                         
                 break;

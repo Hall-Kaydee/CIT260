@@ -7,6 +7,9 @@ package byui.cit260.zombieGame.view;
 
 import byui.cit260.zombieGame.exceptions.FightControlException;
 import byui.cit260.zombieGame.model.MainCharacter;
+import byui.cit260.zombieGame.model.Map;
+import byui.cit260.zombieGame.model.Scene;
+import byui.cit260.zombieGame.model.Zombie;
 import zombiegame.ZombieGame;
 
 /**
@@ -30,16 +33,7 @@ public class ZombieMayhemView extends View{
                
         );
     
-        MainCharacter coordinates = new MainCharacter();
-     
-        int xCoord = coordinates.getXCoordinate();
-        int yCoord = coordinates.getYCoordinate();
-        double characterHealth = coordinates.getCharHealth();
-        
-        
-        System.out.println("\nYour health is at level " + String.valueOf(characterHealth));
-        
-        System.out.println("\nThere are " + Integer.toString(ZombieGame.zombieCountArray[xCoord][yCoord]) + " zombies here.");    
+  
     
     
     
@@ -52,8 +46,11 @@ public class ZombieMayhemView extends View{
     @Override
     public boolean doAction(String choice){
     
-
-
+  
+        MainCharacter coordinates = new MainCharacter();
+     
+        int xCoord = coordinates.getXCoordinate();
+        int yCoord = coordinates.getYCoordinate();
 
 
         // this is the help menu do action function
@@ -68,6 +65,14 @@ public class ZombieMayhemView extends View{
                 
                 try {
                     
+                    Zombie zombieData = new Zombie ();
+                    
+                    int[] zombieDataArray = zombieData.buildZombies(xCoord, yCoord);
+
+                    int enmHealth = zombieDataArray[1];
+                    
+                    zombieData.setMasterZombieHealth((double) enmHealth);
+
                     MainCharacter charStats = new MainCharacter();
                     fightView.getFightResult(charStats.getCharDam(), charStats.getCharHealth(), charStats.getHitPoints());
                     }
