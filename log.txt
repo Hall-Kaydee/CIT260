@@ -53,6 +53,8 @@ B - Back
 Q - Quit
 ++++++++++++++++++++++++++++++++++++++
 byui.cit260.zombieGame.view.MoveView - 
+You have reached the WEST border of the map. You cannot go any farther
+byui.cit260.zombieGame.view.MoveView - 
 
 
 ++++++++++++++++++++++++++++++++++++++
@@ -64,6 +66,229 @@ F - Forward
 B - Back
 Q - Quit
 ++++++++++++++++++++++++++++++++++++++
+byui.cit260.zombieGame.view.MoveView - 
+
+
+++++++++++++++++++++++++++++++++++++++
++  Move Menu                          
+++++++++++++++++++++++++++++++++++++++
+R - Right
+L - Left
+F - Forward
+B - Back
+Q - Quit
+++++++++++++++++++++++++++++++++++++++
+byui.cit260.zombieGame.view.MoveView - 
+
+
+++++++++++++++++++++++++++++++++++++++
++  Move Menu                          
+++++++++++++++++++++++++++++++++++++++
+R - Right
+L - Left
+F - Forward
+B - Back
+Q - Quit
+++++++++++++++++++++++++++++++++++++++
+byui.cit260.zombieGame.view.MoveView - 
+You have reached the EAST border of the map. You cannot go any farther
+byui.cit260.zombieGame.view.MoveView - 
+
+
+++++++++++++++++++++++++++++++++++++++
++  Move Menu                          
+++++++++++++++++++++++++++++++++++++++
+R - Right
+L - Left
+F - Forward
+B - Back
+Q - Quit
+++++++++++++++++++++++++++++++++++++++
+byui.cit260.zombieGame.view.MoveView - 
+
+
+++++++++++++++++++++++++++++++++++++++
++  Move Menu                          
+++++++++++++++++++++++++++++++++++++++
+R - Right
+L - Left
+F - Forward
+B - Back
+Q - Quit
+++++++++++++++++++++++++++++++++++++++
+byui.cit260.zombieGame.view.MoveView - 
+
+
+++++++++++++++++++++++++++++++++++++++
++  Move Menu                          
+++++++++++++++++++++++++++++++++++++++
+R - Right
+L - Left
+F - Forward
+B - Back
+Q - Quit
+++++++++++++++++++++++++++++++++++++++
+byui.cit260.zombieGame.view.MoveView - 
+
+
+++++++++++++++++++++++++++++++++++++++
++  Move Menu                          
+++++++++++++++++++++++++++++++++++++++
+R - Right
+L - Left
+F - Forward
+B - Back
+Q - Quit
+++++++++++++++++++++++++++++++++++++++
+byui.cit260.zombieGame.view.MoveView - 
+
+
+++++++++++++++++++++++++++++++++++++++
++  Move Menu                          
+++++++++++++++++++++++++++++++++++++++
+R - Right
+L - Left
+F - Forward
+B - Back
+Q - Quit
+++++++++++++++++++++++++++++++++++++++
+byui.cit260.zombieGame.view.MoveView - 
+
+
+++++++++++++++++++++++++++++++++++++++
++  Move Menu                          
+++++++++++++++++++++++++++++++++++++++
+R - Right
+L - Left
+F - Forward
+B - Back
+Q - Quit
+++++++++++++++++++++++++++++++++++++++
+byui.cit260.zombieGame.view.MoveView - 
+
+
+++++++++++++++++++++++++++++++++++++++
++  Move Menu                          
+++++++++++++++++++++++++++++++++++++++
+R - Right
+L - Left
+F - Forward
+B - Back
+Q - Quit
+++++++++++++++++++++++++++++++++++++++
+byui.cit260.zombieGame.view.MoveView - 
+You have reached the NORTH border of the map. You cannot go any farther
+byui.cit260.zombieGame.view.MoveView - 
+
+
+++++++++++++++++++++++++++++++++++++++
++  Move Menu                          
+++++++++++++++++++++++++++++++++++++++
+R - Right
+L - Left
+F - Forward
+B - Back
+Q - Quit
+++++++++++++++++++++++++++++++++++++++
+byui.cit260.zombieGame.view.MoveView - 
+
+
+++++++++++++++++++++++++++++++++++++++
++  Move Menu                          
+++++++++++++++++++++++++++++++++++++++
+R - Right
+L - Left
+F - Forward
+B - Back
+Q - Quit
+++++++++++++++++++++++++++++++++++++++
+byui.cit260.zombieGame.view.MoveView - 
+Number of Enemies or or Player Health cannot be zero or below.
+byui.cit260.zombieGame.view.MoveView - 
+
+
+++++++++++++++++++++++++++++++++++++++
++  Move Menu                          
+++++++++++++++++++++++++++++++++++++++
+R - Right
+L - Left
+F - Forward
+B - Back
+Q - Quit
+++++++++++++++++++++++++++++++++++++++
+byui.cit260.zombieGame.view.GameMenuView - 
+
+
+++++++++++++++++++++++++++++++++++++++
++  Game Menu                          
+++++++++++++++++++++++++++++++++++++++
+V - View Map
+E - View Equipment
+M - Move
+T - Talk
+U - Use Equipment
+W - Select Weapon
+R - Save Reports
+Q - Quit
+++++++++++++++++++++++++++++++++++++++
+byui.cit260.zombieGame.view.MapView - 
+
+
++---------+---------+---------+---------+---------+---------+---------+
+    |     |   TEMPLE SQUARE REFUGEE CAMP    |     |     ZOO     |     |
+    |     |---------------------------------|     |-------------|     |
+    |  +         +         +         +         +         +         +  |
+    |     |-------------|     |-------------|     |-------------|     |
+    |     |             | XXX |             |     |             |     |
+    |     |             |     |   SHOPPING  |     | CATHEDRAL   |     |
+    |  +  |      +      |  +  |     MALL    |  +  |             |  +  |
+    |     |  CONVENTION |     |             |     |             |     |
+    |     |    CENTER   |     |             |     |             |     |
+    |     |             |     |-------------|     |-------------|     |
+    |  +  |      +      |  +         +         +         +         +  |
+    |     |             |     |-------------|     |-------------|     |
+    | XXX |             |     |             |     |             |     |
+    |     |             |     |    HOTEL    |     |  APARTMENT  |     |
+    |  +  |      +      |  +  |             |  +  |    BLDG     |  +  |
+    |     |             |     |             |     |             |     |
+    |     |             |     |             |     |             |     |
+    |     |-------------| XXX |-------------|     |-------------| XXX |
+    |  +         +         +         +         +         +         +  |
+    |     |-------------|                         |-------------|     |
+    |     |             |                         |             |     |
+    |     |     BUS     |          PARK           |    CITY     |     |
+    |  +  |   STATION   |  +         +         +  |    HALL     |  +  |
+    |     |             |                         |             |     |
+    |     |             |                         |             |     |
+    | XXX |-------------|                         |-------------|     |
+    |  +         +         +         +         +         +         +  |
+    |     |-------------|     |-------------|     |-------------|     |
+    |     |      |      |     |             |     |             |     |
+    |     |      |      |     |   GROCERY   |     |   POLICE    |     |
+    |  +  |------|------|  +  |    STORE    |  +  |   STATION   |  +  |
+    |     |      |      |     |             |     |             |     |
+    |     |      |      |     |             |     |             | XXX |
+    |     |-------------|     |-------------|     |-------------|     |
+    |  +         +         +         +         +         +         +  |
+    |     |-------------|     |-------------|     |-------------|     |
+    |     |             |     |             |     |             |     |
+    |     |   SPORTING  |     |             |     | CONVENIENCE |     |
+    |  +  |    GOODS    |  +  |   HOSPITAL  |  +  |    STORE    |  +  |
+    |     |    STORE    |     |             |     |             |     |
+    |     |             |     |             |     |             |     |
+    |     |-------------|     |-------------|     |-------------|     |
+    |  +         +         +         +         +         +         +  |
+    |     |-------------|     |-------------|     |-------------|     |
+    |     |             |     |             |     |      |      |     |
+    |     |    FIRE     |     |             |     |      |      |     |
+    |  +  |  STATION    |  +  |    SCHOOL   |  +  |------|------|  +  |
+    |     |             |     |             |     |      |      |     |
+    |     |             |     |             |     |      |      |     |
+|---|     |-------------|     |-------------|     |-------------|     |
++    START       +         +         +         +         +         +  |
+|---------------------------------------------------------------------|
+ 
+Press Q to Quit:
 byui.cit260.zombieGame.view.GameMenuView - 
 
 
