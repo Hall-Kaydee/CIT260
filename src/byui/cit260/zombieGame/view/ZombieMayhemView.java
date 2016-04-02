@@ -6,6 +6,8 @@
 package byui.cit260.zombieGame.view;
 
 import byui.cit260.zombieGame.exceptions.FightControlException;
+import byui.cit260.zombieGame.model.MainCharacter;
+import zombiegame.ZombieGame;
 
 /**
  *
@@ -22,12 +24,25 @@ public class ZombieMayhemView extends View{
                 + "\n+  Fight Zombie Menu                  "
                 + "\n++++++++++++++++++++++++++++++++++++++"
                 + "\nF - Fight the zombies"
-                + "\nW - Select another weapon"
                 + "\nS - Stop and take a chance on running"
                 + "\nQ - Quit"
                 + "\n++++++++++++++++++++++++++++++++++++++"
                
         );
+    
+        MainCharacter coordinates = new MainCharacter();
+     
+        int xCoord = coordinates.getXCoordinate();
+        int yCoord = coordinates.getYCoordinate();
+        double characterHealth = coordinates.getCharHealth();
+        
+        
+        System.out.println("\nYour health is at level " + String.valueOf(characterHealth));
+        
+        System.out.println("\nThere are " + Integer.toString(ZombieGame.zombieCountArray[xCoord][yCoord]) + " zombies here.");    
+    
+    
+    
     }     
     
     public ZombieMayhemView(String message) {
@@ -37,6 +52,10 @@ public class ZombieMayhemView extends View{
     @Override
     public boolean doAction(String choice){
     
+
+
+
+
         // this is the help menu do action function
         
         choice = choice.toUpperCase(); //convert choice to upper case
@@ -48,7 +67,9 @@ public class ZombieMayhemView extends View{
             case "F"://what is the goal?
                 
                 try {
-                    fightView.getFightResult();
+                    
+                    MainCharacter charStats = new MainCharacter();
+                    fightView.getFightResult(charStats.getCharDam(), charStats.getCharHealth(), charStats.getHitPoints());
                     }
                 catch
                         
@@ -58,14 +79,12 @@ public class ZombieMayhemView extends View{
                  
                break;
             
-            case "W"://How to move
-                //System.out.println("\nView Equipment");
- 
-               break;
                
             case "S"://how to get items noted out to test inventory menu -Evan
 
-  
+                System.out.println("\nSorry. You need to dispatch ALL the zombies or they will keep attacking you.");                
+                
+               break;  
 
             default:
                 System.out.println("\nInvalid selection. Try again");

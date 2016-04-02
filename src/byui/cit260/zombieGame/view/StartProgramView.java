@@ -7,15 +7,25 @@ package byui.cit260.zombieGame.view;
 
 import byui.cit260.zombieGame.control.GameControl;
 import byui.cit260.zombieGame.model.Player;
+import java.io.BufferedReader;
+import java.io.Console;
+import java.io.IOException;
+import java.io.PrintWriter;
+import static java.lang.System.console;
 import java.util.Scanner;
+import zombiegame.ZombieGame;
 
 /**
  *
  * @author Boyd
  */
-public class StartProgramView extends View {
+public class StartProgramView {
+
+    private final String displayMessage;
+    protected final BufferedReader keyboard = ZombieGame.getInFile();
+    protected final PrintWriter console = ZombieGame.getOutFile();
     
-    public String displayMessage;
+    //public String displayMessage;
     
     public StartProgramView(){
         super();         
@@ -29,7 +39,7 @@ public class StartProgramView extends View {
 
     private void displayBanner() {
      
-        this.console.println(
+        System.out.println(
         "\n+---------+---------+---------+---------+---------+---------+---------+" +
         "\n+   In Salt Lake City in the year 2020, strange things are starting   +" +
         "\n+ to happen. People are getting sick, stores and businesses have      +" +
@@ -48,7 +58,7 @@ public class StartProgramView extends View {
     
     }
 
-    public void displayStartProgramView() {
+    public void displayStartProgramView() throws IOException {
        
         // System.out.println("\n*** displayProgramView function called ***");
         
@@ -65,20 +75,20 @@ public class StartProgramView extends View {
     
             }
 // When deleted just get null
-    @Override
-    public String getInput() {
+
+    public String getInput() throws IOException {
     
         //Scanner keyboard = new Scanner(System.in);//keyboard input string
         String value = "";
             boolean valid = false;//setflag to invalid valid entered
 
-          try{
+          //try{
             while (!valid) {
                 //while a valid name has not been retrieved
                 
                 //prompt for the players name
                 
-                this.console.println(this.displayMessage);
+                System.out.println(this.displayMessage);
                 
                 value = keyboard.readLine();//get the name from the keyboard
                 
@@ -98,18 +108,18 @@ public class StartProgramView extends View {
                 
                 }
             
-          }
+         // }
           
-          catch (Exception e){
+        //  catch (Exception e){
          
-         ErrorView.display(this.getClass().getName(),"\nError reading inputs" + e.getMessage());
+       //  ErrorView.display(this.getClass().getName(),"\nError reading inputs" + e.getMessage());
          
-     }
+    // }
 
                 return value;//return the value
  
     }
-    @Override
+
     public boolean doAction(String playersName) {
     
     
@@ -148,7 +158,7 @@ public class StartProgramView extends View {
   
        
         
-    this.console.println("\n++++++++++++++++++++++++++++++++++++++++++"
+    System.out.println("\n++++++++++++++++++++++++++++++++++++++++++"
                      + "\n+ Welcome to the Game " + player.getName()
                      + "\n+ R.I.P. " + player.getName()
                      + "\n++++++++++++++++++++++++++++++++++++++++++"

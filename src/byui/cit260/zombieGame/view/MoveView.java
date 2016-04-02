@@ -10,6 +10,8 @@ import byui.cit260.zombieGame.exceptions.FightControlException;
 import byui.cit260.zombieGame.exceptions.MoveControlException;
 import byui.cit260.zombieGame.model.MainCharacter;
 import byui.cit260.zombieGame.model.Map;
+import byui.cit260.zombieGame.model.Scene;
+import zombiegame.ZombieGame;
 
 
 
@@ -40,15 +42,16 @@ public class MoveView extends View{
                );
         
         
-            MainCharacter mainCharacter = new MainCharacter();
- 
-            double chrHealth = mainCharacter.getCharHealth();
-            
-            String characterHealth = String.valueOf(chrHealth);        
+        MainCharacter coordinates = new MainCharacter();
+     
+        int xCoord = coordinates.getXCoordinate();
+        int yCoord = coordinates.getYCoordinate();
+        double characterHealth = coordinates.getCharHealth();
         
         
+        System.out.println("\nYour health is at level " + String.valueOf(characterHealth));
         
-            System.out.println("\n Player Health is " + characterHealth); 
+        System.out.println("\nThere are " + Integer.toString(ZombieGame.zombieCountArray[xCoord][yCoord]) + " zombies here."); 
         
         
         
@@ -64,7 +67,9 @@ public class MoveView extends View{
         // this is the help menu do action function
         
         choice = choice.toUpperCase(); //convert choice to upper case
-        FightView fightView = new FightView();        
+        //FightView fightView = new FightView();
+        ZombieMayhemView mayhemView = new ZombieMayhemView();         
+        
 
         //int xCoord = 0;
         //int yCoord = 0;        
@@ -73,6 +78,7 @@ public class MoveView extends View{
           MainCharacter xCoordinate = new MainCharacter();
           MainCharacter yCoordinate = new MainCharacter();
           Map playerMapLocation = new Map();
+          Scene sceneDescription = new Scene();
 
           int xCoord = xCoordinate.getXCoordinate();
           int yCoord = yCoordinate.getYCoordinate();  
@@ -105,15 +111,11 @@ public class MoveView extends View{
 
                 String playerLocationR = playerMapLocation.buildMap(xCoordR, yCoordR);
                 this.console.println("\nPlayer location is " + playerLocationR);
-
-                try {
-                    fightView.getFightResult();
-                    }
-                catch
-                        
-                  (FightControlException me){
-                   ErrorView.display(this.getClass().getName(),me.getMessage());
-                  }                        
+                
+                String currentSceneDescR = sceneDescription.buildSceneDescritpions(xCoordR, yCoordR);
+                this.console.println(currentSceneDescR);
+                
+                mayhemView.display();                        
                         
                 break;
             
@@ -142,15 +144,10 @@ public class MoveView extends View{
                 String playerLocationL = playerMapLocation.buildMap(xCoordL, yCoordL);
                 this.console.println("\nPlayer location is " + playerLocationL);
 
-
-                try {
-                    fightView.getFightResult();
-                    }
-                catch
-                        
-                  (FightControlException me){
-                   ErrorView.display(this.getClass().getName(),me.getMessage());
-                  }                        
+                String currentSceneDescL = sceneDescription.buildSceneDescritpions(xCoordL, yCoordL);
+                this.console.println(currentSceneDescL);
+                
+                mayhemView.display();                        
                         
                 break;
                
@@ -179,16 +176,12 @@ public class MoveView extends View{
 
                 String playerLocationF = playerMapLocation.buildMap(xCoordF, yCoordF);
                 this.console.println("\nPlayer location is " + playerLocationF);
- 
 
-                try {
-                    fightView.getFightResult();
-                    }
-                catch
-                        
-                  (FightControlException me){
-                   ErrorView.display(this.getClass().getName(),me.getMessage());
-                  }                        
+                String currentSceneDescF = sceneDescription.buildSceneDescritpions(xCoordF, yCoordF);
+                this.console.println(currentSceneDescF);                
+                
+
+                mayhemView.display();                        
                         
                 break;
                 
@@ -215,16 +208,12 @@ public class MoveView extends View{
                 int yCoordB = yCoordinate.getYCoordinate();
 
                 String playerLocationB = playerMapLocation.buildMap(xCoordB, yCoordB);
-                this.console.println("\nPlayer location is " + playerLocationB);             
+                this.console.println("\nPlayer location is " + playerLocationB);
                 
-                try {
-                    fightView.getFightResult();
-                    }
-                catch
-                        
-                  (FightControlException me){
-                   ErrorView.display(this.getClass().getName(),me.getMessage());
-                  }                        
+                String currentSceneDescB = sceneDescription.buildSceneDescritpions(xCoordB, yCoordB);
+                this.console.println(currentSceneDescB);                
+                
+                mayhemView.display();                        
                         
                 break;
  

@@ -15,6 +15,7 @@ import java.util.IllegalFormatException;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import zombiegame.ZombieGame;
 
 
 /**
@@ -23,16 +24,18 @@ import java.util.logging.Logger;
  */
 public class FightView {
 
+
+
     
 
-    public void getFightResult() throws FightControlException  {
+    public void getFightResult(int charDam, double chrHealth, double chrHitPnts) throws FightControlException  {
  
-        double charDam = 0.0;
+        //double charDam = 0.0;
         //int enmHealth;
         //int numOfEnemies;
         //int enmDamage;
-        double chrHealth = 0;
-        double chrHitPnts = 0;
+        //double chrHealth = 0;
+        //double chrHitPnts = 0;
         
         
         
@@ -44,18 +47,18 @@ public class FightView {
                 int xCoord = xCoordinate.getXCoordinate();
                 int yCoord = yCoordinate.getYCoordinate(); 
 
-                Scene sceneData = new Scene ();
+               // Scene sceneData = new Scene ();
                 Zombie zombieData = new Zombie ();
 
-                int[] sceneDataArray = sceneData.buildScenes(xCoord, yCoord);
+               // int[] sceneDataArray = sceneData.buildScenes(xCoord, yCoord);
                 int[] zombieDataArray = zombieData.buildZombies(xCoord, yCoord);
 
                 int enmHealth = zombieDataArray[1];
                 int enmDamage = zombieDataArray[0];
-                int numOfEnemies = sceneDataArray[0];
+                int numOfEnemies = ZombieGame.zombieCountArray[xCoord][yCoord];
                 String zombieDescription = zombieData.buildZombieDescriptions(xCoord, yCoord);
 
-                Scanner in = new Scanner(System.in);        
+                //Scanner in = new Scanner(System.in);        
         
 
 
@@ -71,19 +74,24 @@ public class FightView {
                  //return enemyHealthResult;
 
 
-                System.out.println("\n" + zombieDescription);        
+                System.out.println("\n" + zombieDescription);
+                
+                //Scene sceneTest = new Scene();
+                
+                //sceneObjects [xCoord][yCoord].zombieCount = 0;
 
                 System.out.println("\nZombie health is " + enemyHealthResult);
-
-                Zombie zombieHealthWrite = new Zombie();
-
-                zombieHealthWrite.setZombieHealth((int) enemyHealthResult);
+                
+                if (enemyHealthResult <= 0){
+                  
+                ZombieGame.zombieCountArray[xCoord][yCoord] = 0;    
+                    
+                }
 
                 
                 chrHealth = mainCharacter.getCharHealth();   
        
-     
- 
+
                 chrHitPnts = mainCharacter.getHitPoints();        
    
 
@@ -95,6 +103,10 @@ public class FightView {
                 MainCharacter charHealthWrite = new MainCharacter();
        
                 charHealthWrite.setCharHealth(charHealthResult);
+                
+               // if (enmHealth <= 0){
+                    
+               // }
                 
 
    

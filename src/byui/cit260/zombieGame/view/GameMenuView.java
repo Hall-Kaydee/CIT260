@@ -38,20 +38,20 @@ public class GameMenuView extends View{
                
         );
         
+        MainCharacter coordinates = new MainCharacter();
+     
+        int xCoord = coordinates.getXCoordinate();
+        int yCoord = coordinates.getYCoordinate();
+        double characterHealth = coordinates.getCharHealth();
         
-            MainCharacter mainCharacter = new MainCharacter();
+        
+        System.out.println("\nYour health is at level " + String.valueOf(characterHealth));
+        
+
+        
+        System.out.println("\nThere are " + Integer.toString(ZombieGame.zombieCountArray[xCoord][yCoord]) + " zombies here.");
  
-            double chrHealth = mainCharacter.getCharHealth();
-            
-            String characterHealth = String.valueOf(chrHealth);        
       
-            System.out.println("\n Player Health is " + characterHealth);        
-        
-        
-        
-        
-        
-        
       }
         
     public GameMenuView(String message) {
@@ -62,6 +62,11 @@ public class GameMenuView extends View{
     @Override
     public boolean doAction(String choice){
     
+            
+
+        
+        
+
         // this is the help menu do action function
         
         choice = choice.toUpperCase(); //convert choice to upper case
@@ -74,9 +79,7 @@ public class GameMenuView extends View{
             
             case "E"://How to move
                 //System.out.println("\nView Equipment");
-                InventoryView inventoryMenu = new InventoryView() {
-           
-        };
+                InventoryView inventoryMenu = new InventoryView() {};
                 inventoryMenu.display();
                break;
                
@@ -86,11 +89,11 @@ public class GameMenuView extends View{
                 MainCharacter xCoordinate = new MainCharacter();
                 MainCharacter yCoordinate = new MainCharacter();  
                 
-                int xCoord = xCoordinate.getXCoordinate();
-                int yCoord = yCoordinate.getYCoordinate();
+                int xCoordM = xCoordinate.getXCoordinate();
+                int yCoordM = yCoordinate.getYCoordinate();
                           
                 Map playerMapLocation = new Map();
-                String playerLocation = playerMapLocation.buildMap(xCoord, yCoord);
+                String playerLocation = playerMapLocation.buildMap(xCoordM, yCoordM);
                 System.out.println("\nPlayer location is " + playerLocation);
                 
                 moveMenu.display();
@@ -137,28 +140,23 @@ public class GameMenuView extends View{
 
     public void displayMap() {
  
-      MapView mapView = new MapView();
+      Map mapView = new Map();
+      
+      MainCharacter xCoordinate = new MainCharacter();
+      MainCharacter yCoordinate = new MainCharacter();
 
-      mapView.display();   
+      int xCoord = xCoordinate.getXCoordinate();
+      int yCoord = yCoordinate.getYCoordinate();
+      
+      String playerMapView = mapView.buildMapViews(xCoord, yCoord);
+
+      System.out.println(playerMapView); 
     
     
     }
     
     private void callSaveReports() {
 
- /*       Map maptxt = MapControl.createMap();
-        
-        String mapReport = maptxt.getMap();
-
-        Scene sceneMapReport = new Scene();
-        
-        String map = sceneMapReport.getMap();
-        int zombieCount = sceneMapReport.getZombieCount();
-        int medKitCount = sceneMapReport.getMedKitCount();
-        int energyBarCount = sceneMapReport.getEnergyBarCount();
-        int waterCount = sceneMapReport.getWaterBarCount();
-
-*/
  
          Scene sceneMapReport = new Scene();
          String map = sceneMapReport.getMap();
