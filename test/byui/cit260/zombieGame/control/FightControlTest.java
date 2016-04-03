@@ -5,6 +5,7 @@
  */
 package byui.cit260.zombieGame.control;
 
+import byui.cit260.zombieGame.exceptions.FightControlException;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -114,7 +115,7 @@ public class FightControlTest {
      * Test of calcCharacterHealth method, of class FightControl.
      */
     @Test
-    public void testCalcCharacterHealth() {
+    public void testCalcCharacterHealth() throws FightControlException {
         System.out.println("calcCharacterHealth Test #1");
         double enemyDamage = 10.0;
         double numberOfEnemies = 3.0;

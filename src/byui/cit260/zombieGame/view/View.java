@@ -65,8 +65,9 @@ public void display()throws IllegalFormatException {
      try{
        while (!valid) {
                 //while a valid name has not been retrieved
-                //het value
-                ErrorView.display(this.getClass().getName(),"\n" + this.displayMessage);
+                //get value
+                //ErrorView.display(this.getClass().getName(),"\n" + this.displayMessage);
+                System.out.println(this.displayMessage);
                 //get the value entered from keyboard
                 
             selection = keyboard.readLine();  //get the name from the keyboard 
