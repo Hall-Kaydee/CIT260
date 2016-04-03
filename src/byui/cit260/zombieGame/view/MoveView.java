@@ -83,13 +83,14 @@ public class MoveView extends View{
         //int yCoord = 0;        
         MoveControl moveControl = new MoveControl();
         
-          MainCharacter xCoordinate = new MainCharacter();
-          MainCharacter yCoordinate = new MainCharacter();
+          MainCharacter coordinates = new MainCharacter();
+
+          double characterHealth = coordinates.getCharHealth();
           Map playerMapLocation = new Map();
           Scene sceneDescription = new Scene();
 
-          int xCoord = xCoordinate.getXCoordinate();
-          int yCoord = yCoordinate.getYCoordinate(); 
+          int xCoord = coordinates.getXCoordinate();
+          int yCoord = coordinates.getYCoordinate(); 
           
         /*  String playerLocation = playerMapLocation.buildMap(xCoord, yCoord);
           this.console.println("\nPlayer location is " + playerLocation);
@@ -119,15 +120,19 @@ public class MoveView extends View{
 //                System.out.println("\nPlayer location is " + resultR[0] + "," + resultR[1]);
                 this.console.println("\nYou have moved to the right");
 
-                int xCoordR = xCoordinate.getXCoordinate();
-                int yCoordR = yCoordinate.getYCoordinate();
+                int xCoordR = coordinates.getXCoordinate();
+                int yCoordR = coordinates.getYCoordinate();
+                
+
 
                 String playerLocationR = playerMapLocation.buildMap(xCoordR, yCoordR);
-                this.console.println("\nPlayer location is " + playerLocationR);
-                
+
+                this.console.println("\nPlayer location is " + playerLocationR + " Your health is at level " + Double.toString(characterHealth));
+
                 String currentSceneDescR = sceneDescription.buildSceneDescritpions(xCoordR, yCoordR);
                 this.console.println(currentSceneDescR);                
-                
+
+                System.out.println("\nThere are " + Integer.toString(ZombieGame.zombieCountArray[xCoordR][yCoordR]) + " zombies here.");                 
                 
                 
                 mayhemView.display();                 
@@ -157,14 +162,20 @@ public class MoveView extends View{
                 //System.out.println("\nPlayer location is " + resultL[0] + "," + resultL[1]);
                 this.console.println("\nYou have moved to the left");
                 
-                int xCoordL = xCoordinate.getXCoordinate();
-                int yCoordL = yCoordinate.getYCoordinate();
+                int xCoordL = coordinates.getXCoordinate();
+                int yCoordL = coordinates.getYCoordinate();
+
+                
 
                 String playerLocationL = playerMapLocation.buildMap(xCoordL, yCoordL);
-                this.console.println("\nPlayer location is " + playerLocationL);
+
+                this.console.println("\nPlayer location is " + playerLocationL + " Your health is at level " + Double.toString(characterHealth));
 
                 String currentSceneDescL = sceneDescription.buildSceneDescritpions(xCoordL, yCoordL);
                 this.console.println(currentSceneDescL);
+
+                System.out.println("\nThere are " + Integer.toString(ZombieGame.zombieCountArray[xCoordL][yCoordL]) + " zombies here."); 
+
                 
                 mayhemView.display();                        
                         
@@ -189,17 +200,21 @@ public class MoveView extends View{
                 //System.out.println("\nPlayer location is " + resultF[0] + "," + resultF[1]);
                 this.console.println("\nYou have moved forward");
 
-                int xCoordF = xCoordinate.getXCoordinate();
-                int yCoordF = yCoordinate.getYCoordinate();
+                int xCoordF = coordinates.getXCoordinate();
+                int yCoordF = coordinates.getYCoordinate();
 
 
+                
+                
+                
                 String playerLocationF = playerMapLocation.buildMap(xCoordF, yCoordF);
-                this.console.println("\nPlayer location is " + playerLocationF);
+                
+                this.console.println("\nPlayer location is " + playerLocationF + " Your health is at level " + Double.toString(characterHealth));
 
                 String currentSceneDescF = sceneDescription.buildSceneDescritpions(xCoordF, yCoordF);
                 this.console.println(currentSceneDescF);                
                 
-                
+                System.out.println("\nThere are " + Integer.toString(ZombieGame.zombieCountArray[xCoordF][yCoordF]) + " zombies here.");                  
                 
                 mayhemView.display();                        
                         
@@ -224,14 +239,18 @@ public class MoveView extends View{
                 this.console.println("\nYou have moved backward");
 
 
-                int xCoordB = xCoordinate.getXCoordinate();
-                int yCoordB = yCoordinate.getYCoordinate();
+                int xCoordB = coordinates.getXCoordinate();
+                int yCoordB = coordinates.getYCoordinate();
 
                 String playerLocationB = playerMapLocation.buildMap(xCoordB, yCoordB);
-                this.console.println("\nPlayer location is " + playerLocationB);
-                
+         
+                this.console.println("\nPlayer location is " + playerLocationB + " Your health is at level " + Double.toString(characterHealth));
+               
                 String currentSceneDescB = sceneDescription.buildSceneDescritpions(xCoordB, yCoordB);
                 this.console.println(currentSceneDescB);                
+
+                System.out.println("\nThere are " + Integer.toString(ZombieGame.zombieCountArray[xCoordB][yCoordB]) + " zombies here."); 
+
                 
                 mayhemView.display();                        
                         

@@ -35,7 +35,7 @@ public class FightControl {
         
                 if (healthPerEnemy <= 0) {
 
-                    System.out.println("Ah yeah! Zombies are D.E.A.D. You are safe..... for now."); 
+                    System.out.println("\nAh yeah! Zombies are D.E.A.D. You are safe..... for now."); 
             
                     return (int) healthPerEnemy;
                 }
