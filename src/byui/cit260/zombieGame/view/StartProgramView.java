@@ -160,9 +160,20 @@ public class StartProgramView {
         
     System.out.println("\n++++++++++++++++++++++++++++++++++++++++++"
                      + "\n+ Welcome to the Game " + player.getName()
-                     + "\n+ R.I.P. " + player.getName()
                      + "\n++++++++++++++++++++++++++++++++++++++++++"
-                        );
+                     + "\n"
+                     + "\n        ----------           "
+                     + "\n       /          \\         "
+                     + "\n      |            |         "
+                     + "\n      |   R.I.P.   |         "
+                     + "\n      |  " + player.getName()
+                     + "\n      |            |         "
+                     + "\n      |            |         "
+                     + "\n      |            |         "
+                     + "\n      |            |         "
+                     + "\n      |            |         "     
+                     + "\n -----==============------   "
+                       );
     
                         //create main menu view object
                         MainMenuView mainMenuView = new MainMenuView();

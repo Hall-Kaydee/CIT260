@@ -48,7 +48,7 @@ public class GameControl {
     }
 
 
-    public static void getSavedGame(String filepath) throws GameControlException {
+    public static void getSavedGame(String filepath) throws GameControlException 
 
        {
         Game game = null;
@@ -68,7 +68,7 @@ public class GameControl {
        // close the outuput file
        ZombieGame.setCurrentGame(game); 
 
-    }
+    
 
     }
    
@@ -130,17 +130,14 @@ public class GameControl {
         if (name == null){
             
             return null;
-            
         }
         
         Player player = new Player();
         player.setName(name);
         ZombieGame.setPlayer(player);//save the player
-        
-        
+   
         return player;
-        
-    
+ 
     }
     
     public double calcSneak(double numEnemy, double dist) throws SneakControlException{

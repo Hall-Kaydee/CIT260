@@ -17,12 +17,12 @@ public class DoubleFormat {
     protected String displayMessage;
     
     public Double getDoubleNumber()
-                throws NumberFormatException{
+                throws DoubleFormatException{
         Double number = null;
         
         while ( number == null) {
             String value = this.getInput();
-           // value = value.trim().toUpperCase();
+            //value = value.trim().toUpperCase();
             
             if (value.equals("Q"))
                 break;
@@ -31,10 +31,10 @@ public class DoubleFormat {
             
             number = Double.parseDouble(value);
             
-          } catch (NumberFormatException nf){ 
+          } catch (Exception e){ 
               
-             
-              System.out.println("\n You must enter a valid number. Try again or enter Q to quit.");
+             throw new DoubleFormatException(e.getMessage());
+
           } 
           finally{System.out.println("sup"); }
         }

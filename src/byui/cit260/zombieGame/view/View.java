@@ -59,40 +59,24 @@ public void display()throws IllegalFormatException {
 @Override
  public String getInput() throws IllegalFormatException {
      
-            //Scanner keyboard = new Scanner(System.in);
             boolean valid = false;   //setflag to invalid valid entered
             String selection = null;
+
      try{
        while (!valid) {
-                //while a valid name has not been retrieved
-                //get value
-                //ErrorView.display(this.getClass().getName(),"\n" + this.displayMessage);
-                System.out.println(this.displayMessage);
-                //get the value entered from keyboard
-                
+            System.out.println(this.displayMessage);
             selection = keyboard.readLine();  //get the name from the keyboard 
-
-            
             selection = selection.trim();     //trim off the excess blanks
-                
-                // if the name is invalid < one character in length
-                
         if (selection.length()< 1)  { //blank value entered
-                
                 ErrorView.display(this.getClass().getName(),"You must enter a value");
                 continue;//and repeat again
-                
                 }
-                
                 break;
          }
-
-     }
+        }
      catch (Exception e){
-         
          ErrorView.display(this.getClass().getName(),"\nError reading inputs" + e.getMessage());
-         
-     }
+        }
      
        
         return selection;  //return the value 

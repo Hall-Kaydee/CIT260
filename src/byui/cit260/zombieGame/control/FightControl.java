@@ -6,6 +6,7 @@
 package byui.cit260.zombieGame.control;
 
 import byui.cit260.zombieGame.exceptions.FightControlException;
+import byui.cit260.zombieGame.view.ErrorView;
 import java.util.IllegalFormatException;
 
 /**
@@ -16,7 +17,7 @@ public class FightControl {
     
     public int calcEnemyHealth(double charDamage, double enemyHealth, int numberOfEnemies)
     
-                                throws IllegalFormatException {
+                                throws FightControlException {
  
             if (enemyHealth <= 0 ){
             
@@ -29,23 +30,25 @@ public class FightControl {
             
             else {
         
-        
+             try{
                 double healthPerEnemy = ((enemyHealth * numberOfEnemies) - charDamage) / numberOfEnemies;
-        
-        
-                if (healthPerEnemy <= 0) {
 
+                if (healthPerEnemy <= 0) {
                     System.out.println("\nAh yeah! Zombies are D.E.A.D. You are safe..... for now."); 
-            
                     return (int) healthPerEnemy;
-                }
+                    }
 
                 else {
-            
                     return (int) healthPerEnemy;
-            
                     }
-             }
+                
+                }catch (Exception e){
+                 throw new FightControlException(e.getMessage());
+                    }
+                
+                
+                
+                 }
             
     }
  

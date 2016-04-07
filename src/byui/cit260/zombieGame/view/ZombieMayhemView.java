@@ -22,17 +22,24 @@ public class ZombieMayhemView extends View{
     
     public ZombieMayhemView() {
         
-    super ("\n"
-                + "\n++++++++++++++++++++++++++++++++++++++"
-                + "\n+  Fight Zombie Menu                  "
-                + "\n++++++++++++++++++++++++++++++++++++++"
-                + "\nF - Fight the zombies"
-                + "\nS - Stop and take a chance on running"
-                + "\nQ - Quit"
-                + "\n++++++++++++++++++++++++++++++++++++++"
+    super (
+            
+            
+                     
+
+            
+            
+                "\n++++++++++++++++++++++++++++++++++++++"
+              + "\n+  Fight Zombie Menu                  "
+              + "\n++++++++++++++++++++++++++++++++++++++"
+              + "\nF - Fight the zombies"
+              + "\nS - Stop and take a chance on running"
+              + "\nQ - Quit"
+              + "\n++++++++++++++++++++++++++++++++++++++"
                
         );
     
+
   
     
     
@@ -53,7 +60,9 @@ public class ZombieMayhemView extends View{
         int yCoord = coordinates.getYCoordinate();
 
 
-        // this is the help menu do action function
+        MainCharacter currentWeapon = new MainCharacter();
+        String weapon = currentWeapon.getCurrentWeapon(currentWeapon.getCharDam());
+        System.out.println("\nCurrent Weapon: " + weapon);        // this is the help menu do action function
         
         choice = choice.toUpperCase(); //convert choice to upper case
         

@@ -12,15 +12,11 @@ import byui.cit260.zombieGame.model.MainCharacter;
  * @author Boyd
  */
 public class UseRadioControl {
-
-
-// move player to the right
     
         MainCharacter radioListenCount = new MainCharacter();
 
         int listenCount = radioListenCount.getRadioListenCount();
-
-   
+  
 public String useRadio(int listenCount)  {
  
     String radioMessage = "";
@@ -28,34 +24,31 @@ public String useRadio(int listenCount)  {
     if (number1 >= 3){
         
         radioMessage = "\n The static is gone... the radio is dead. ";
-        
-    }
+     }
     
     else {
-        
-        
+   
         switch (number1){
             
-            case 0://right
+            case 0:
                 
                 radioMessage = this.setMessageOne();
                 
                 break;
                 
-            case 1://Left
+            case 1:
                 
                 radioMessage = this.setMessageTwo();
                 
                 break;
                 
-            case 2://Forward
+            case 2:
                 
                 radioMessage = this.setMessageThree();
                 
                 break;
                 
-                
-            default:
+           default:
                 System.out.println("\nInvalid selection. Try again");
                 break;
                 

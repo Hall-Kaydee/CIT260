@@ -14,6 +14,11 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import static jdk.nashorn.internal.objects.NativeString.length;
 import zombiegame.ZombieGame;
+import static zombiegame.ZombieGame.energyBarCountArray;
+import static zombiegame.ZombieGame.medKitCountArray;
+import static zombiegame.ZombieGame.sceneObjects;
+import static zombiegame.ZombieGame.waterCountArray;
+import static zombiegame.ZombieGame.weaponArray;
 
 /**
  *
@@ -27,11 +32,12 @@ public class GameMenuView extends View{
                 + "\n+  Game Menu                          "
                 + "\n++++++++++++++++++++++++++++++++++++++"
                 + "\nV - View Map"
-                + "\nE - View Equipment"
+                + "\nE - View Inventory"
                 + "\nM - Move"
+                + "\nS - Search Current Location"                
                 + "\nT - Talk"
-                + "\nU - Use Equipment"
-                + "\nW - Select Weapon"  
+                + "\nU - Use Inventory"
+                + "\nW - View and Select Weapon"  
                 + "\nR - Save Reports"
                 + "\nQ - Quit"
                 + "\n++++++++++++++++++++++++++++++++++++++"
@@ -70,11 +76,14 @@ public class GameMenuView extends View{
     @Override
     public boolean doAction(String choice){
     
-            
+        MainCharacter coordinates = new MainCharacter();
+  
+                
+        int xCoord = coordinates.getXCoordinate();
+        int yCoord = coordinates.getYCoordinate();
 
-        
-        
-
+        Map playerMapLocation = new Map();                          
+        String playerLocation = playerMapLocation.buildMap(xCoord, yCoord);
         // this is the help menu do action function
         
         choice = choice.toUpperCase(); //convert choice to upper case
@@ -85,10 +94,26 @@ public class GameMenuView extends View{
                 this.displayMap();
                break;
             
-            case "E"://How to move
+            case "E":
+
+
+                
+                
+                
+                
+
+                System.out.println("\nNumber of Medkits: " + Integer.toString(ZombieGame.playerMedKitCount) 
+                                 + "   Number of Water Bottles: " + Integer.toString(ZombieGame.playerWaterCount)
+                                 + "   Number of Energy Bars: " + Integer.toString(ZombieGame.playerEnergyBarCount)                
+                                    );                
+
+
+
+
+
                 //System.out.println("\nView Equipment");
-                InventoryView inventoryMenu = new InventoryView() {};
-                inventoryMenu.display();
+                //InventoryView inventoryMenu = new InventoryView() {};
+                //inventoryMenu.display();
                break;
                
             case "M"://how to get items noted out to test inventory menu -Evan
@@ -111,6 +136,32 @@ public class GameMenuView extends View{
                 //System.out.println("\nYou have moved");
 
                 break;
+   
+                
+            case "S":
+
+
+                
+                
+                int medKits = medKitCountArray[xCoord][yCoord];
+                int waters = waterCountArray[xCoord][yCoord];
+                int energyBars = energyBarCountArray[xCoord][yCoord];
+                String weapon = weaponArray[xCoord][yCoord];
+
+                
+                System.out.println("\nPlayer location is " + playerLocation);
+                System.out.println("Number of Medkits: " + Integer.toString(medKits) 
+                                 + "  Number of Water Bottles: " + Integer.toString(waters)
+                                 + "  Number of Energy Bars: " + Integer.toString(energyBars)
+                                 + "  Weapon found: " + weapon
+                                    );                
+
+
+                SearchLocationView searchMenu = new SearchLocationView();
+                searchMenu.display();
+                
+                break;                 
+                
                 
             case "T":
 
@@ -121,14 +172,19 @@ public class GameMenuView extends View{
                 
             case "U"://combat - how to fight
                 
-                UseEquipmentView useEquipmentMenu = new UseEquipmentView();
-                useEquipmentMenu.display();
+                UseInventoryView useInventoryMenu = new UseInventoryView ();
+                useInventoryMenu.display();
                 
                 break;
                 
                 
             case "W"://combat - how to fight
-                System.out.println("\nView and Select Weapons");
+                
+                ViewWeapons viewWeapons = new ViewWeapons ();
+                viewWeapons.display();
+                
+                
+                //System.out.println("\nView and Select Weapons");
                 break;
                 
             case "R"://save the current game
@@ -169,7 +225,7 @@ public class GameMenuView extends View{
  
          Scene sceneMapReport = new Scene();
          String map = sceneMapReport.getMap();
-        int zombieCount = sceneMapReport.getZombieCount();
+        //int zombieCount = sceneMapReport.getZombieCount();
         int medKitCount = sceneMapReport.getMedKitCount();
         int energyBarCount = sceneMapReport.getEnergyBarCount();
         int waterCount = sceneMapReport.getWaterBarCount();
@@ -200,9 +256,7 @@ public class GameMenuView extends View{
            mapStringLength = playerMapView.length() - 1;
            
            while (i <= mapStringLength){
-               
-
-               
+   
                if (lineCount <= 71) {
                    
                    characterIn = playerMapView.charAt(i);
@@ -222,10 +276,9 @@ public class GameMenuView extends View{
                    i++;
                     }
                
-               //i++;
                
                }
-           //out.printf("%-71s", playerMapView);
+
            
             }
         
@@ -236,11 +289,35 @@ public class GameMenuView extends View{
         try {
             
            PrintWriter out2 = new PrintWriter(ZombieGame.sceneReportFile);
-           
+            medKitCount = ZombieGame.playerMedKitCount;
+            waterCount = ZombieGame.playerWaterCount;
+            energyBarCount = ZombieGame.playerEnergyBarCount; 
+            
+            MainCharacter damageVal = new MainCharacter();
+            int damageValue = damageVal.getCharDam();
+            String currentWeapon = "";
+            if (damageValue == 5)  currentWeapon = "FISTS";
+            if (damageValue == 15) currentWeapon = "KNIFE";            
+            if (damageValue == 18) currentWeapon = "MACHETE";
+            if (damageValue == 19) currentWeapon = "BASEBALL BAT";
+            if (damageValue == 21) currentWeapon = "CROSSBOW";
+            if (damageValue == 25) currentWeapon = "HANDGUN";
+            if (damageValue == 30) currentWeapon = "DOUBLE DESERT EAGLES";
+            if (damageValue == 32) currentWeapon = "SEMI-AUTOMATIC SHOTGUN";
+            if (damageValue == 38) currentWeapon = "UZI MACHINE GUN";
+            if (damageValue == 42) currentWeapon = "AK-47";
+            if (damageValue == 55) currentWeapon = "GRENADE";
+            if (damageValue == 85) currentWeapon = "ROCKET LAUNCHER";
+
+                                    
+                                    
+                        
+            
+                                                 
            out2.println("\n------------ Scene Report --------------");
            out2.printf("%n%-20s%10s", "Description", "Quantity" );
            out2.printf("%n%-20s%10s", "-----------", "--------" );
-           out2.printf("%n%-20s%10d", "Zombie Count", zombieCount );           
+           out2.printf("%n%-20s%10s", "Current Weapon", currentWeapon );           
            out2.printf("%n%-20s%10d", "Medkit Count", medKitCount ); 
            out2.printf("%n%-20s%10d", "Energybar Count", energyBarCount );
            out2.printf("%n%-20s%10d", "Water Count", waterCount );           
@@ -258,7 +335,8 @@ public class GameMenuView extends View{
           Map playerMapLocation = new Map();
 
           int xCoord = xCoordinate.getXCoordinate();
-          int yCoord = yCoordinate.getYCoordinate(); 
+          int yCoord = yCoordinate.getYCoordinate();
+          double health = xCoordinate.getCharHealth();
           String playerLocation = playerMapLocation.buildMap(xCoord, yCoord);  
             
             
@@ -267,10 +345,11 @@ public class GameMenuView extends View{
            out2.println("\n------------ Player Sats Report --------------");
            out2.printf("%n%-30s%10s", "Description", "Value" );
            out2.printf("%n%-30s%10s", "-----------", "-----" );
+           out2.printf("%n%-30s%10f", "Player Health", health ); 
            out2.printf("%n%-30s%10s", "Scene Name", playerLocation );           
            out2.printf("%n%-30s%10d", "X Coordinate", xCoord ); 
            out2.printf("%n%-30s%10d", "Y Coordinate", yCoord );
-           
+          
          
             }
         

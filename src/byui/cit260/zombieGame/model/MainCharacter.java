@@ -68,8 +68,43 @@ public class MainCharacter implements Serializable{
 
     public void setCharDam(int charDam) {
         ZombieGame.charDam = charDam;
+       
     }
 
+   public String getCurrentWeapon (int charDam){
+       String weapon = "";
+
+       if (charDam == 5){ 
+           weapon = "FISTS";}
+       if (charDam == 15){ 
+           weapon = "KNIFE";}
+       if (charDam == 18){ 
+           weapon = "MACHETE";}
+       if (charDam == 19){ 
+           weapon = "BASEBALL BAT";}
+       if (charDam == 21){ 
+           weapon = "CROSSBOW";}
+       if (charDam == 25){ 
+           weapon = "HANDGUN";}
+       if (charDam == 30){ 
+           weapon = "DOUBLE DESERT EAGLES";}
+       if (charDam == 32){ 
+           weapon = "SEMI-AUTOMATIC SHOTGUN";}
+       if (charDam == 38){ 
+           weapon = "UZI MACHINE GUN";}
+       if (charDam == 42){ 
+           weapon = "AK-47";}
+       if (charDam == 55){ 
+           weapon = "GRENADE";}
+       if (charDam == 85){ 
+           weapon = "ROCKET LAUNCHER";}
+
+       return weapon;
+       
+   }    
+    
+    
+    
     public double getCharHealth() {
         return ZombieGame.charHealth;
     }
