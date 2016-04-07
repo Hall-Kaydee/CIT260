@@ -24,10 +24,9 @@ public class UseInventoryView extends View{
     
     public UseInventoryView(){
     super(
-            "\nNumber of Medkits: " + Integer.toString(ZombieGame.playerMedKitCount) 
-                          + "   Number of Water Bottles: " + Integer.toString(ZombieGame.playerWaterCount)
-                          + "   Number of Energy Bars: " + Integer.toString(ZombieGame.playerEnergyBarCount)  
-            + "\n++++++++++++++++++++++++++++++++++++++"
+                          
+      
+              "\n++++++++++++++++++++++++++++++++++++++"
             + "\nM - Use Medkits"
             + "\nW - Use Water Bottles"
             + "\nE - Use Energy Bars"
@@ -35,7 +34,9 @@ public class UseInventoryView extends View{
             + "\n++++++++++++++++++++++++++++++++++++++"
      );
     
-    
+     System.out.println("\nNumber of Medkits: " + Integer.toString(ZombieGame.playerMedKitCount) 
+          + "   Number of Water Bottles: " + Integer.toString(ZombieGame.playerWaterCount)
+          + "   Number of Energy Bars: " + Integer.toString(ZombieGame.playerEnergyBarCount)); 
     
     }    
     
@@ -46,6 +47,11 @@ public class UseInventoryView extends View{
     @Override
     public boolean doAction(String value) throws IllegalFormatException {
 
+    System.out.println("\nNumber of Medkits: " + Integer.toString(ZombieGame.playerMedKitCount) 
+                          + "   Number of Water Bottles: " + Integer.toString(ZombieGame.playerWaterCount)
+                          + "   Number of Energy Bars: " + Integer.toString(ZombieGame.playerEnergyBarCount)
+                             );
+        
 
         MainCharacter inventory = new MainCharacter();
   
@@ -63,11 +69,13 @@ public class UseInventoryView extends View{
 
                 if (newHealth > 0){
 
-                    newHealth = newHealth + (playerMedKitCount * 2);
+                    newHealth = newHealth + (ZombieGame.playerMedKitCount * 2);
 
                     inventory.setCharHealth(newHealth);                
 
-                    playerMedKitCount = 0;
+                    ZombieGame.playerMedKitCount = 0;
+                    
+
                 }
                 
                 else {
@@ -82,11 +90,16 @@ public class UseInventoryView extends View{
 
                 if (newHealth > 0){
                     
-                    newHealth = newHealth + (playerWaterCount * 1.5);
+                    newHealth = newHealth + (ZombieGame.playerWaterCount * 1.5);
 
                     inventory.setCharHealth(newHealth);                
 
-                    playerWaterCount = 0; 
+                    ZombieGame.playerWaterCount = 0;
+                    
+                    System.out.println("\nNumber of Medkits: " + Integer.toString(ZombieGame.playerMedKitCount) 
+                          + "   Number of Water Bottles: " + Integer.toString(ZombieGame.playerWaterCount)
+                          + "   Number of Energy Bars: " + Integer.toString(ZombieGame.playerEnergyBarCount)
+                             );
                 
                 }
 
@@ -103,12 +116,16 @@ public class UseInventoryView extends View{
 
                 if (newHitPoints > 0){
 
-                    newHitPoints = newHitPoints + (playerEnergyBarCount * 0.1);
+                    newHitPoints = newHitPoints + (ZombieGame.playerEnergyBarCount * 0.1);
 
                     inventory.setHitPoints(newHitPoints);                
 
-                    playerEnergyBarCount = 0;
-                
+                    ZombieGame.playerEnergyBarCount = 0;
+
+                    System.out.println("\nNumber of Medkits: " + Integer.toString(ZombieGame.playerMedKitCount) 
+                          + "   Number of Water Bottles: " + Integer.toString(ZombieGame.playerWaterCount)
+                          + "   Number of Energy Bars: " + Integer.toString(ZombieGame.playerEnergyBarCount)
+                             );                    
                 }
                 
                 else {
